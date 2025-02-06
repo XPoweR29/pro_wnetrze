@@ -1,0 +1,156 @@
+@use '../../sass/common' as *;
+
+.home {
+	position: relative;
+	height: 100svh;
+	min-height: 660px;
+	background-image: url('../../assets/img/home_img.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: $white;
+	overflow: hidden;
+	z-index: 1;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: $dark;
+		opacity: 80%;
+		z-index: -1;
+	}
+
+	.wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 5em;
+	}
+
+	.heading {
+		font-size: 2.6em;
+		text-transform: uppercase;
+	}
+
+	.text {
+		margin-top: 1.5em;
+		font-size: 1.15em;
+		font-weight: 500;
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 400px;
+		margin-top: 5em;
+
+		.contact {
+			position: relative;
+			@include mainButton;
+			transition: box-shadow 0.3s;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+
+			&:hover {
+				box-shadow: 0px 0px 15px $accent;
+
+				&::before {
+					animation: pulse 1s linear forwards;
+				}
+			}
+		}
+
+		.portfolio {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.5em;
+			padding: 0.5em;
+			color: $accent;
+			overflow: hidden;
+			z-index: 1;
+
+			.icon {
+				width: 1.7em;
+			}
+
+			&:hover {
+				.icon {
+					animation: slide-again 0.5s linear forwards;
+				}
+			}
+		}
+	}
+
+	.socialLink {
+		position: absolute;
+		bottom: 3em;
+		right: 4em;
+		width: fit-content;
+		display: flex;
+		align-items: end;
+
+		.writing {
+			width: 150px;
+			rotate: 5deg;
+			opacity: 0;
+			animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+			animation-delay: 2s;
+		}
+
+		.icon {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			padding: 0.5em;
+			transform: translateX(65%) translateY(40%);
+		}
+	}
+
+	.divider {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 50%;
+		height: 30px; 
+		background-color: $white;
+		clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+	}
+}
+
+@media (width>=576px) {
+	.home {
+		.heading {
+			max-width: 690px;
+			text-align: center;
+		}
+
+		.text {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.socialLink {
+			.writing {
+				width: 170px;
+			}
+		}
+	}
+}

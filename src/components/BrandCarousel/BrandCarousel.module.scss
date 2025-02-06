@@ -1,0 +1,29 @@
+@use '../../sass/common' as *;
+
+.carousel {
+    margin-top: 10em;
+    margin-bottom: 2em;
+    padding: 1em 0;
+    background-color: rgba(46, 46, 46, 0.1);
+
+    img {
+        width: 80px;
+        margin: 0 3em;
+        opacity: 0.7;
+    }
+}
+
+@media(width>=768px) {
+    .carousel {
+        img {
+            width: 100px;
+            margin: 0 4em;
+        }
+    }
+}
+
+@media(width>=992px) {
+    .carousel {
+        margin-top: 12em;
+    }
+}

@@ -1,3 +1,4 @@
+@use '../sass/common' as *;
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -9,8 +10,8 @@
 	padding: 15px 15px;
 	display: inline-block;
 	cursor: pointer;
-	transition-property: opacity, filter;
 	transition-duration: 0.15s;
+	transition-property: opacity, filter, background-color;
 	transition-timing-function: linear;
 	font: inherit;
 	color: inherit;
@@ -29,7 +30,7 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-	background-color: #000;
+	background-color: $dark;
 }
 
 .hamburger-box {
@@ -49,10 +50,10 @@
 .hamburger-inner::after {
 	width: 40px;
 	height: 4px;
-	background-color: #000;
+	background-color: $accent;
 	border-radius: 4px;
 	position: absolute;
-	transition-property: transform;
+	transition-property: transform, background-color;
 	transition-duration: 0.15s;
 	transition-timing-function: ease;
 }

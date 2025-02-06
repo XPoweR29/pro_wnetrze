@@ -1,19 +1,18 @@
-import { Wrapper } from '@/components/Wrapper/Wrapper';
 import styles from './page.module.scss';
+import { Start } from '@/sections/Start/Start';
+import { About } from '@/sections/About/About';
+import { Services } from '@/sections/Services/Services';
+import { Portfolio } from '@/sections/Portfolio/Portfolio';
+import { Process } from '@/sections/Process/Process';
 
 export default function Home() {
-
 	return (
 		<section className={styles.section}>
-			<Wrapper className={styles.wrapper}>
-				<h1 className={styles.heading}>Project_Starter</h1>
-
-				<ul className={styles.list}>
-					<li>➡️ npm install</li>
-					<li>➡️ change project name in <i>'package.json'</i></li>
-					<li>➡️ edit <i>'app/page.tsx'</i></li>
-				</ul>
-			</Wrapper>
+			<Start />
+			<About/>
+			<Services/>
+			<Portfolio/>
+			<Process/>
 		</section>
 	);
 }

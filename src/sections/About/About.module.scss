@@ -1,0 +1,93 @@
+@use '../../sass/common' as *;
+
+.about {
+	padding-top: 7em;
+	padding-bottom: 5em;
+	background-color: $white;
+	color: $black;
+	overflow: hidden;
+
+	.wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.headingContainer {
+		@include sectionHeading;
+	}
+
+	.text {
+		margin: 1.5em 0;
+
+		&:nth-of-type(1) {
+			margin-top: 2.5em;
+		}
+	}
+
+	.features {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+		margin: 0 auto;
+		margin-top: 6em;
+		margin-bottom: 8em;
+	}
+
+	.aboutImg {
+		width: 100%;
+		max-width: 510px;
+        align-self: center;
+	}
+}
+
+@media (width>=992px) {
+	.about {
+		.wrapper {
+			flex-direction: row-reverse;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 3em;
+		}
+
+		.flexContainer {
+			position: relative;
+		}
+
+		.features {
+            justify-content: start;
+			gap: 0.5em;
+			margin-bottom: auto;
+		}
+
+		.aboutImg {
+			width: 38%;
+			margin-top: 4em;
+            align-self: auto;
+		}
+	}
+}
+
+@media (width>=1200px) {
+    .about {
+
+        .wrapper {
+            gap: 5em;
+        }
+
+        .aboutImg {
+            width: 50%;
+        }
+    }
+}
+
+@media (width>=1400px) {
+    .about {
+
+        .wrapper {
+            gap: 7em;
+        }
+    }
+}

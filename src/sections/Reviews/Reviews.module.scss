@@ -1,0 +1,55 @@
+@use '../../sass/common' as *;
+
+.section {
+
+	.headingContainer {
+		@include sectionHeading;
+        margin: 0 auto;
+
+		.heading {
+			text-align: center;
+			color: $white;
+			z-index: 0;
+
+			img {
+				bottom: -0.2em;
+				height: 15px;
+				opacity: 0.8;
+			}
+		}
+	}
+
+	.text {
+        margin: 0 auto;
+		margin-top: 2.5em;
+        max-width: 900px;
+        text-align: center;
+
+		a {
+			color: $accent;
+			text-decoration: underline;
+            white-space: nowrap;
+		}
+	}
+
+    .swiper {
+        margin-top: 3em;
+        max-width: 405px;
+    }
+}
+
+@media(width>=992px) {
+    .section {
+        .swiper {
+            max-width: 91%;
+        }
+    }
+}
+
+@media(width>=1200px) {
+    .section {
+        .swiper {
+            max-width: none;
+        }
+    }
+}

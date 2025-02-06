@@ -1,0 +1,46 @@
+@use '../../sass/common' as *;
+
+.item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.photo {
+		width: 100%;
+		max-width: 450px;
+		border-radius: 5px;
+		box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	.title {
+		margin-top: 0.5em;
+		font-size: 1.3em;
+		font-weight: 800;
+		color: $dark;
+		align-self: flex-start;
+	}
+
+	.text {
+		margin-top: 1em;
+	}
+}
+
+@media (width>=992px) {
+	.item {
+        flex-direction: row;
+        gap: 3em;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .flexContainer {
+            width: 50%;
+        }
+
+        .photo {
+            width: 30%;
+        }
+	}
+}

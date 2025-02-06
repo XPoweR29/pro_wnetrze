@@ -1,0 +1,32 @@
+@use '../../sass/common' as *;
+
+.process {
+	padding-top: 10em;
+	padding-bottom: 5em;
+	color: $black;
+	background-color: $white;
+	overflow: hidden;
+
+	.headingContainer {
+		@include sectionHeading;
+		align-self: center;
+
+		.bg_heading {
+			top: 0%;
+			left: -5%;
+		}
+
+		.heading {
+			text-align: center;
+
+			img {
+				bottom: -0.1em;
+				height: 15px;
+			}
+		}
+	}
+
+    .text {
+        margin-top: 2.5em;
+    }
+}
