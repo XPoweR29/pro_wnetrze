@@ -4,6 +4,8 @@ import { About } from '@/sections/About/About';
 import { Services } from '@/sections/Services/Services';
 import { Portfolio } from '@/sections/Portfolio/Portfolio';
 import { Process } from '@/sections/Process/Process';
+import { TimelineSteps } from '@/components/TimelineSteps/TimelineSteps';
+import { Contact } from '@/sections/Contact/Contact';
 
 export default function Home() {
 	return (
@@ -13,6 +15,7 @@ export default function Home() {
 			<Services/>
 			<Portfolio/>
 			<Process/>
+			<Contact/>
 		</section>
 	);
 }

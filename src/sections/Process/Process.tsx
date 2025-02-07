@@ -4,6 +4,7 @@ import { rubikDirt } from '@/app/layout';
 
 import styles from './Process.module.scss';
 import underline from '../../assets/underline.svg';
+import { TimelineSteps } from '@/components/TimelineSteps/TimelineSteps';
 
 export const Process = () => {
 	return (
@@ -14,7 +15,7 @@ export const Process = () => {
 						proces
 					</span>
 					<h2 className={styles.heading}>
-						Jak wygląda {' '}
+						Jak wygląda{' '}
 						<span className={styles.word}>
 							współpraca
 							<img src={underline.src} alt='' aria-hidden />
@@ -30,6 +31,8 @@ export const Process = () => {
 					zgodnie z Twoimi oczekiwaniami. Sprawdź, jak przebiega współpraca krok
 					po kroku!
 				</p>
+
+				<TimelineSteps className={styles.timeline}/>
 			</Wrapper>
 		</section>
 	);

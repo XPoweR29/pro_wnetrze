@@ -1,0 +1,62 @@
+@use '../../sass/common' as *;
+
+.contact {
+	padding: 7em 0;
+	color: $white;
+	background-color: $dark;
+	overflow: hidden;
+
+	.wrapper {
+		border: 1px solid green;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.headingContainer {
+		@include sectionHeading;
+
+		.bg_heading {
+			top: 0%;
+			left: -5%;
+			color: $white;
+			z-index: -1;
+		}
+
+		.heading {
+			text-align: center;
+			color: $white;
+			z-index: 0;
+
+			img {
+				bottom: -0.2em;
+				height: 15px;
+				opacity: 0.8;
+			}
+		}
+	}
+
+	.napContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 3em;
+		margin-top: 3em;
+	}
+
+	.contactItem {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+
+		.icon {
+			width: 50px;
+		}
+	}
+
+	.map {
+		margin-top: 6em;
+		width: 100%;
+		aspect-ratio: 1/1;
+	}
+}

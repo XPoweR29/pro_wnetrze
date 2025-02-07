@@ -5,7 +5,7 @@
 	padding-bottom: 5em;
 	color: $black;
 	background-color: $white;
-	overflow: hidden;
+	overflow-x: clip;
 
 	.headingContainer {
 		@include sectionHeading;
@@ -29,4 +29,28 @@
     .text {
         margin-top: 2.5em;
     }
+
+	.timeline {
+		margin-top: 7em;
+	}
+}
+
+@media(width >= 768px) { 
+	.process {
+		.text {
+			width: 85%;
+		}
+
+		.timeline {
+			margin-top: 9em;
+		}
+	}
+}
+
+@media(width >= 992px) {
+	.process {
+		.text {
+			width: 70%;
+		}
+	}
 }
