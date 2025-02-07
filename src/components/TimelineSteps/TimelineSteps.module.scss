@@ -2,122 +2,149 @@
 
 
 .container {
-	background-color: $white;
-	color: $dark;
-}
+  background-color: $white;
+  color: $dark;
+  width: 100%; 
+  font-family: sans-serif; 
 
-.headingContainer {
-	@include sectionHeading;
-	align-self: center;
-
-	.bg_heading {
-		top: 0%;
-		left: -5%;
-	}
-
-	.heading {
-		text-align: center;
-
-		img {
-			bottom: -0.1em;
-			height: 15px;
-		}
-	}
+  @media (min-width: 768px) {
+    padding-left: 2.5rem; 
+    padding-right: 2.5rem;
+  }
 }
 
 .stepBox {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	margin-left: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto; 
+  max-width: 80rem; 
+  padding-bottom: 5rem; 
 }
 
 .step {
-	display: flex;
-	justify-content: space-between;
-	gap: 1em;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em; 
+  padding-top: 2.5rem; 
+
+  @media (min-width: 768px) {
+    padding-top: 10rem; 
+  }
+
+  @media (min-width: 576px) {
+    gap: 3em;
+  }
+  @media (min-width: 768px) {
+    gap: 0;
+  }
 }
+
 
 .label {
-	top: 40%;
-	display: flex;
-	flex-direction: row;
-	justify-content: start;
-	align-items: center;
-	gap: 0.5em;
+  position: sticky; 
+  top: 40%; 
+  display: flex;
+  flex-direction: row; 
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+  z-index: 40; 
+  align-self: flex-start; 
+  max-width: 20rem;
 
-	.point {
-		position: relative;
-		width: 25px;
-		aspect-ratio: 1/1;
-		background-color: rgba(255, 204, 0, 0.3);
-		border-radius: 50%;
+  @media (min-width: 1024px) {
+    max-width: 24rem; 
+  }
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 
-		&::before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 45%;
-			aspect-ratio: 1/1;
-			transform: translate(-50%, -50%);
-			background-color: $accent;
-			border-radius: 50%;
-		}
-	}
+  .point {
+    position: relative;
+    width: 25px;
+    aspect-ratio: 1/1;
+    background-color: rgba(255, 204, 0, 0.3);
+    border-radius: 50%;
 
-	.number {
-		color: $dark;
-		font-size: 1.5em;
-		font-weight: bold;
-	}
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 45%;
+      aspect-ratio: 1/1;
+      transform: translate(-50%, -50%);
+      background-color: $accent;
+      border-radius: 50%;
+    }
+  }
+
+  .number {
+    color: $dark;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
 }
 
+
+.content {
+  position: relative;
+  align-items: center;
+  padding-bottom: 20em;
+  min-height: 200px;
+  width: 100%; 
+
+  @media (min-width: 768px) {
+    padding-left: 1rem; 
+  }
+
+  .title {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  .image {
+    position: absolute;
+    bottom: 25%;
+    right: 0;
+    width: 80%;
+    max-width: 250px !important;
+    opacity: 0.2;
+  }
+}
+
+
 .track {
-	position: absolute;
-	left: 11.5px;
+  position: absolute;
+  left: 11.5px; 
+  top: 0;
+  overflow: hidden;
+  width: 2px; 
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  
 }
 
 .pathline {
-	background: $accent;
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 2px; 
+  background: linear-gradient(
+    to top,
+    darken(rgb(255, 204, 0), 0%) 0%,
+    #FFCC00 50%,
+    transparent 100%
+  );
+  border-radius: 9999px; 
 }
 
-.content {
-	position: relative;
-	align-items: center;
-	padding-bottom: 20em;
-	min-height: 200px;
 
-	.title {
-		margin-bottom: 0.5em;
-		font-weight: bold;
-		font-size: 1.3em;
-	}
-
-	.image {
-		position: absolute;
-		bottom: 25%;
-		right: 0;
-		width: 80%;
-		max-width: 250px !important;
-		opacity: 0.2;
-	}
-}
-
-@media (width >= 576px) {
-	.step {
-		gap: 3em;
-	}
-}
-
-@media (width >= 768px) {
-	.step {
-		gap: 0;
-	}
-}
-
-@media(width >= 1400px) { 
-	.stepBox {
-		margin-right: 10%;
-	}
+@media (min-width: 1400px) { 
+  .stepBox {
+    margin-right: 10%;
+  }
 }
