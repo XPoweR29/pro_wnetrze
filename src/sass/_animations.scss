@@ -36,6 +36,20 @@
 	}
 }
 
+@keyframes pulse-contact {
+	0% {
+		border: 1px solid $accent;
+		border-radius: 50%;
+		opacity: 0.17;
+		scale: 1;
+	}
+
+	100% {
+		opacity: 0;
+		scale: 3;
+	}
+}
+
 @keyframes slide-again {
 	0% {
 		transform: translateX(0);

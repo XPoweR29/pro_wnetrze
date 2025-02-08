@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Rubik_Dirt, Manrope, Rubik } from 'next/font/google';
-import '../sass/globals.scss';
 import { ContextProvider } from '../contexts/app.context';
 import Head from 'next/head';
 import { Header } from '@/components/Header/Header';
+import { Rubik_Dirt, Manrope, Rubik } from 'next/font/google';
+import '../sass/globals.scss';
 
 const manrope = Manrope({
 	subsets: ['latin'],

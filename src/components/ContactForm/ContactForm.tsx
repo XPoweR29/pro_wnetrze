@@ -5,7 +5,7 @@ import styles from './ContactForm.module.scss';
 import { ContactFormData, useContactForm } from '@/hooks/useContactForm';
 import icon_envelope from '../../assets/icons/btn_envelope.svg';
 
-const ContactForm: React.FC = () => {
+export const ContactForm = ({ className }: {className?: string;}) => {
 	const onSubmit = (data: ContactFormData) => {
 		console.log('Dane formularza:', data);
 		// Tutaj możesz wysłać dane do API Next.js, np. za pomocą fetch
@@ -14,7 +14,7 @@ const ContactForm: React.FC = () => {
 	const { register, submitHandler, errors } = useContactForm(onSubmit);
 
 	return (
-		<form onSubmit={submitHandler} className={styles.form}>
+		<form onSubmit={submitHandler} className={`${styles.form} ${className}`}>
 			<div className={styles.formGroup}>
 				<label htmlFor='name' className={`${styles.label} ${styles.srOnly}`}>
 					Imię:
@@ -110,5 +110,3 @@ const ContactForm: React.FC = () => {
 		</form>
 	);
 };
-
-export default ContactForm;

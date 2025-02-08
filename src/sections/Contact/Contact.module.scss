@@ -1,13 +1,30 @@
 @use '../../sass/common' as *;
 
 .contact {
-	padding: 7em 0;
+	position: relative;
+	padding-top: 10em;
+	padding-bottom: 8em;
+	background-image: url('../../assets/img/contact_bgImage.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
 	color: $white;
-	background-color: $dark;
 	overflow: hidden;
+	z-index: 1;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: $dark;
+		opacity: 80%;
+		z-index: -1;
+	}
 
 	.wrapper {
-		border: 1px solid green;
 		display: flex;
 		flex-direction: column;
 	}
@@ -23,7 +40,8 @@
 		}
 
 		.heading {
-			text-align: center;
+			max-width: 360px;
+			text-align: left;
 			color: $white;
 			z-index: 0;
 
@@ -35,15 +53,32 @@
 		}
 	}
 
+	.text {
+		margin-top: 2.5em;
+	}
+
+	.gridContainer{ 
+		border: 1px solid red;
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		grid-template-areas: 
+		"items"
+		"form"
+		"map";
+	}
+
 	.napContainer {
+		grid-area: "items";
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 3em;
-		margin-top: 3em;
+		margin-top: 5em;
 	}
 
 	.contactItem {
+		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -52,11 +87,126 @@
 		.icon {
 			width: 50px;
 		}
+
+		.iconContainer {
+			position: relative;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			transition: box-shadow 0.4s;
+			z-index: 1;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 50px;
+				height: 50px;
+				border: 1px solid $accent;
+				border-radius: 100%;
+				z-index: -1;
+				padding: 0;
+				opacity: 1;
+			}
+		}
+
+		.label {
+			position: relative;
+			letter-spacing: 0px;
+			transition: letter-spacing 0.5s;
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -0.2em;
+				left: 0;
+				height: 1px;
+				width: 0%;
+				background-color: $accent;
+				border-radius: 100%;
+				box-shadow: 0px -1px 10px 1px $accent;
+				opacity: 0.5;
+				transition: 0.3s;
+			}
+		}
+
+		&:hover {
+			.iconContainer {
+				box-shadow: 0px 0px 10px $accent;
+			}
+
+			.iconContainer::before {
+				animation: pulse-contact 0.7s linear forwards;
+			}
+
+			.label {
+				letter-spacing: 0.5px;
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.contactForm {
+		grid-area: "form";
+		margin-top: 5em;
+		width: 100%;
 	}
 
 	.map {
-		margin-top: 6em;
-		width: 100%;
-		aspect-ratio: 1/1;
+		// grid-area: "map";
+		// position: relative;
+		// left: 50%;
+		// transform: translateX(-50%);
+		// width: 100vw;
+		// margin-top: 5em;
+		// aspect-ratio: 1/1;
+		// border: none;
+
+		margin-top: 5em;
+		width: 100vw;
+		min-width: 340px;
+        max-height: 430px;
+		aspect-ratio: 2/1.5;
+		border: none;
+	}
+
+	.divider {
+		position: absolute;
+		top: -1px;
+		right: 0;
+		width: 50%;
+		height: 30px;
+		background-color: $white;
+		clip-path: polygon(100% 100%, 15% 100%, 0 0, 100% 0);
+	}
+}
+
+@media(width >= 992px) {
+	.contact {
+		.gridContainer {
+			grid-template-columns: 1fr, 1fr;
+			grid-template-areas: "items form";
+			grid-template-areas: "map form";
+		}
+
+		.napContainer{
+			width: 100%;
+			height: fit-content;
+		}
+
+		.map {
+			margin-top: 0;
+		}
+	}
+}
+
+@media(width >= 1200px) {
+	.contact {
+		.napContainer{
+			width: 100%;
+			margin-left: 30%;
+		}
 	}
 }
