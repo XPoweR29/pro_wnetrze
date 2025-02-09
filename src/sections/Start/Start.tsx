@@ -8,11 +8,14 @@ import Link from 'next/link';
 import social_img from '../../assets/icons/icon_social.svg';
 import instagram from '../../assets/icons/icon_instagram.svg';
 import arrow from '../../assets/icons/icon_arrow.svg';
-import divider from '../../assets/angled_divider.svg';
+import bgImg from '../../assets/img/home_img.jpg';
+import ParallaxImage from '@/components/ParallaxImage/ParallaxImage';
 
 export const Start = () => {
 	return (
 		<section className={styles.home} id='home'>
+			<ParallaxImage src={bgImg} speed={-0.7} className={styles.parallax} />
+
 			<Wrapper className={styles.wrapper}>
 				<h1 className={`${styles.heading} ${rubik.className}`}>
 					Kompleksowe remonty i wykończenia wnętrz
@@ -55,7 +58,8 @@ export const Start = () => {
 					</a>
 				</div>
 			</Wrapper>
-			<div className={styles.divider}/>
+
+			<div className={styles.divider} />
 		</section>
 	);
 };

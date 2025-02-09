@@ -4,13 +4,8 @@
 	position: relative;
 	padding-top: 10em;
 	padding-bottom: 10em;
-	background-image: url('../../assets/img/img_livingroom.jpg');
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
 	color: $white;
 	overflow: hidden;
-	z-index: 1;
 
 	&::before {
 		content: '';
@@ -20,8 +15,17 @@
 		height: 100%;
 		width: 100%;
 		background-color: $dark;
-		opacity: 80%;
+		opacity: 0.8;
 		z-index: -1;
+	}
+
+	.fixedBackground {
+		z-index: -2;
+	}
+
+	.wrapper {
+		position: relative;
+		z-index: 2;
 	}
 
 	.divider {

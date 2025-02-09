@@ -5,6 +5,8 @@ import { ContactContent } from '@/components/ContactContent/ContactContent';
 import { rubikDirt } from '@/app/layout';
 import underline from '../../assets/underline.svg';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
+import FixedBackground from '@/components/FixedBackground/FixedBackground';
+import bgImage from '../../assets/img/contact_bgImage.jpg';
 
 export const Contact = () => {
 	return (

@@ -7,10 +7,15 @@ import styles from './Portfolio.module.scss';
 import underline from '../../assets/underline.svg';
 import { galleryItems } from '@/data/galleryItems';
 import { Reviews } from '../Reviews/Reviews';
+import ParallaxImage from '@/components/ParallaxImage/ParallaxImage';
+import bgImg from '../../assets/img/img_livingroom.jpg';
+import { div } from 'motion/react-client';
+import FixedBackground from '@/components/FixedBackground/FixedBackground';
 
 export const Portfolio = () => {
 	return (
 		<section className={styles.portfolio} id='portfolio'>
+			<FixedBackground src={bgImg} className={styles.fixedBackground}/>
 			<div className={styles.divider} />
 			<div className={styles.divider} />
 
@@ -34,20 +39,20 @@ export const Portfolio = () => {
 					wnętrza, które spełniają oczekiwania naszych klientów.
 				</div>
 
-                <div className={styles.gallery}>
-                    {galleryItems.map(({title, description, imgUrl, imgAlt}, index) => (
-                        <GalleryCard
-                            title={title}
-                            description={description}
-                            imgUrl={imgUrl}
-                            imgAlt={imgAlt}
-                            number={`0${index+1}.`}
-                            key={index}
-                        />
-                    ))}
-                </div>
+				<div className={styles.gallery}>
+					{galleryItems.map(({ title, description, imgUrl, imgAlt }, index) => (
+						<GalleryCard
+							title={title}
+							description={description}
+							imgUrl={imgUrl}
+							imgAlt={imgAlt}
+							number={`0${index + 1}.`}
+							key={index}
+						/>
+					))}
+				</div>
 
-				<Reviews className={styles.commentSection}/>
+				<Reviews className={styles.commentSection} />
 			</Wrapper>
 		</section>
 	);
