@@ -31,13 +31,21 @@
 		width: 50%;
 		height: 30px;
 		background-color: $white;
-		clip-path: polygon(100% 100%, 15% 100%, 0 0, 100% 0);
+		clip-path: polygon(100% 100%, 30px 100%, 0 0, 100% 0);
 
 		&:nth-last-of-type(2) {
 			top: auto;
 			bottom: -1px;
-			clip-path: polygon(100% 0, 15% 0, 0 100%, 100% 100%);
+			clip-path: polygon(100% 0, 30px 0, 0 100%, 100% 100%);
+		}
 
+		@media (width >= 992px) {
+			height: 40px;
+			clip-path: polygon(100% 100%, 40px 100%, 0 0, 100% 0);
+
+			&:nth-last-of-type(2) {
+				clip-path: polygon(100% 0, 40px 0, 0 100%, 100% 100%);
+			}
 		}
 	}
 
@@ -77,12 +85,12 @@
 		gap: 4em;
 	}
 
-	.commentSection{ 
+	.commentSection {
 		margin-top: 10em;
 	}
 }
 
-@media(width>=992px) {
+@media (width>=992px) {
 	.portfolio {
 		.text {
 			max-width: 70%;
@@ -90,7 +98,7 @@
 	}
 }
 
-@media(width>=1400px) {
+@media (width>=1400px) {
 	.portfolio {
 		.text {
 			max-width: 60%;

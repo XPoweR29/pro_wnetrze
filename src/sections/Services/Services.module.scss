@@ -1,11 +1,13 @@
 @use '../../sass/common' as *;
 
 .services {
+	position: relative;
 	padding-top: 10em;
 	padding-bottom: 5em;
 	color: $black;
 	background-color: $white;
 	overflow: hidden;
+	z-index: 2;
 
 	.wrapper {
 		display: flex;

@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { Header } from '@/components/Header/Header';
 import { Rubik_Dirt, Manrope, Rubik } from 'next/font/google';
 import '../sass/globals.scss';
+import { Footer } from '@/components/Footer/Footer';
 
 const manrope = Manrope({
 	subsets: ['latin'],
@@ -38,7 +39,7 @@ export default function RootLayout({
 				<ContextProvider>
 					<Header />
 					{children}
-					{/* <Footer/> */}
+					<Footer/>
 				</ContextProvider>
 			</body>
 		</html>

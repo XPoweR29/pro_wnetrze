@@ -1,11 +1,13 @@
 @use '../../sass/common' as *;
 
 .process {
+	position: relative;
 	padding-top: 10em;
 	padding-bottom: 5em;
 	color: $black;
 	background-color: $white;
 	overflow-x: clip;
+	z-index: 2;
 
 	.headingContainer {
 		@include sectionHeading;

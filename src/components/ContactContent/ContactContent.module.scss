@@ -1,0 +1,158 @@
+@use '../../sass/common' as *;
+
+.content {
+    padding-top: 5em;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+        max-width: 1140px;
+	}
+
+	.napContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2.5em;
+		min-width: 320px;
+	}
+
+	.contactItem {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+
+		.icon {
+			width: 45px;
+		}
+
+		.iconContainer {
+			position: relative;
+			height: 45px;
+			width: 45px;
+			border-radius: 50%;
+			transition: box-shadow 0.4s;
+			z-index: 1;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 45px;
+				height: 45px;
+				border: 1px solid $accent;
+				border-radius: 100%;
+				z-index: -1;
+				padding: 0;
+				opacity: 1;
+			}
+		}
+
+		.label {
+			position: relative;
+			letter-spacing: 0px;
+			transition: letter-spacing 0.5s;
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -0.2em;
+				left: 0;
+				height: 1px;
+				width: 0%;
+				background-color: $accent;
+				border-radius: 100%;
+				box-shadow: 0px -1px 10px 1px $accent;
+				opacity: 0.5;
+				transition: 0.3s;
+			}
+		}
+
+		&:hover {
+			.iconContainer {
+				box-shadow: 0px 0px 10px $accent;
+			}
+
+			.iconContainer::before {
+				animation: pulse-contact 0.7s linear forwards;
+			}
+
+			.label {
+				letter-spacing: 0.5px;
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.map {
+		margin-top: 5em;
+		width: 100vw;
+		min-width: 340px;
+		max-height: 430px;
+		aspect-ratio: 2/1.5;
+		filter: saturate(60%);
+		border: none;
+		order: 3;
+	}
+
+	.contactForm {
+		order: 2;
+		margin-top: 5em;
+	}
+
+}
+
+@media (width >= 992px) {
+	.content {
+
+		.wrapper {
+			flex-direction: row;
+			gap: 4em;
+		}
+
+		.flexContainer {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+            width: 50%;
+            max-width: 650px;
+		}
+
+		.napContainer {
+			margin-top: 0;
+		}
+
+
+
+		.map {
+			width: 90%;
+            aspect-ratio: 200/140;
+		}
+
+		.contactForm {
+			margin-top: auto;
+		}
+	}
+}
+
+@media (width >= 1200px) {
+	.content {
+		.napContainer {
+			width: 100%;
+            margin-left: 20%;
+		}
+
+        .map {
+            width: 90%;
+            align-self: flex-start;
+            aspect-ratio: 200/120;
+        }
+	}
+}

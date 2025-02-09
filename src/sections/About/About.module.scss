@@ -1,11 +1,13 @@
 @use '../../sass/common' as *;
 
 .about {
+	position: relative;
 	padding-top: 7em;
 	padding-bottom: 5em;
 	background-color: $white;
 	color: $black;
 	overflow: hidden;
+	z-index: 2;
 
 	.wrapper {
 		position: relative;

@@ -2,7 +2,7 @@
 
 .home {
 	position: relative;
-	height: 100svh;
+	height: calc(100svh + 30px);
 	min-height: 660px;
 	background-image: url('../../assets/img/home_img.jpg');
 	background-position: center;
@@ -100,7 +100,7 @@
 
 	.socialLink {
 		position: absolute;
-		bottom: 3em;
+		bottom: calc(3em + 30px);
 		right: 4em;
 		width: fit-content;
 		display: flex;
@@ -128,9 +128,20 @@
 		bottom: 0;
 		left: 0;
 		width: 50%;
-		height: 30px; 
+		height: 30px;
 		background-color: $white;
-		clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0 100%);
+
+		@media (width >= 992px) {
+			height: 40px;
+			clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 100%, 0 100%);
+		}
+	}
+}
+
+@media (width >= 992px) {
+	.home {
+		height: calc(100svh + 40px);
 	}
 }
 

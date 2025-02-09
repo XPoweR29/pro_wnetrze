@@ -4,7 +4,7 @@ import { About } from '@/sections/About/About';
 import { Services } from '@/sections/Services/Services';
 import { Portfolio } from '@/sections/Portfolio/Portfolio';
 import { Process } from '@/sections/Process/Process';
-import Contact from '@/sections/Contact/Contact';
+import { Contact } from '@/sections/Contact/Contact';
 
 export default function Home() {
 	return (

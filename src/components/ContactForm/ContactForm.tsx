@@ -5,7 +5,7 @@ import styles from './ContactForm.module.scss';
 import { ContactFormData, useContactForm } from '@/hooks/useContactForm';
 import icon_envelope from '../../assets/icons/btn_envelope.svg';
 
-export const ContactForm = ({ className }: {className?: string;}) => {
+export const ContactForm = ({ className }: { className?: string }) => {
 	const onSubmit = (data: ContactFormData) => {
 		console.log('Dane formularza:', data);
 		// Tutaj możesz wysłać dane do API Next.js, np. za pomocą fetch
@@ -26,7 +26,14 @@ export const ContactForm = ({ className }: {className?: string;}) => {
 					placeholder='Imię'
 					{...register('name', { required: 'Imię jest wymagane' })}
 				/>
-				{errors.name && <p className={styles.error}>{errors.name.message}</p>}
+				{
+					<p
+						className={`${styles.error} ${
+							errors.name && styles['error--active']
+						}`}>
+						{errors.name?.message}
+					</p>
+				}
 			</div>
 
 			<div className={styles.formGroup}>
@@ -46,7 +53,14 @@ export const ContactForm = ({ className }: {className?: string;}) => {
 						},
 					})}
 				/>
-				{errors.email && <p className={styles.error}>{errors.email.message}</p>}
+				{
+					<p
+						className={`${styles.error} ${
+							errors.email && styles['error--active']
+						}`}>
+						{errors.email?.message}
+					</p>
+				}
 			</div>
 
 			<div className={styles.formGroup}>
@@ -60,6 +74,7 @@ export const ContactForm = ({ className }: {className?: string;}) => {
 					placeholder='Telefon (opcjonalnie)'
 					{...register('phone')}
 				/>
+				{<p className={`${styles.error} ${errors.phone&&styles['error--active']}`}>{errors.phone?.message}</p>}
 			</div>
 
 			<div className={styles.formGroup}>
@@ -72,9 +87,14 @@ export const ContactForm = ({ className }: {className?: string;}) => {
 					placeholder='Wiadomość'
 					{...register('message', { required: 'Wiadomość jest wymagana' })}
 				/>
-				{errors.message && (
-					<p className={styles.error}>{errors.message.message}</p>
-				)}
+				{
+					<p
+						className={`${styles.error} ${
+							errors.message && styles['error--active']
+						}`}>
+						{errors.message?.message}
+					</p>
+				}
 			</div>
 
 			<div className={styles.formGroup}>
@@ -99,13 +119,24 @@ export const ContactForm = ({ className }: {className?: string;}) => {
 						.
 					</p>
 				</label>
-				{errors.privacyPolicy && (
-					<p className={styles.error}>{errors.privacyPolicy.message}</p>
-				)}
+				{
+					<p
+						className={`${styles.error} ${
+							errors.privacyPolicy && styles['error--active']
+						}`}>
+						{errors.privacyPolicy?.message}
+					</p>
+				}
 			</div>
 
 			<button type='submit' className={styles.submitButton}>
-				Wyślij <img className={styles.icon} src={icon_envelope.src} alt="" aria-hidden/>
+				Wyślij{' '}
+				<img
+					className={styles.icon}
+					src={icon_envelope.src}
+					alt=''
+					aria-hidden
+				/>
 			</button>
 		</form>
 	);
