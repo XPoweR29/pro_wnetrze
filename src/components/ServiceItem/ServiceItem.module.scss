@@ -31,7 +31,7 @@
         flex-direction: row;
         gap: 3em;
 
-        &:nth-child(even) {
+        &.even {
             flex-direction: row-reverse;
         }
 

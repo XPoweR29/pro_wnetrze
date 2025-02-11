@@ -21,7 +21,7 @@ export const timelineSteps: TimelineEntry[] = [
 	{
 		title: 'Konsultacja i wycena',
 		content:
-			'Podczas konsultacji omówimy szczegóły Twojego projektu. Przeanalizujemy Twoje potrzeby, doradzimy najlepsze rozwiązania i przedstawimy szczegółową, darmową wycenę. Dzięki temu dokładnie wiesz, czego się spodziewać, zarówno pod względem kosztów, jak i harmonogramu prac.',
+			'Podczas konsultacji omówimy szczegóły Twojego projektu. Przeanalizujemy Twoje potrzeby, doradzimy najlepsze rozwiązania i przedstawimy szczegółową, wycenę. Dzięki temu dokładnie wiesz, czego się spodziewać, zarówno pod względem kosztów, jak i harmonogramu prac.',
 		image: consult,
 	},
 	{

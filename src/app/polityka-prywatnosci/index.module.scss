@@ -1,0 +1,58 @@
+@use '../../sass/common' as *;
+
+.policy {
+  padding-top: 10em; 
+  padding-bottom: 7em;
+  background-color: $white;
+  color: $dark;
+  line-height: 1.6;
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    margin: 2em 0 1em;
+    text-align: center;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  ul {
+    margin: 1em 0;
+    padding-left: 2em;
+    
+    li {
+      margin-bottom: 0.5em;
+      line-height: 1.4;
+      
+      // Opcjonalnie, jeśli chcesz wyróżnić listy zagnieżdżone
+      ul {
+        margin-top: 0.5em;
+      }
+    }
+  }
+
+  a {
+    color: royalblue; 
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  // Dodatkowe style dla wyróżnienia niektórych elementów
+  strong {
+    font-weight: bold;
+  }
+
+  small {
+    font-size: 0.8em;
+  }
+}

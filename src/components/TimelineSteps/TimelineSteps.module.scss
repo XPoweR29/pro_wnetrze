@@ -88,36 +88,6 @@
   }
 }
 
-
-.content {
-  position: relative;
-  align-items: center;
-  padding-bottom: 20em;
-  min-height: 200px;
-  width: 100%; 
-
-  @media (min-width: 768px) {
-    padding-left: 1rem; 
-  }
-
-  .title {
-    margin-bottom: 0.5em;
-    font-weight: bold;
-    font-size: 1.3em;
-  }
-
-  .image {
-    position: absolute;
-    bottom: 25%;
-    right: 0;
-    width: 80%;
-    max-width: 250px !important;
-    opacity: 0.2;
-    pointer-events: none;
-  }
-}
-
-
 .track {
   position: absolute;
   left: 11.5px; 

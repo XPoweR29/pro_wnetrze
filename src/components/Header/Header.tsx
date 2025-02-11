@@ -12,6 +12,7 @@ import { useBreakpoints } from '@/hooks/useBreakpoint';
 import { LinkBar } from '@/components/LinkBar/LinkBar';
 import { MobileMenu } from '@/components/MobileMenu/MobileMenu';
 import { AppContext } from '@/contexts/app.context';
+import { usePathname } from 'next/navigation';
 
 export const Header = () => {
 	const [showNav, setShowNav] = useState(true);
@@ -19,6 +20,7 @@ export const Header = () => {
 	const [bgColor, setBgColor] = useState<string>('transparent');
 	const { breakpoint } = useBreakpoints();
 	const { setMobileMenuShown } = useContext(AppContext)!;
+	const pathname = usePathname();
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -33,7 +35,12 @@ export const Header = () => {
 
 			if (currentScrollPos > 100) {
 				setBgColor('#2E2E2E');
-			} else setBgColor('transparent');
+			} else if (
+				pathname !== '/polityka-prywatnosci' &&
+				currentScrollPos <= 100
+			) {
+				setBgColor('transparent');
+			}
 
 			setPrevScrollPos(currentScrollPos);
 		};
@@ -42,12 +49,19 @@ export const Header = () => {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, [prevScrollPos]);
 
+	useEffect(() => {
+		if (pathname === '/polityka-prywatnosci') {
+			setBgColor('#2E2E2E');
+			console.log('polityka psia mać');
+		} else setBgColor('transparent');
+	}, [pathname]);
+
 	return (
 		<header
 			className={`${styles.header} ${!showNav ? styles['header--hidden'] : ''}`}
 			style={{ backgroundColor: bgColor }}>
 			<Wrapper className={styles.wrapper}>
-				<Link href='/'>
+				<Link href='/#start'>
 					<Image className={styles.logo} src={logo} alt='logo' />
 				</Link>
 

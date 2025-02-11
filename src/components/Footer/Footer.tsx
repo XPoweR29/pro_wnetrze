@@ -14,7 +14,7 @@ export const Footer = () => {
 			<Wrapper className={styles.wrapper}>
 				<div className={styles.flexContainer}>
 					<div className={styles.col1}>
-						<Link href={'/'} className={styles.logo}>
+						<Link href={'/#start'} className={styles.logo}>
 							<Image src={logo} alt='PROWnętrze' />
 						</Link>
 
@@ -62,9 +62,7 @@ export const Footer = () => {
 						<p>
 							<Link
 								href='/polityka-prywatnosci'
-								className={styles.link}
-								target='_blank'
-								rel='noopener noreferrer'>
+								className={styles.link}>
 								Polityka Prywatności
 							</Link>
 						</p>

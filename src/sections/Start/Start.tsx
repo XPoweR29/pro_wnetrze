@@ -13,7 +13,7 @@ import ParallaxImage from '@/components/ParallaxImage/ParallaxImage';
 
 export const Start = () => {
 	return (
-		<section className={styles.home} id='home'>
+		<section className={styles.home} id='start'>
 			<ParallaxImage src={bgImg} speed={-0.7} className={styles.parallax} />
 
 			<Wrapper className={styles.wrapper}>

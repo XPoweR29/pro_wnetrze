@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './ContactForm.module.scss';
 import { ContactFormData, useContactForm } from '@/hooks/useContactForm';
 import icon_envelope from '../../assets/icons/btn_envelope.svg';
+import Link from 'next/link';
 
 export const ContactForm = ({ className }: { className?: string }) => {
 	const onSubmit = (data: ContactFormData) => {
@@ -74,7 +75,14 @@ export const ContactForm = ({ className }: { className?: string }) => {
 					placeholder='Telefon (opcjonalnie)'
 					{...register('phone')}
 				/>
-				{<p className={`${styles.error} ${errors.phone&&styles['error--active']}`}>{errors.phone?.message}</p>}
+				{
+					<p
+						className={`${styles.error} ${
+							errors.phone && styles['error--active']
+						}`}>
+						{errors.phone?.message}
+					</p>
+				}
 			</div>
 
 			<div className={styles.formGroup}>
@@ -110,13 +118,7 @@ export const ContactForm = ({ className }: { className?: string }) => {
 					<p>
 						{' '}
 						Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z{' '}
-						<a
-							href='/polityka-prywatnosci'
-							target='_blank'
-							rel='noopener noreferrer'>
-							Polityką Prywatności
-						</a>
-						.
+						<Link href='/polityka-prywatnosci'>Polityką Prywatności</Link>.
 					</p>
 				</label>
 				{

@@ -7,6 +7,7 @@ import { serviceList } from '@/data/serviceList';
 import styles from './Services.module.scss';
 import underline from '../../assets/underline.svg';
 import { BrandCarousel } from '@/components/BrandCarousel/BrandCarousel';
+import { AnimateServiceItem } from '@/components/AnimateServiceitem/AnimateServiceItem';
 
 export const Services = () => {
 	return (
@@ -36,14 +37,19 @@ export const Services = () => {
 
 				<div className={styles.serviceContainer}>
 					{serviceList.map((item, index) => (
-						<ServiceItem title={item.title} image={item.image} alt={item.alt} key={index}>
-							{item.children}
-						</ServiceItem>
+							<AnimateServiceItem
+								title={item.title}
+								image={item.image}
+								alt={item.alt}
+								isEven={index%2===0}
+								key={index}>
+								{item.children}
+							</AnimateServiceItem>
 					))}
 				</div>
 			</Wrapper>
 
-			<BrandCarousel/>
+			<BrandCarousel />
 		</section>
 	);
 };

@@ -8,9 +8,10 @@ export const ServiceItem = ({
 	children,
 	image,
 	alt,
+	isEven
 }: ServiceItem) => {
 	return (
-		<div className={`${className} ${styles.item}`}>
+		<div className={`${className} ${styles.item} ${isEven?styles.even:''}`}>
 			<Image className={styles.photo} src={image} alt={alt} />
 			<div className={styles.flexContainer}>
 				<h3 className={styles.title}>{title}</h3>

@@ -1,5 +1,5 @@
 'use client';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import styles from './MobileMenu.module.scss';
 import Link from 'next/link';
@@ -12,6 +12,12 @@ import { navLinks } from '@/data/navLinks';
 export const MobileMenu = () => {
 	const { breakpoint } = useBreakpoints();
 	const { mobileMenuShown, setMobileMenuShown } = useContext(AppContext)!;
+
+	useEffect(() => {
+		if(mobileMenuShown){
+			document.body.style.overflow = 'hidden';
+		} else document.body.style.overflow = 'visible';
+	}, [mobileMenuShown]);
 
 	const handleClick = () => {
 		setMobileMenuShown(false);
@@ -28,15 +34,17 @@ export const MobileMenu = () => {
 					inert={!mobileMenuShown}
 					aria-label='Menu główne'>
 					<ul>
-						{navLinks.map(({href, label, onClick}, index) => (
-							<li onClick={handleClick} key={index}
-							style={{animationDelay: `${index*0.07}s`}}>
+						{navLinks.map(({ href, label, onClick }, index) => (
+							<li
+								onClick={handleClick}
+								key={index}
+								style={{ animationDelay: `${index * 0.07}s` }}>
 								<Link href={href}>{label}</Link>
 							</li>
 						))}
 					</ul>
 
-					<Image src={tools_img} className={styles.image} alt='' aria-hidden/>
+					<Image src={tools_img} className={styles.image} alt='' aria-hidden />
 				</nav>
 			) : null}
 		</>

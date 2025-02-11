@@ -5,6 +5,7 @@ import { Services } from '@/sections/Services/Services';
 import { Portfolio } from '@/sections/Portfolio/Portfolio';
 import { Process } from '@/sections/Process/Process';
 import { Contact } from '@/sections/Contact/Contact';
+import Loading from './loading';
 
 export default function Home() {
 	return (

@@ -40,7 +40,7 @@ export const About = () => {
 						stawiamy na pierwszym miejscu.
 					</p>
 					<p className={styles.text}>
-						Działamy głównie na terenie powiatu Żywieckiego i okolic, oferując
+						Działamy głównie na terenie powiatu Żywieckiego, okolic Bielska-Białej, Andrychowa i Krakowa, oferując
 						klientom indywidualnym oraz firmom niezawodne wsparcie przy
 						realizacji różnorodnych projektów. Naszym celem jest nie tylko
 						dostarczanie usług najwyższej jakości, ale również budowanie{' '}
@@ -50,16 +50,16 @@ export const About = () => {
 					</p>
 
 					<div className={styles.features}>
-						<FeatureItem icon={icon_list.src}>
+						<FeatureItem icon={icon_list.src} delay={0}>
 							Zgodnie z Twoimi oczekiwaniami
 						</FeatureItem>
-						<FeatureItem icon={icon_hands.src}>
+						<FeatureItem icon={icon_hands.src} delay={0.2}>
 							Zaufanie i współpraca
 						</FeatureItem>
-						<FeatureItem icon={icon_calendar.src}>
+						<FeatureItem icon={icon_calendar.src} delay={0.4}>
 							Terminowość i niezawodność
 						</FeatureItem>
-						<FeatureItem icon={icon_quality.src}>
+						<FeatureItem icon={icon_quality.src} delay={0.6}>
 							Najwyższa jakość usług
 						</FeatureItem>
 					</div>

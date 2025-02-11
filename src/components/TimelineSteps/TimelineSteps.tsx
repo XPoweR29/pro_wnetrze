@@ -1,11 +1,13 @@
 'use client';
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion, useInView } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 import { Rubik, Rubik_Dirt } from 'next/font/google';
 import Image from 'next/image';
 import { timelineSteps } from '@/data/timelineSteps';
 
 import styles from './TimelineSteps.module.scss';
+import { StepContent } from '../StepContent/StepContent';
+import { title } from 'process';
 
 const rubik = Rubik({
 	subsets: ['latin'],
@@ -21,6 +23,7 @@ export const TimelineSteps = ({ className }: { className?: string }) => {
 	const ref = useRef<HTMLDivElement>(null);
 	const containerRef = useRef<HTMLDivElement>(null);
 	const [height, setHeight] = useState(0);
+
 
 	useEffect(() => {
 		if (ref.current) {
@@ -39,47 +42,37 @@ export const TimelineSteps = ({ className }: { className?: string }) => {
 
 	return (
 		<div
-			className={`${styles.container} ${className} w-full bg-white dark:bg-neutral-950 font-sans md:px-10`}
+			className={`${styles.container} ${className}`}
 			ref={containerRef}>
 			<div
 				ref={ref}
-				className={`${styles.stepBox} relative max-w-7xl mx-auto pb-20`}>
+				className={styles.stepBox}>
 				{timelineSteps.map((item, index) => (
 					<div
 						key={index}
-						className={`${styles.step} flex justify-start pt-10 md:pt-40 md:gap-10`}>
+						className={styles.step}>
 						<div
-							className={`${styles.label} sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full`}>
+							className={styles.label}>
 							<div className={styles.point}></div>
 							<p className={`${styles.number} ${rubik.className}`}>{`0${
 								index + 1
 							}.`}</p>
 						</div>
 
-						<div
-							className={`${styles.content} relative pl-20 pr-4 md:pl-4 w-full`}>
-							<Image
-								className={styles.image}
-								src={item.image}
-								alt=''
-								aria-hidden
-							/>
-							<h3 className={styles.title}>{item.title}</h3>
-							<p className={styles.describe}>{item.content}</p>
-						</div>
+						<StepContent title={item.title} content={item.content} image={item.image}/>
 					</div>
 				))}
 				<div
 					style={{
 						height: height + 'px',
 					}}
-					className={`${styles.track} absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]`}>
+					className={styles.track}>
 					<motion.div
 						style={{
 							height: heightTransform,
 							opacity: opacityTransform,
 						}}
-						className={`${styles.pathline} absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full`}
+						className={styles.pathline}
 					/>
 				</div>
 			</div>

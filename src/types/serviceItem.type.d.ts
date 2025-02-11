@@ -4,4 +4,5 @@ interface ServiceItem {
 	children: React.ReactNode;
 	image?: string | StaticImageData;
 	alt: string;
+	isEven?: boolean;
 }

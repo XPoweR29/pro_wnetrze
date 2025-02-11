@@ -36,12 +36,16 @@
 	.heading {
 		font-size: 2.6em;
 		text-transform: uppercase;
+		animation: fade-in-bottom 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+		animation-delay: 0.5s;
 	}
 
 	.text {
 		margin-top: 1.5em;
 		font-size: 1.15em;
 		font-weight: 500;
+		animation: fade-in-bottom 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+		animation-delay: 0.5s;
 	}
 
 	.buttons {
@@ -56,6 +60,8 @@
 			position: relative;
 			@include mainButton;
 			transition: box-shadow 0.3s;
+			animation: fade-in-left 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+			animation-delay: 0.8s;
 
 			&::before {
 				content: '';
@@ -85,6 +91,8 @@
 			color: $accent;
 			overflow: hidden;
 			z-index: 1;
+			animation: fade-in-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+			animation-delay: 0.8s;
 
 			.icon {
 				width: 1.7em;
@@ -120,6 +128,8 @@
 			right: 0;
 			padding: 0.5em;
 			transform: translateX(65%) translateY(40%);
+			animation: shake-bottom 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
+			animation-delay: 4s;
 		}
 	}
 
