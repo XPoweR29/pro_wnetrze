@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState, FC } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import styles from './ParallaxImage.module.scss';
+import Loading from '@/app/loading';
+import { useAppContext } from '@/hooks/useAppContext';
 
 interface ParallaxImageProps {
 	src: string | StaticImageData;
@@ -16,6 +18,7 @@ const ParallaxImage: FC<ParallaxImageProps> = ({
 }) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const [offset, setOffset] = useState(0);
+	const { isBgLoaded, setIsBgLoaded } = useAppContext();
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -29,23 +32,44 @@ const ParallaxImage: FC<ParallaxImageProps> = ({
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, [speed]);
 
+	useEffect(() => {
+		const handleLoad = () => {
+			setIsBgLoaded(true);
+		}
+
+		if (document.readyState === 'complete') {
+			handleLoad();
+		} else {
+			window.addEventListener('load', handleLoad);
+		}
+
+		return () => window.removeEventListener('load', handleLoad);
+	},[]);
+
+
 	return (
-		<div
-			ref={containerRef}
-			className={`${styles.container} ${className || ''}`}>
-			<div
-				className={styles.parallax}
-				style={{ transform: `translateY(${offset}px)` }}>
-				<Image
-					src={src}
-					alt=''
-					aria-hidden
-					fill
-					style={{ objectFit: 'cover' }}
-					priority
-				/>
-			</div>
-		</div>
+		<>
+			{!isBgLoaded ? (
+				<Loading />
+			) : (
+				<div
+					ref={containerRef}
+					className={`${styles.container} ${className || ''}`}>
+					<div
+						className={styles.parallax}
+						style={{ transform: `translateY(${offset}px)` }}>
+						<Image
+							src={src}
+							alt=''
+							aria-hidden
+							fill
+							style={{ objectFit: 'cover' }}
+							priority
+						/>
+					</div>
+				</div>
+			)}
+		</>
 	);
 };
 

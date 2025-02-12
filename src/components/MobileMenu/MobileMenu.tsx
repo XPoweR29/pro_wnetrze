@@ -34,7 +34,7 @@ export const MobileMenu = () => {
 					inert={!mobileMenuShown}
 					aria-label='Menu główne'>
 					<ul>
-						{navLinks.map(({ href, label, onClick }, index) => (
+						{navLinks.map(({ href, label }, index) => (
 							<li
 								onClick={handleClick}
 								key={index}

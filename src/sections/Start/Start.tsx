@@ -9,6 +9,7 @@ import social_img from '../../assets/icons/icon_social.svg';
 import instagram from '../../assets/icons/icon_instagram.svg';
 import arrow from '../../assets/icons/icon_arrow.svg';
 import bgImg from '../../assets/img/home_img.jpg';
+
 import ParallaxImage from '@/components/ParallaxImage/ParallaxImage';
 
 export const Start = () => {

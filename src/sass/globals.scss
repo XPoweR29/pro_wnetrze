@@ -9,6 +9,7 @@ html {
 body {
 	font-size: 1.4rem;
 	min-width: 340px;
+	background-color: $dark;
 
 	@media (min-width: 400px) {
 		font-size: 1.6rem;
@@ -24,17 +25,55 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: $white;
+	background-color: $dark;
 	z-index: 1000;
 
 	.loader {
-		width: 85px;
-		height: 35px;
-		--g1: conic-gradient(from 90deg at 3px 3px, #0000 90deg, #2e2e2e 0);
-		--g2: conic-gradient(from -90deg at 22px 22px, #0000 90deg, #2e2e2e 0);
-		background: var(--g1), var(--g1), var(--g1), var(--g2), var(--g2), var(--g2);
-		background-size: 25px 25px;
-		background-repeat: no-repeat;
-		animation: loader 1s infinite alternate;
+		width: 48px;
+		height: 48px;
+		border: 5px solid;
+		border-color: $accent transparent;
+		border-radius: 50%;
+		display: inline-block;
+		box-sizing: border-box;
+		animation: loader 1s linear infinite;
+	}
+}
+
+.notFoundPage {
+	height: 100svh;
+	min-height: 660px;
+	padding-top: 10em;
+	color: $white;
+	background: linear-gradient($dark, black);
+	box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.3);
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.image {
+		width: 60%;
+		max-width: 250px;
+		margin-bottom: 1em;
+	}
+
+	.heading {
+		font-size: 2em;
+		text-align: center;
+	}
+
+	.text {
+		margin-top: 2em;
+		font-size: 1em;
+		text-align: center;
+	}
+
+	a {
+		margin-top: 1em;
+		color: $accent;
+		text-decoration: underline;
 	}
 }

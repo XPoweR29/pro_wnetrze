@@ -7,9 +7,7 @@ import styles from './Portfolio.module.scss';
 import underline from '../../assets/underline.svg';
 import { galleryItems } from '@/data/galleryItems';
 import { Reviews } from '../Reviews/Reviews';
-import ParallaxImage from '@/components/ParallaxImage/ParallaxImage';
 import bgImg from '../../assets/img/img_livingroom.jpg';
-import { div } from 'motion/react-client';
 import FixedBackground from '@/components/FixedBackground/FixedBackground';
 
 export const Portfolio = () => {

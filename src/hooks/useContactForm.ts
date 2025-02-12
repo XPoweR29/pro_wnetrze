@@ -14,10 +14,11 @@ export const useContactForm = (onSubmit: SubmitHandler<ContactFormData>) => {
 	const {
 		register,
 		handleSubmit,
+		reset,
 		formState: { errors },
 	} = useForm<ContactFormData>();
 
 	const submitHandler = handleSubmit(onSubmit);
 
-	return { register, submitHandler, errors };
+	return { register, submitHandler, errors, reset };
 };

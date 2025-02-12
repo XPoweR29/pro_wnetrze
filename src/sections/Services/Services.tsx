@@ -1,7 +1,6 @@
 import React from 'react';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
 import { rubikDirt } from '@/app/layout';
-import { ServiceItem } from '@/components/ServiceItem/ServiceItem';
 import { serviceList } from '@/data/serviceList';
 
 import styles from './Services.module.scss';

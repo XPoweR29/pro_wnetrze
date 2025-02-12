@@ -1,22 +1,15 @@
 'use client';
-import { useScroll, useTransform, motion, useInView } from 'framer-motion';
+import { useScroll, useTransform, motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
-import { Rubik, Rubik_Dirt } from 'next/font/google';
-import Image from 'next/image';
+import { Rubik } from 'next/font/google';
 import { timelineSteps } from '@/data/timelineSteps';
 
 import styles from './TimelineSteps.module.scss';
 import { StepContent } from '../StepContent/StepContent';
-import { title } from 'process';
 
 const rubik = Rubik({
 	subsets: ['latin'],
 	weight: ['400', '700', '900'],
-});
-
-const rubikDirt = Rubik_Dirt({
-	subsets: ['latin'],
-	weight: ['400'],
 });
 
 export const TimelineSteps = ({ className }: { className?: string }) => {

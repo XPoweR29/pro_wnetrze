@@ -2,8 +2,6 @@
 
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 import styles from './BrandCarousel.module.scss';

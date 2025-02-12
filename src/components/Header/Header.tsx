@@ -52,7 +52,6 @@ export const Header = () => {
 	useEffect(() => {
 		if (pathname === '/polityka-prywatnosci') {
 			setBgColor('#2E2E2E');
-			console.log('polityka psia mać');
 		} else setBgColor('transparent');
 	}, [pathname]);
 

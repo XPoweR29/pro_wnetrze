@@ -1,18 +1,57 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './ContactForm.module.scss';
 import { ContactFormData, useContactForm } from '@/hooks/useContactForm';
 import icon_envelope from '../../assets/icons/btn_envelope.svg';
 import Link from 'next/link';
+import toast from 'react-hot-toast';
 
 export const ContactForm = ({ className }: { className?: string }) => {
-	const onSubmit = (data: ContactFormData) => {
-		console.log('Dane formularza:', data);
-		// Tutaj możesz wysłać dane do API Next.js, np. za pomocą fetch
+	const [isSubmiting, setIsSubmiting] = useState<boolean>(false);
+
+	const onSubmit = async (data: ContactFormData) => {
+		try {
+			setIsSubmiting(true);
+			const formData = new FormData();
+			formData.append('name', data.name);
+			formData.append('email', data.email);
+			if (data.phone) formData.append('phone', data.phone);
+			formData.append('message', data.message);
+			formData.append('sender', 'kontakt@pawelzydek.dev');
+			formData.append('recipient', 'pawelzydek29@gmail.com');
+
+			const response = await fetch(
+				'https://backendapp-gamma.vercel.app/api/send-mail',
+				{
+					method: 'POST',
+					body: formData,
+				}
+			);
+
+			if (response.ok) {
+				toast.success('Twoja wiadomość została wysłana', {
+					duration: 5000,
+					position: 'top-center',
+				});
+
+				reset();
+			}
+		} catch (err) {
+			toast.error(
+				'Błąd podczas wysyłania wiadomości. Spróbuj ponownie później',
+				{
+					duration: 5000,
+					position: 'top-right',
+				}
+			);
+			console.error(err);
+		} finally {
+			setIsSubmiting(false)
+		}
 	};
 
-	const { register, submitHandler, errors } = useContactForm(onSubmit);
+	const { register, submitHandler, errors, reset } = useContactForm(onSubmit);
 
 	return (
 		<form onSubmit={submitHandler} className={`${styles.form} ${className}`}>
@@ -25,7 +64,17 @@ export const ContactForm = ({ className }: { className?: string }) => {
 					type='text'
 					className={styles.input}
 					placeholder='Imię'
-					{...register('name', { required: 'Imię jest wymagane' })}
+					{...register('name', {
+						required: 'Imię jest wymagane',
+						pattern: {
+							value: /^(?!\s*$).+/,
+							message: 'Imię musi mieć conajmniej 3 znaki',
+						},
+						minLength: {
+							value: 3,
+							message: 'Imię musi mieć conajmniej 3 znaki',
+						},
+					})}
 				/>
 				{
 					<p
@@ -73,7 +122,12 @@ export const ContactForm = ({ className }: { className?: string }) => {
 					type='tel'
 					className={styles.input}
 					placeholder='Telefon (opcjonalnie)'
-					{...register('phone')}
+					{...register('phone', {
+						pattern: {
+							value: /^(?=(?:.*\d){9,})[0-9\-\s\(\)]+$/,
+							message: 'Nieprawidłowy numer telefonu',
+						},
+					})}
 				/>
 				{
 					<p
@@ -93,7 +147,13 @@ export const ContactForm = ({ className }: { className?: string }) => {
 					id='message'
 					className={styles.textarea}
 					placeholder='Wiadomość'
-					{...register('message', { required: 'Wiadomość jest wymagana' })}
+					{...register('message', {
+						required: 'Wiadomość jest wymagana',
+						pattern: {
+							value: /^(?!\s*$).+/,
+							message: 'Wiadomość nie może być pusta',
+						},
+					})}
 				/>
 				{
 					<p
@@ -131,7 +191,7 @@ export const ContactForm = ({ className }: { className?: string }) => {
 				}
 			</div>
 
-			<button type='submit' className={styles.submitButton}>
+			<button type='submit' className={styles.submitButton} disabled={isSubmiting}>
 				Wyślij{' '}
 				<img
 					className={styles.icon}

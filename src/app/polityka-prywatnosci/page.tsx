@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 	title: 'Polityka prywatności | PROWnętrze',
 	description:
 		'Zapoznaj się z naszą polityką prywatności, która określa zasady przetwarzania danych osobowych oraz ochrony prywatności w PROWnętrze.',
-	icons: [{rel: 'icon', url: '/favicon.ico'}],
 };
 
 const PrivacyPolicy = () => {
@@ -34,8 +33,8 @@ const PrivacyPolicy = () => {
 				<ul>
 					<li>
 						<p>
-							<strong>Serwis</strong> - serwis internetowy "PROWnętrze"
-							działający pod adresem{' '}
+							<strong>Serwis</strong> - serwis internetowy
+							&quot;PROWnętrze&quot; działający pod adresem{' '}
 							<Link href='/'>https://www.pro-wnetrze.pl</Link>
 						</p>
 					</li>
@@ -50,8 +49,8 @@ const PrivacyPolicy = () => {
 						<p>
 							<strong>Administrator Serwisu / Danych</strong> - Administratorem
 							Serwisu oraz Administratorem Danych (dalej Administrator) jest
-							firma "PROWnętrze", prowadząca działalność pod adresem: ul.
-							Parkowa 43, 34-321 Kocierz Moszczanicki, o nadanym numerze
+							firma &quot;PROWnętrze&quot;, prowadząca działalność pod adresem:
+							ul. Parkowa 43, 34-321 Kocierz Moszczanicki, o nadanym numerze
 							identyfikacji podatkowej (NIP): 553 259 57 98, świadcząca usługi
 							drogą elektroniczną za pośrednictwem Serwisu
 						</p>
@@ -164,8 +163,9 @@ const PrivacyPolicy = () => {
 						<p>
 							<strong>Anonimizacja</strong> - Anonimizacja danych to
 							nieodwracalny proces operacji na danych, który niszczy / nadpisuje
-							"dane osobowe" uniemożliwiając identyfikację, lub powiązanie
-							danego rekordu z konkretnym użytkownikiem lub osobą fizyczną.
+							&quot;dane osobowe&quot; uniemożliwiając identyfikację, lub
+							powiązanie danego rekordu z konkretnym użytkownikiem lub osobą
+							fizyczną.
 						</p>
 					</li>
 				</ul>
@@ -465,12 +465,6 @@ const PrivacyPolicy = () => {
 						</ul>
 					</li>
 				</ul>
-				<p>
-					Usługi świadczone przez podmioty trzecie są poza kontrolą
-					Administratora. Podmioty te mogą w każdej chwili zmienić swoje warunki
-					świadczenia usług, polityki prywatności, cel przetwarzania danych oraz
-					sposoby wykorzystywania plików cookie.
-				</p>
 				<h2 style={{ textAlign: 'center' }}>§8 Rodzaje gromadzonych danych</h2>
 				<p>
 					Serwis gromadzi dane o Użytkownikach. Część danych jest gromadzona
@@ -580,18 +574,9 @@ const PrivacyPolicy = () => {
 					</strong>
 				</p>
 				<ul>
-					<li>
-						Dane anonimiwe (bez danych osobowych) będą przekazywane poza Unię
-						Europejską.
-					</li>
-					<li>
-						Dane anonimiwe (bez danych osobowych) nie będą wykorzystywane do
-						zautomatyzowanego podejmowania decyzji (profilowania).
-					</li>
-					<li>
-						Dane anonimiwe (bez danych osobowych) nie będą odsprzedawane
-						podmiotom trzecim.
-					</li>
+					<li>Prowadzenie statystyk</li>
+					<li>Remarketing</li>
+					<li>Zapewnienia prawnie uzasadnionego interesu Administratora</li>
 				</ul>
 				<h2 style={{ textAlign: 'center' }}>
 					§11 Podstawy prawne przetwarzania danych osobowych
@@ -666,7 +651,7 @@ const PrivacyPolicy = () => {
 					Administratora. W takiej sytuacji Administrator będzie przechowywał
 					wskazane dane, od czasu żądania ich usunięcia przez Użytkownika, nie
 					dłużej niż przez okres 3 lat w przypadku naruszenia lub podejrzenia
-					naruszenia zapisów regulaminu serwisu przez Użytkownika
+					naruszenia zapisów regulaminu przez Użytkownika
 				</p>
 				<p>
 					<strong>
@@ -727,7 +712,7 @@ const PrivacyPolicy = () => {
 							<br />
 							Użytkownikom przysługuje prawo ograniczenia przetwarzania danych
 							osobowych w przypadkach wskazanych w art. 18 RODO, m.in.
-							kwestionowania prawidłowość danych osobowych, realizowane na
+							kwestionowania prawidłowości danych osobowych, realizowane na
 							żądanie złożone do Administratora
 						</p>
 					</li>

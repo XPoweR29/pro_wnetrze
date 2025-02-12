@@ -3,9 +3,10 @@
 import React, { ReactNode, createContext, useEffect, useState } from 'react';
 import { AppContextType } from '../types/appContext.type';
 
-export const AppContext = createContext<AppContextType | null>(null);
+export const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const ContextProvider = ({ children }: { children: ReactNode }) => {
+	const [isBgLoaded, setIsBgLoaded] = useState(false);
 	const [mobileMenuShown, setMobileMenuShown] = useState(false);
 	const [breakpoint, setBreakpoint] = useState<Breakpoints>({
 		sm: false,
@@ -38,6 +39,8 @@ export const ContextProvider = ({ children }: { children: ReactNode }) => {
 		breakpoint,
 		mobileMenuShown,
 		setMobileMenuShown,
+		isBgLoaded, 
+		setIsBgLoaded
 	};
 
 	return (
