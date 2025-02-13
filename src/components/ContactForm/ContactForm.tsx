@@ -19,25 +19,25 @@ export const ContactForm = ({ className }: { className?: string }) => {
 			formData.append('email', data.email);
 			if (data.phone) formData.append('phone', data.phone);
 			formData.append('message', data.message);
-			formData.append('sender', 'kontakt@pawelzydek.dev');
-			formData.append('recipient', 'pawelzydek29@gmail.com');
+			formData.append('sender', 'pawelzydek29@gmail.com');
+			formData.append('recipient', 'prownetrze@tutamail.com');
 
-			// const response = await fetch(
-			// 	'https://backendapp-gamma.vercel.app/api/send-mail',
-			// 	{
-			// 		method: 'POST',
-			// 		body: formData,
-			// 	}
-			// );
+			const response = await fetch(
+				'https://backendapp-gamma.vercel.app/api/send-mail',
+				{
+					method: 'POST',
+					body: formData,
+				}
+			);
 
-			// if (response.ok) {
-			// 	toast.success('Twoja wiadomość została wysłana', {
-			// 		duration: 5000,
-			// 		position: 'top-center',
-			// 	});
+			if (response.ok) {
+				toast.success('Twoja wiadomość została wysłana', {
+					duration: 5000,
+					position: 'top-center',
+				});
 
-			// 	reset();
-			// }
+				reset();
+			}
 		} catch (err) {
 			toast.error(
 				'Błąd podczas wysyłania wiadomości. Spróbuj ponownie później',
@@ -52,7 +52,7 @@ export const ContactForm = ({ className }: { className?: string }) => {
 		}
 	};
 
-	const { register, submitHandler, errors } = useContactForm(onSubmit);
+	const { register, submitHandler, errors, reset } = useContactForm(onSubmit);
 
 	return (
 		<form onSubmit={submitHandler} className={`${styles.form} ${className}`}>
