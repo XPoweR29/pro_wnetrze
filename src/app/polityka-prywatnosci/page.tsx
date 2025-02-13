@@ -8,6 +8,14 @@ export const metadata: Metadata = {
 	title: 'Polityka prywatności | PROWnętrze',
 	description:
 		'Zapoznaj się z naszą polityką prywatności, która określa zasady przetwarzania danych osobowych oraz ochrony prywatności w PROWnętrze.',
+	openGraph: {
+		title: 'Polityka prywatności | PROWnętrze',
+		description: 'Zapoznaj się z naszą polityką prywatności, która określa zasady przetwarzania danych osobowych oraz ochrony prywatności w PROWnętrze.',
+		url: 'https://pro-wnetrze.pl/polityka-prywatnosci',
+	},
+		alternates: {
+			canonical: 'http://www.pro-wnetrze.pl/polityka-prywatnosci'
+		}
 };
 
 const PrivacyPolicy = () => {

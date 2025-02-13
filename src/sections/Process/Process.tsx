@@ -5,6 +5,7 @@ import { rubikDirt } from '@/app/layout';
 import styles from './Process.module.scss';
 import underline from '../../assets/underline.svg';
 import { TimelineSteps } from '@/components/TimelineSteps/TimelineSteps';
+import Image from 'next/image';
 
 export const Process = () => {
 	return (
@@ -18,7 +19,7 @@ export const Process = () => {
 						Jak wygląda{' '}
 						<span className={styles.word}>
 							współpraca
-							<img src={underline.src} alt='' aria-hidden />
+							<Image src={underline} alt='' aria-hidden />
 						</span>
 						{''} z nami?
 					</h2>

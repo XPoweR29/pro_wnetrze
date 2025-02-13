@@ -1,7 +1,13 @@
 {
 	"redirects": [
 		{
-			"source": "https://www.pro-wnetrze.pl/:path*",
+			"source": "/:path*",
+			"has": [
+				{
+					"type": "host",
+					"value": "www.pro-wnetrze.pl"
+				}
+			],
 			"destination": "https://pro-wnetrze.pl/:path*",
 			"permanent": true
 		}

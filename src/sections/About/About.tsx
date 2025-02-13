@@ -25,7 +25,7 @@ export const About = () => {
 							Poznaj naszą {''}
 							<span className={styles.word}>
 								markę
-								<img src={underline.src} alt='' aria-hidden />
+								<Image src={underline} alt='' aria-hidden />
 							</span>
 						</h2>
 					</div>
@@ -50,16 +50,16 @@ export const About = () => {
 					</p>
 
 					<div className={styles.features}>
-						<FeatureItem icon={icon_list.src} delay={0}>
+						<FeatureItem icon={icon_list} delay={0}>
 							Zgodnie z Twoimi oczekiwaniami
 						</FeatureItem>
-						<FeatureItem icon={icon_hands.src} delay={0.2}>
+						<FeatureItem icon={icon_hands} delay={0.2}>
 							Zaufanie i współpraca
 						</FeatureItem>
-						<FeatureItem icon={icon_calendar.src} delay={0.4}>
+						<FeatureItem icon={icon_calendar} delay={0.4}>
 							Terminowość i niezawodność
 						</FeatureItem>
-						<FeatureItem icon={icon_quality.src} delay={0.6}>
+						<FeatureItem icon={icon_quality} delay={0.6}>
 							Najwyższa jakość usług
 						</FeatureItem>
 					</div>

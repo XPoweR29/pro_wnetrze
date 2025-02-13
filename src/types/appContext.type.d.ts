@@ -1,5 +1,5 @@
 
-interface AppContextType {
+export interface AppContextType {
 	breakpoint: Breakpoints;
 
 	isBgLoaded: boolean;

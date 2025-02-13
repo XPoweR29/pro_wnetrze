@@ -30,8 +30,9 @@ const FixedBackground: FC<FixedBackgroundProps> = ({ src, className, margin=0 })
 
 		return () => {
 			observer.unobserve(parentElement);
+			observer.disconnect();
 		};
-	}, []);
+	}, [margin]);
 
 	return (
 		<div

@@ -9,6 +9,7 @@ import { galleryItems } from '@/data/galleryItems';
 import { Reviews } from '../Reviews/Reviews';
 import bgImg from '../../assets/img/img_livingroom.jpg';
 import FixedBackground from '@/components/FixedBackground/FixedBackground';
+import Image from 'next/image';
 
 export const Portfolio = () => {
 	return (
@@ -26,7 +27,7 @@ export const Portfolio = () => {
 						Zobacz, co możemy dla {''}
 						<span className={styles.word}>
 							Ciebie
-							<img src={underline.src} alt='' aria-hidden />
+							<Image src={underline} alt='' aria-hidden />
 						</span>
 						{''} zrobić
 					</h2>

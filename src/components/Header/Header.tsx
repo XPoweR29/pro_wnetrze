@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BurgerBtn } from '@/components/BurgerBtn/BurgerBtn';
@@ -11,48 +11,45 @@ import logo from '../../assets/logo.svg';
 import { useBreakpoints } from '@/hooks/useBreakpoint';
 import { LinkBar } from '@/components/LinkBar/LinkBar';
 import { MobileMenu } from '@/components/MobileMenu/MobileMenu';
-import { AppContext } from '@/contexts/app.context';
 import { usePathname } from 'next/navigation';
+import { useAppContext } from '@/hooks/useAppContext';
 
 export const Header = () => {
-	const [showNav, setShowNav] = useState(true);
-	const [prevScrollPos, setPrevScrollPos] = useState(0);
-	const [bgColor, setBgColor] = useState<string>('transparent');
 	const { breakpoint } = useBreakpoints();
-	const { setMobileMenuShown } = useContext(AppContext)!;
+	const { setMobileMenuShown } = useAppContext();
 	const pathname = usePathname();
+	const [showNav, setShowNav] = useState(true);
+	const [bgColor, setBgColor] = useState<string>('transparent');
+	const prevScrollPos = useRef(0);
 
 	useEffect(() => {
 		const handleScroll = () => {
 			const currentScrollPos = window.scrollY;
 
-			if (prevScrollPos > currentScrollPos) {
+			if (prevScrollPos.current > currentScrollPos) {
 				setShowNav(true);
 			} else {
 				setShowNav(false);
 				setMobileMenuShown(false);
 			}
 
-			if (currentScrollPos > 100) {
+			if (currentScrollPos > 100 || pathname === '/polityka-prywatnosci') {
 				setBgColor('#2E2E2E');
-			} else if (
-				pathname !== '/polityka-prywatnosci' &&
-				currentScrollPos <= 100
-			) {
+			} else {
 				setBgColor('transparent');
 			}
 
-			setPrevScrollPos(currentScrollPos);
+			prevScrollPos.current = currentScrollPos;
 		};
+
+		if (pathname === '/polityka-prywatnosci') {
+			setBgColor('#2E2E2E');
+		} else {
+			setBgColor('transparent');
+		}
 
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, [prevScrollPos]);
-
-	useEffect(() => {
-		if (pathname === '/polityka-prywatnosci') {
-			setBgColor('#2E2E2E');
-		} else setBgColor('transparent');
 	}, [pathname]);
 
 	return (

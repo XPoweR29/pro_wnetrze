@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from './Reviews.module.scss';
 import underline from '../../assets/underline.svg';
 import { ReviewSwiper } from '@/components/ReviewSwiper/ReviewSwiper';
+import Image from 'next/image';
 
 export const Reviews = ({ className }: { className?: string }) => {
 	return (
@@ -12,7 +13,7 @@ export const Reviews = ({ className }: { className?: string }) => {
 				<h2 className={styles.heading}>
 					<span className={styles.word}>
 						Dlaczego
-						<img src={underline.src} alt='' aria-hidden />
+						<Image src={underline} alt='' aria-hidden />
 					</span>
 					{''} warto nam zaufać?
 				</h2>

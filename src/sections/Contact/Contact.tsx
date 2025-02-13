@@ -5,6 +5,7 @@ import { ContactContent } from '@/components/ContactContent/ContactContent';
 import { rubikDirt } from '@/app/layout';
 import underline from '../../assets/underline.svg';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
+import Image from 'next/image';
 
 export const Contact = () => {
 	return (
@@ -19,7 +20,7 @@ export const Contact = () => {
 						Chętnie odpowiemy na{' '}
 						<span className={styles.word}>
 							Twoje
-							<img src={underline.src} alt='' aria-hidden />
+							<Image src={underline} alt='' aria-hidden />
 						</span>
 						{''} pytania
 					</h2>

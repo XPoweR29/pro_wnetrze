@@ -10,6 +10,7 @@ import 'swiper/css';
 
 import reviewJson from '../../data/reviews.json';
 import icon_quote from '../../assets/icons/icon_quote.svg';
+import Image from 'next/image';
 
 export const ReviewSwiper = ({ className }: { className?: string }) => {
 	const { breakpoint } = useBreakpoints();
@@ -28,7 +29,7 @@ export const ReviewSwiper = ({ className }: { className?: string }) => {
 			{reviews.map(({ author, comment }, index) => (
 				<SwiperSlide key={index}>
 					<div className={styles.reviewCard}>
-						<img src={icon_quote.src} alt='' aria-hidden />
+						<Image src={icon_quote} alt='' aria-hidden />
 						<p className={styles.comment}>{comment}</p>
 						<p className={styles.author}>{`- ${author}`}</p>
 					</div>

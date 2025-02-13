@@ -6,6 +6,7 @@ import { ContactFormData, useContactForm } from '@/hooks/useContactForm';
 import icon_envelope from '../../assets/icons/btn_envelope.svg';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
+import Image from 'next/image';
 
 export const ContactForm = ({ className }: { className?: string }) => {
 	const [isSubmiting, setIsSubmiting] = useState<boolean>(false);
@@ -21,22 +22,22 @@ export const ContactForm = ({ className }: { className?: string }) => {
 			formData.append('sender', 'kontakt@pawelzydek.dev');
 			formData.append('recipient', 'pawelzydek29@gmail.com');
 
-			const response = await fetch(
-				'https://backendapp-gamma.vercel.app/api/send-mail',
-				{
-					method: 'POST',
-					body: formData,
-				}
-			);
+			// const response = await fetch(
+			// 	'https://backendapp-gamma.vercel.app/api/send-mail',
+			// 	{
+			// 		method: 'POST',
+			// 		body: formData,
+			// 	}
+			// );
 
-			if (response.ok) {
-				toast.success('Twoja wiadomość została wysłana', {
-					duration: 5000,
-					position: 'top-center',
-				});
+			// if (response.ok) {
+			// 	toast.success('Twoja wiadomość została wysłana', {
+			// 		duration: 5000,
+			// 		position: 'top-center',
+			// 	});
 
-				reset();
-			}
+			// 	reset();
+			// }
 		} catch (err) {
 			toast.error(
 				'Błąd podczas wysyłania wiadomości. Spróbuj ponownie później',
@@ -51,7 +52,7 @@ export const ContactForm = ({ className }: { className?: string }) => {
 		}
 	};
 
-	const { register, submitHandler, errors, reset } = useContactForm(onSubmit);
+	const { register, submitHandler, errors } = useContactForm(onSubmit);
 
 	return (
 		<form onSubmit={submitHandler} className={`${styles.form} ${className}`}>
@@ -193,9 +194,9 @@ export const ContactForm = ({ className }: { className?: string }) => {
 
 			<button type='submit' className={styles.submitButton} disabled={isSubmiting}>
 				Wyślij{' '}
-				<img
+				<Image
 					className={styles.icon}
-					src={icon_envelope.src}
+					src={icon_envelope}
 					alt=''
 					aria-hidden
 				/>

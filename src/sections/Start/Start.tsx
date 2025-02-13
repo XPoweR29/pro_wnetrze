@@ -40,9 +40,9 @@ export const Start = () => {
 				</div>
 
 				<div className={styles.socialLink}>
-					<img
+					<Image
 						className={styles.writing}
-						src={social_img.src}
+						src={social_img}
 						alt=''
 						aria-hidden
 					/>
@@ -51,9 +51,9 @@ export const Start = () => {
 						className={styles.link}
 						target='_blank'
 						rel='noopener noreferrer'>
-						<img
+						<Image
 							className={styles.icon}
-							src={instagram.src}
+							src={instagram}
 							alt='link do instagrama'
 						/>
 					</a>

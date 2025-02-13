@@ -7,6 +7,7 @@ import styles from './Services.module.scss';
 import underline from '../../assets/underline.svg';
 import { BrandCarousel } from '@/components/BrandCarousel/BrandCarousel';
 import { AnimateServiceItem } from '@/components/AnimateServiceitem/AnimateServiceItem';
+import Image from 'next/image';
 
 export const Services = () => {
 	return (
@@ -19,7 +20,7 @@ export const Services = () => {
 					<h2 className={styles.heading}>
 						<span className={styles.word}>
 							Profesjonalne
-							<img src={underline.src} alt='' aria-hidden />
+							<Image src={underline} alt='' aria-hidden />
 						</span>
 						{''} usługi remontowe i wykończeniowe
 					</h2>

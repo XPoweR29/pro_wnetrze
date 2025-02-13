@@ -3,9 +3,10 @@
 import React, { useRef } from 'react';
 import styles from './FeatureItem.module.scss';
 import { useInView } from 'framer-motion';
+import Image, { StaticImageData } from 'next/image';
 
 interface Props {
-	icon: string;
+	icon: string | StaticImageData;
 	children: React.ReactNode;
 	delay?: number;
 }
@@ -16,7 +17,7 @@ export const FeatureItem = ({ icon, children, delay=0 }: Props) => {
 
 	return (
 		<div className={`${styles.feature} ${isInView?styles['slide-right']:''}`} ref={itemRef} style={{animationDelay: `${delay}s`}}>
-			<img src={icon} alt='' aria-hidden />
+			<Image src={icon} alt='' aria-hidden />
 			<p>{children}</p>
 		</div>
 	);

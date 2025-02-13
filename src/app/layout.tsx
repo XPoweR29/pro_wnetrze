@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
 import { ContextProvider } from '../contexts/app.context';
-import Head from 'next/head';
 import { Header } from '@/components/Header/Header';
 import { Rubik_Dirt, Manrope, Rubik } from 'next/font/google';
 import '../sass/globals.scss';
 import { Footer } from '@/components/Footer/Footer';
-import SEO from '@/components/SEO/SEO';
 
 const manrope = Manrope({
 	subsets: ['latin'],
@@ -24,21 +22,36 @@ export const metadata: Metadata = {
 	title:
 		'Profesjonalne usługi remontowo-budowlane Żywiec | PROWnętrze - firma budowlana',
 	description:
-		'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz w Żywcu oraz regionach Krakowa, Andrychowa i Bielska. Zaufaj naszym fachowcom i ciesz się nową jakością przestrzeni!',
+		'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz w Żywcu oraz regionach Krakowa, Andrychowa i Bielska. Zaufaj naszym fachowcom!',
 	icons: [{ rel: 'icon', url: '/favicon.ico' }],
+	openGraph: {
+		title:
+			'Profesjonalne usługi remontowo-budowlane Żywiec | PROWnętrze - firma budowlana',
+		description:
+			'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz w Żywcu oraz regionach Krakowa, Andrychowa i Bielska. Zaufaj naszym fachowcom i ciesz się nową jakością przestrzeni!',
+		url: 'https://pro-wnetrze.pl',
+		siteName: 'PROWnętrze',
+		images: [
+			{
+				url: 'https://pro-wnetrze.pl/logo.png',
+				width: 1200,
+				height: 630,
+				alt: 'PROWnętrze Logo',
+			},
+		],
+		type: 'website',
+		locale: 'pl_PL',
+	},
+	alternates: {
+		canonical: 'https://www.pro-wnetrze.pl'
+	}
 };
 
 export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang='pl'>
-			<SEO page='home' />
-			<Head>
-				<link rel='canonical' href='https://pro-wnetrze.pl' />
-				<link href='dist/hamburgers.css' rel='stylesheet'></link>
-			</Head>
-
+		<html lang='pl-PL'>
 			<body className={manrope.className}>
 				<ContextProvider>
 					<Header />
