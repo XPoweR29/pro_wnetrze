@@ -17,10 +17,10 @@ export const ContactForm = ({ className }: { className?: string }) => {
 			const formData = new FormData();
 			formData.append('name', data.name);
 			formData.append('email', data.email);
-			if (data.phone) formData.append('phone', data.phone);
+			if (data.phone) formData.append('phone', `+48${data.phone}`);
 			formData.append('message', data.message);
-			formData.append('sender', 'kontakt@webcraft-studio.pl');
-			formData.append('recipient', 'pawelzydek29@gmail.com');
+			formData.append('sender', 'kontakt@pro-wnetrze.pl');
+			formData.append('recipient', 'prownetrze.zywiec@gmail.com');
 
 			const response = await fetch(
 				'https://backendapp-gamma.vercel.app/api/send-mail',
@@ -48,7 +48,7 @@ export const ContactForm = ({ className }: { className?: string }) => {
 			);
 			console.error(err);
 		} finally {
-			setIsSubmiting(false)
+			setIsSubmiting(false);
 		}
 	};
 
@@ -124,9 +124,13 @@ export const ContactForm = ({ className }: { className?: string }) => {
 					className={styles.input}
 					placeholder='Telefon (opcjonalnie)'
 					{...register('phone', {
-						pattern: {
-							value: /^(?=(?:.*\d){9,})[0-9\-\s\(\)]+$/,
-							message: 'Nieprawidłowy numer telefonu',
+						validate: {
+							onlyDigits: (value) =>
+								/^\d+$/.test(value!) ||
+								'Wprowadź tylko cyfry',
+							nineDigits: (value) =>
+								value!.length === 9 ||
+								'Numer telefonu musi mieć dokładnie 9 cyfr',
 						},
 					})}
 				/>
@@ -192,14 +196,12 @@ export const ContactForm = ({ className }: { className?: string }) => {
 				}
 			</div>
 
-			<button type='submit' className={styles.submitButton} disabled={isSubmiting}>
+			<button
+				type='submit'
+				className={styles.submitButton}
+				disabled={isSubmiting}>
 				Wyślij{' '}
-				<Image
-					className={styles.icon}
-					src={icon_envelope}
-					alt=''
-					aria-hidden
-				/>
+				<Image className={styles.icon} src={icon_envelope} alt='' aria-hidden />
 			</button>
 		</form>
 	);
