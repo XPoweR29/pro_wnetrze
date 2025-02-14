@@ -4,6 +4,7 @@ import { Header } from '@/components/Header/Header';
 import { Rubik_Dirt, Manrope, Rubik } from 'next/font/google';
 import '../sass/globals.scss';
 import { Footer } from '@/components/Footer/Footer';
+import { businessSchema } from '@/data/schema';
 
 const manrope = Manrope({
 	subsets: ['latin'],
@@ -51,14 +52,23 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang='pl-PL'>
-			<body className={manrope.className}>
-				<ContextProvider>
-					<Header />
-					{children}
-					<Footer />
-				</ContextProvider>
-			</body>
-		</html>
+		<>
+			<html lang='pl-PL'>
+				<head>
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+					/>
+				</head>
+
+				<body className={manrope.className}>
+					<ContextProvider>
+						<Header />
+						{children}
+						<Footer />
+					</ContextProvider>
+				</body>
+			</html>
+		</>
 	);
 }
