@@ -19,8 +19,8 @@ export const ContactForm = ({ className }: { className?: string }) => {
 			formData.append('email', data.email);
 			if (data.phone) formData.append('phone', data.phone);
 			formData.append('message', data.message);
-			formData.append('sender', 'pawelzydek29@gmail.com');
-			formData.append('recipient', 'prownetrze@tutamail.com');
+			formData.append('sender', 'kontakt@webcraft-studio.pl');
+			formData.append('recipient', 'pawelzydek29@gmail.com');
 
 			const response = await fetch(
 				'https://backendapp-gamma.vercel.app/api/send-mail',

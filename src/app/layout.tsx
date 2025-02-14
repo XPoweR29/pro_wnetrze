@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 		locale: 'pl_PL',
 	},
 	alternates: {
-		canonical: 'https://www.pro-wnetrze.pl'
+		canonical: 'https://pro-wnetrze.pl'
 	}
 };
 

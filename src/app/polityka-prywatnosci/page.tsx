@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 		url: 'https://pro-wnetrze.pl/polityka-prywatnosci',
 	},
 		alternates: {
-			canonical: 'http://www.pro-wnetrze.pl/polityka-prywatnosci'
+			canonical: 'http://pro-wnetrze.pl/polityka-prywatnosci'
 		}
 };
 

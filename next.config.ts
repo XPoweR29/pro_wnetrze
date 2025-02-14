@@ -14,11 +14,11 @@ const nextConfig: NextConfig = {
 				has: [
 					{
 						type: 'host',
-						value: 'pro-wnetrze.pl',
+						value: 'www.pro-wnetrze.pl',
 					},
 				],
 				permanent: true,
-				destination: 'https://www.pro-wnetrze.pl/:path*',
+				destination: 'https://pro-wnetrze.pl/:path*',
 			},
 		];
 	},
