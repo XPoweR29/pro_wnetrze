@@ -5,6 +5,7 @@ import { Rubik_Dirt, Manrope, Rubik } from 'next/font/google';
 import '../sass/globals.scss';
 import { Footer } from '@/components/Footer/Footer';
 import { businessSchema } from '@/data/schema';
+import Script from 'next/script';
 
 const manrope = Manrope({
 	subsets: ['latin'],
@@ -44,8 +45,8 @@ export const metadata: Metadata = {
 		locale: 'pl_PL',
 	},
 	alternates: {
-		canonical: 'https://pro-wnetrze.pl'
-	}
+		canonical: 'https://pro-wnetrze.pl',
+	},
 };
 
 export default function RootLayout({
@@ -55,6 +56,18 @@ export default function RootLayout({
 		<>
 			<html lang='pl-PL'>
 				<head>
+					<Script
+						async
+						src='https://www.googletagmanager.com/gtag/js?id=G-0YM4R3T4P6'
+					/>
+					<Script id='gtag-init'>
+						{`
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){window.dataLayer.push(arguments);}
+							gtag('js', new Date());
+							gtag('config', 'G-0YM4R3T4P6');
+        				`}
+					</Script>
 					<script
 						type='application/ld+json'
 						dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
