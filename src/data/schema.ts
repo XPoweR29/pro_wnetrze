@@ -1,6 +1,6 @@
 export const businessSchema = {
 	'@context': 'https://schema.org',
-	'@type': 'ConstructionBusiness',
+	'@type': 'HomeAndConstructionBusiness',
 	name: 'PROWnętrze',
 	alternateName:
 		'PROWnętrze - Firma budowlana Żywiec | usługi remontowo-budowlane',
@@ -47,64 +47,60 @@ export const businessSchema = {
 		{ '@type': 'City', name: 'Kęty' },
 		{ '@type': 'City', name: 'Bielsko-Biała' },
 	],
-	makesOffer: {
-		'@type': 'OfferCatalog',
-		name: 'Oferta usług remontowo-budowlanych',
-		itemListElement: [
-			{
-				'@type': 'Offer',
-				itemOffered: {
-					'@type': 'Service',
-					name: 'Kompleksowe wykończenia wnętrz',
-					description:
-						'Kompleksowe wykończenia wnętrz obejmujące wszystkie etapy prac wykończeniowych.',
-				},
+	makesOffer: [
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'Kompleksowe wykończenia wnętrz',
+				description:
+					'Kompleksowe wykończenia wnętrz obejmujące wszystkie etapy prac wykończeniowych.',
 			},
-			{
-				'@type': 'Offer',
-				itemOffered: {
-					'@type': 'Service',
-					name: 'Gładzie gipsowe i montaż płyt GK',
-					description:
-						'Wykonujemy gładzie gipsowe oraz montaż płyt GK, gwarantując idealną powierzchnię pod dalsze prace wykończeniowe.',
-				},
+		},
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'Gładzie gipsowe i montaż płyt GK',
+				description:
+					'Wykonujemy gładzie gipsowe oraz montaż płyt GK, gwarantując idealną powierzchnię pod dalsze prace wykończeniowe.',
 			},
-			{
-				'@type': 'Offer',
-				itemOffered: {
-					'@type': 'Service',
-					name: 'Malowanie i dekoracje ścian (tapetowanie)',
-					description:
-						'Profesjonalne malowanie, dekoracje ścian oraz tapetowanie, dostosowane do indywidualnych potrzeb klienta.',
-				},
+		},
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'Malowanie i dekoracje ścian (tapetowanie)',
+				description:
+					'Profesjonalne malowanie, dekoracje ścian oraz tapetowanie, dostosowane do indywidualnych potrzeb klienta.',
 			},
-			{
-				'@type': 'Offer',
-				itemOffered: {
-					'@type': 'Service',
-					name: 'Tapety z włókna szklanego',
-					description:
-						'Instalacja tapet z włókna szklanego, które są trwałe i łatwe do utrzymania w czystości.',
-				},
+		},
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'Tapety z włókna szklanego',
+				description:
+					'Instalacja tapet z włókna szklanego, które są trwałe i łatwe do utrzymania w czystości.',
 			},
-			{
-				'@type': 'Offer',
-				itemOffered: {
-					'@type': 'Service',
-					name: 'Układanie podłóg i paneli',
-					description:
-						'Profesjonalne układanie podłóg oraz paneli, gwarantujące estetyczny i trwały efekt.',
-				},
+		},
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'Układanie podłóg i paneli',
+				description:
+					'Profesjonalne układanie podłóg oraz paneli, gwarantujące estetyczny i trwały efekt.',
 			},
-			{
-				'@type': 'Offer',
-				itemOffered: {
-					'@type': 'Service',
-					name: 'Kafelkowanie i remonty łazienek',
-					description:
-						'Kompleksowe usługi kafelkowania i remontów łazienek, zapewniające nowoczesne i funkcjonalne rozwiązania.',
-				},
+		},
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'Kafelkowanie i remonty łazienek',
+				description:
+					'Kompleksowe usługi kafelkowania i remontów łazienek, zapewniające nowoczesne i funkcjonalne rozwiązania.',
 			},
-		],
-	},
+		},
+	],
 };
