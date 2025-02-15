@@ -25,7 +25,6 @@ export const metadata: Metadata = {
 		'Kompleksowe usługi remontowo-budowlane Żywiec | PROWnętrze - firma budowlana',
 	description:
 		'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz w Żywcu oraz regionach Krakowa, Andrychowa i Bielska. Zaufaj naszym fachowcom!',
-	icons: [{ rel: 'icon', url: '/favicon.ico' }],
 	openGraph: {
 		title:
 			'Kompleksowe usługi remontowo-budowlane Żywiec | PROWnętrze - firma budowlana',
