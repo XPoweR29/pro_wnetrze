@@ -56,16 +56,25 @@ export default function RootLayout({
 		<>
 			<html lang='pl-PL'>
 				<head>
+					<link
+						rel='preload'
+						as='video'
+						href='/video-bg.mp4'
+						type='video/mp4'
+					/>
 					<Script
 						async
 						src='https://www.googletagmanager.com/gtag/js?id=G-0YM4R3T4P6'
 					/>
-					<Script id='gtag-init'>
+					<Script id='gtag-init' strategy='afterInteractive'>
 						{`
 							window.dataLayer = window.dataLayer || [];
 							function gtag(){window.dataLayer.push(arguments);}
 							gtag('js', new Date());
-							gtag('config', 'G-0YM4R3T4P6');
+							gtag('config', 'G-0YM4R3T4P6', {
+								anonymize_ip: true,
+								cookie_flags: 'SameSite=None; Secure'
+							});
         				`}
 					</Script>
 					<script

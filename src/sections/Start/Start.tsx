@@ -8,14 +8,12 @@ import Link from 'next/link';
 import social_img from '../../assets/icons/icon_social.svg';
 import instagram from '../../assets/icons/icon_instagram.svg';
 import arrow from '../../assets/icons/icon_arrow.svg';
-import bgImg from '../../assets/img/home_img.jpg';
-
-import ParallaxImage from '@/components/ParallaxImage/ParallaxImage';
+import ParallaxVideo from '@/components/ParallaxImage/ParallaxVideo';
 
 export const Start = () => {
 	return (
 		<section className={styles.home} id='start'>
-			<ParallaxImage src={bgImg} speed={-0.7} className={styles.parallax} />
+			<ParallaxVideo src={'/video-bg.mp4'} speed={-0.7} className={styles.parallax} />
 
 			<Wrapper className={styles.wrapper}>
 				<h1 className={`${styles.heading} ${rubik.className}`}>

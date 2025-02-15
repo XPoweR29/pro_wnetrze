@@ -1,21 +1,16 @@
 'use client';
 import { useEffect, useRef, useState, FC } from 'react';
-import Image, { StaticImageData } from 'next/image';
-import styles from './ParallaxImage.module.scss';
+import styles from './ParallaxVideo.module.scss';
 import Loading from '@/app/loading';
 import { useAppContext } from '@/hooks/useAppContext';
 
-interface ParallaxImageProps {
-	src: string | StaticImageData;
+interface Props {
+	src: string;
 	speed?: number;
 	className?: string;
 }
 
-const ParallaxImage: FC<ParallaxImageProps> = ({
-	src,
-	speed = 0.5,
-	className,
-}) => {
+const ParallaxVideo: FC<Props> = ({ src, speed = 0.5, className }) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const [offset, setOffset] = useState(0);
 	const { isBgLoaded, setIsBgLoaded } = useAppContext();
@@ -35,7 +30,7 @@ const ParallaxImage: FC<ParallaxImageProps> = ({
 	useEffect(() => {
 		const handleLoad = () => {
 			setIsBgLoaded(true);
-		}
+		};
 
 		if (document.readyState === 'complete') {
 			handleLoad();
@@ -44,8 +39,7 @@ const ParallaxImage: FC<ParallaxImageProps> = ({
 		}
 
 		return () => window.removeEventListener('load', handleLoad);
-	},[]);
-
+	}, []);
 
 	return (
 		<>
@@ -58,14 +52,15 @@ const ParallaxImage: FC<ParallaxImageProps> = ({
 					<div
 						className={styles.parallax}
 						style={{ transform: `translateY(${offset}px)` }}>
-						<Image
-							src={src}
-							alt=''
-							aria-hidden
-							fill
-							style={{ objectFit: 'cover' }}
-							priority
-						/>
+						<video 
+						preload='auto'
+						 autoPlay 
+						 loop 
+						 muted 
+						 playsInline 
+						 className={styles.video}>
+							<source src={src} type='video/mp4' />
+						</video>
 					</div>
 				</div>
 			)}
@@ -73,4 +68,4 @@ const ParallaxImage: FC<ParallaxImageProps> = ({
 	);
 };
 
-export default ParallaxImage;
+export default ParallaxVideo;

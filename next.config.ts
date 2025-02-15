@@ -1,8 +1,14 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+	productionBrowserSourceMaps: true,
 	images: {
-		domains: ['assets.aceternity.com'],
+		remotePatterns: [
+			{
+				protocol: 'http',
+				hostname: '*.acernity.com'
+			}
+		],
 	},
 	eslint: {
 		ignoreDuringBuilds: false,
