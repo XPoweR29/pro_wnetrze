@@ -1,0 +1,65 @@
+@use '../../sass/common' as *;
+
+.services {
+	position: relative;
+	padding-top: 10em;
+	padding-bottom: 5em;
+	color: $black;
+	background-color: $white;
+	overflow: hidden;
+	z-index: 2;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.headingContainer {
+		@include sectionHeading;
+		align-self: center;
+
+		.bg_heading {
+			top: 0%;
+			left: -5%;
+		}
+
+		.heading {
+			text-align: center;
+
+			img {
+				bottom: -0.1em;
+				height: 15px;
+			}
+		}
+	}
+
+	.text {
+		margin-top: 2.5em;
+		font-weight: 600;
+	}
+
+	.serviceContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 5em;
+		margin-top: 5em;
+	}
+
+	.carousel {
+		margin-top: 5em;
+	}
+}
+
+@media (width>=992px) {
+	.services {
+		.headingContainer {
+			.bg_heading {
+				top: -50%;
+			}
+		}
+
+		.text {
+			text-align: center;
+		}
+	}
+}

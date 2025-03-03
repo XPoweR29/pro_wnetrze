@@ -1,0 +1,54 @@
+@use '../../sass/common' as *;
+
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 1em;
+
+	span {
+		font-size: 2em;
+		font-weight: 900;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+		-webkit-text-stroke: 0.3px $white;
+	}
+
+	.content {
+		display: flex;
+		justify-content: center;
+		align-items: start;
+		gap: 1em;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+
+	p {
+		font-weight: 100;
+	}
+
+	img {
+		width: 100px;
+        pointer-events: none;
+	}
+}
+
+@media (width>= 450px) {
+    .card {
+        img {
+            width: 120px;
+        }
+    }
+}
+
+@media (width>= 768px) {
+    .card {
+        img {
+            width: 150px;
+        }
+    }
+}
