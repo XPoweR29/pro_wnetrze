@@ -1,8 +1,12 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
 import styles from './ServiceBox.module.scss';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import icon from '../../assets/icons/circle-arrow.png';
+import { useInView } from 'framer-motion';
+import { useBreakpoints } from '@/hooks/useBreakpoint';
 
 interface Props {
 	title: string;
@@ -20,12 +24,31 @@ export const ServiceBox = ({
 	reverse,
 	children,
 }: Props) => {
+	const { breakpoint } = useBreakpoints();
+
+	const textRef = useRef<HTMLDivElement>(null);
+	const imageRef = useRef<HTMLImageElement>(null);
+	const linkRef = useRef<HTMLUListElement>(null);
+
+	const textInView = useInView(textRef, { amount: breakpoint.lg?1:0.5, once: true });
+	const imageInView = useInView(imageRef, { amount: breakpoint.lg?1:0.5, once: true });
+	const linkInView = useInView(linkRef, { amount: breakpoint.lg?1:0.5, once: true });
+
 	return (
 		<section
 			className={`${styles.serviceBox} ${reverse ? styles.reverse : ''}`}>
 			<div className={styles.linkContainer}>
-				<h3 className={reverse ? styles.reverse : ''}>{title}</h3>
-				<p className={`${styles.text} ${reverse ? styles.reverse : ''}`}>
+				<h3
+					ref={textRef}
+					className={`${reverse ? styles.reverse : ''} ${
+						textInView ? styles['fade-in-bottom'] : ''
+					}`}>
+					{title}
+				</h3>
+				<p
+					className={`${styles.text} ${reverse ? styles.reverse : ''} ${
+						textInView ? styles['fade-in-bottom'] : ''
+					}`}>
 					{children}
 				</p>
 
@@ -36,11 +59,16 @@ export const ServiceBox = ({
 					<Image
 						src={image}
 						alt={imageAlt}
-						className={`${styles.serviceImage}`}
+						ref={imageRef}
+						className={`${styles.serviceImage} ${
+							imageInView ? styles['fade-in-bottom'] : ''
+						}`}
 					/>
-					<ul className={styles.linkList}>
-						{links.map(({ slug, label }) => (
-							<li key={slug}>
+					<ul
+						className={`${styles.linkList}`}
+						ref={linkRef}>
+						{links.map(({ slug, label }, i) => (
+							<li key={slug} className={linkInView ? styles['fade-in-left'] : ''} style={{animationDelay: `0.${i}s`, animationDuration: '1s'}}>
 								<Image src={icon} alt='' aria-hidden />
 								<Link href={`/uslugi-remotnowe/${slug}`}>{label}</Link>
 							</li>

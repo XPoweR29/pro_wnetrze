@@ -1,0 +1,76 @@
+@use '../../sass/common' as *;
+
+.ctaSection {
+	position: relative;
+	margin: 0 auto;
+	margin-top: 5em;
+	max-width: 510px;
+	padding: 5em 0;
+	z-index: 1;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 150vw;
+		min-width: 100vh;
+		height: 100%;
+		transform: translateX(-50%);
+		background-color: rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(4px);
+		pointer-events: none;
+		z-index: -1;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		padding: 3em 0.5em;
+		border: 1px solid $white;
+		border-radius: 0 30px 0 30px;
+		opacity: 0;
+	}
+
+	h4 {
+		text-align: center;
+		font-size: 1.2em;
+	}
+
+	p {
+		margin: 1em 0;
+		margin-top: 1em;
+		text-align: center;
+		font-weight: 100;
+	}
+
+	a {
+		position: relative;
+		@include mainButton;
+		margin: 0 auto;
+		margin-top: 2em;
+		transition: box-shadow 0.3s;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
+
+		&:hover {
+			box-shadow: 0px 0px 15px $accent;
+
+			&::before {
+				animation: pulse 1s linear forwards;
+			}
+		}
+	}
+}
+
+.fade-in-bottom {
+	animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}

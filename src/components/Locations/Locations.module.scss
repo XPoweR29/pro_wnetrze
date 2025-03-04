@@ -16,6 +16,10 @@
 		list-style: none;
 	}
 
+	li {
+		opacity: 0;
+	}
+
 	.link {
 		display: flex;
 		justify-content: center;

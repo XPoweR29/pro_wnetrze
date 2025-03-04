@@ -78,3 +78,11 @@ body {
 		text-decoration: underline;
 	}
 }
+
+
+.fade-in-left {
+	animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.fade-in-right {
+	animation: fade-in-right 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}

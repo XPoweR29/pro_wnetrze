@@ -2,6 +2,10 @@
 	margin-top: 6em;
 	max-width: 1110px;
 
+	.title {
+		opacity: 0;
+	}
+
 	h2 {
 		font-size: 2em;
 		white-space: nowrap;
@@ -26,6 +30,7 @@
 	p {
 		margin-top: 2em;
 		font-weight: 100;
+		opacity: 0;
 	}
 }
 

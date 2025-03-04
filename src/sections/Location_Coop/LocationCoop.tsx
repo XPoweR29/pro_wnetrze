@@ -9,6 +9,7 @@ import FixedBackground from '@/components/FixedBackground/FixedBackground';
 import Image from 'next/image';
 import { CoopSwiper } from '@/components/CoopSwiper/CoopSwiper';
 import Link from 'next/link';
+import { CtaFrame } from '@/components/CtaFrame/CtaFrame';
 
 export const LocationCoop = () => {
 	return (
@@ -40,17 +41,7 @@ export const LocationCoop = () => {
 
 				<CoopSwiper className={styles.swiper} />
 
-				<div className={styles.ctaSection}>
-					<div className={styles.container}>
-						<h4>Pierwszy krok do udanej współpracy to rozmowa</h4>
-						<p>
-							Zadzwoń, napisz e-mail lub wypełnij formularz – omówimy Twoje
-							potrzeby i zaproponujemy najlepsze rozwiązanie.
-						</p>
-
-						<Link href={'/kontakt'}>Skontaktuj się z nami</Link>
-					</div>
-				</div>
+			<CtaFrame/>
 			</Wrapper>
 		</section>
 	);

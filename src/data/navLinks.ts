@@ -19,7 +19,7 @@ export const renovationServicesLinks: LinkData[] = [
 export const interiorDesignLinks: LinkData[] = [
 	{ slug: 'remont-lazienki', label: 'Remont łazienki' },
 	{ slug: 'adaptacja-poddasza', label: 'Adaptacja poddasza' },
-	{ slug: 'montaz-stolarki-okiennej-i-drzwiowej', label: 'Stolarka okienna' },
+	{ slug: 'montaz-drzwi-wewnetrznych', label: 'Montaż drzwi wewnętrznych' },
 	{ slug: 'ukladanie-podlog-i-parkietow-ukladanie-paneli', label: 'Ukladanie podłóg' },
 	{ slug: 'wykonczenia-pod-klucz', label: 'Wykończenia pod klucz' },
 ];
@@ -27,7 +27,7 @@ export const interiorDesignLinks: LinkData[] = [
 export const decorationsLinks: LinkData[] = [
 	{ slug: 'imitacja-betonu', label: 'Imitacja betonu' },
 	{ slug: 'glinka-wenecka', label: 'Glinka wenecka' },
-	{ slug: 'traweryn', label: 'Traweryn' },
+	{ slug: 'trawertyn', label: 'Trawertyn' },
 	{ slug: 'tynki-dekoracyjne', label: 'Tynki dekoracyjne' },
 	{ slug: 'stuiki', label: 'Stiuki' },
 ];

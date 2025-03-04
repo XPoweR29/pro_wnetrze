@@ -26,12 +26,14 @@
 
 		h3 {
 			font-size: 1.3em;
+			opacity: 0;
 		}
 
 		.text {
 			margin-top: 1em;
 			margin-bottom: 1em;
 			max-width: 690px;
+			opacity: 0;
 		}
 
 		.flexContainer {
@@ -52,6 +54,7 @@
 			align-items: center;
 			gap: 0.5em;
 			padding-left: 0.5em;
+			opacity: 0;
 
 			img {
 				width: 17px;
@@ -71,7 +74,16 @@
 		aspect-ratio: 16/10;
 		border-radius: 5px;
 		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+		opacity: 0;
 	}
+}
+
+.fade-in-bottom {
+	animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.fade-in-left {
+	animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 @media (width >= 576px) {
@@ -131,7 +143,7 @@
 	}
 }
 
-@media(width >=1200px) {
+@media (width >=1200px) {
 	.serviceBox {
 		.linkContainer {
 			.flexContainer {
