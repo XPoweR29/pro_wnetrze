@@ -24,14 +24,14 @@ export const metadata: Metadata = {
 	title:
 		'Kompleksowe usługi remontowo-budowlane Żywiec | PROWnętrze - firma budowlana',
 	description:
-		'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz w Żywcu oraz regionach Krakowa, Andrychowa i Bielska. Zaufaj naszym fachowcom!',
+		'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz na terenie województwa Śląskiego oraz Małopolskiego. Zaufaj naszym fachowcom!',
 	openGraph: {
 		title:
 			'Kompleksowe usługi remontowo-budowlane Żywiec | PROWnętrze - firma budowlana',
 		description:
-			'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz w Żywcu oraz regionach Krakowa, Andrychowa i Bielska. Zaufaj naszym fachowcom i ciesz się nową jakością przestrzeni!',
+			'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz na terenie województwa Śląskiego oraz Małopolskiego. Zaufaj naszym fachowcom!',
 		url: 'https://pro-wnetrze.pl',
-		siteName: 'PROWnętrze',
+		siteName: 'PRO Wnętrze',
 		images: [
 			{
 				url: 'https://pro-wnetrze.pl/og_img.jpg',
@@ -76,10 +76,6 @@ export default function RootLayout({
 							});
         				`}
 					</Script>
-					<script
-						type='application/ld+json'
-						dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
-					/>
 				</head>
 
 				<body className={manrope.className}>

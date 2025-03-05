@@ -28,7 +28,10 @@ export const LocationStart = ({titleRow1, titleRow2, text1, text2, className}: P
 			/>
 
 			<Wrapper className={styles.wrapper}>
-				<h1 className={`${styles.heading} ${rubik.className}`}>{titleRow1}</h1>
+				<h1 className={`${styles.heading} ${rubik.className}`}>
+					<span>{titleRow1}</span>
+					<span>{' '}{titleRow2}</span>
+				</h1>
 				<p className={styles.text}>
 					<span>{text1}</span>
 					<span> {text2}</span>

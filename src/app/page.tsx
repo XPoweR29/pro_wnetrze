@@ -5,10 +5,16 @@ import { Process } from '@/sections/Process/Process';
 import { Contact } from '@/sections/Contact/Contact';
 import { Toaster } from 'react-hot-toast';
 import { Portfolio } from '@/sections/Portfolio/Portfolio';
+import { businessSchema } from '@/data/schema';
 
 export default function Home() {
 	return (
 		<>
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+			/>
+
 			<Start />
 			<About />
 			<Services />

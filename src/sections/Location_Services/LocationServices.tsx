@@ -20,6 +20,7 @@ interface Props {
 	heading: string;
 	underline_word?: string;
 	text: string;
+	servicesArr: ServiceBoxType[];
 }
 
 export const LocationServices = ({
@@ -27,6 +28,7 @@ export const LocationServices = ({
 	heading,
 	underline_word,
 	text,
+	servicesArr,
 }: Props) => {
 	return (
 		<section className={`${styles.services} ${className}`}>
@@ -48,49 +50,33 @@ export const LocationServices = ({
 
 				<div className={styles.serviceContainer}>
 					<ServiceBox
-						title='Usługi remontowe w Żywcu'
-						image={renovationImg}
-						imageAlt='usługi remontowe w Żywcu i okolicach'
+						title={servicesArr[0].title}
+						image={servicesArr[0].image}
+						imageAlt={servicesArr[0].imageAlt}
 						links={renovationServicesLinks}>
-						Potrzebujesz solidnej ekipy remontowej w Żywcu? Nasza firma zajmuje
-						się kompleksową realizacją prac remontowych – od przygotowania
-						powierzchni po końcowe wykończenie. Wspieramy zarówno drobne
-						poprawki, jak i duże projekty obejmujące malowanie ścian,
-						tapetowanie, montaż sufitów podwieszanych czy gładzenie tynków.
-						Dzięki wieloletniemu doświadczeniu zapewniamy terminowość i wysoką
-						jakość usług.
+						{servicesArr[0].content}
 					</ServiceBox>
 
 					<ServiceBox
-						title='Żywiec wykończenia wnętrz'
-						image={renovation2Img}
-						imageAlt='Wykończenia wnętrz pod klucz w Żywcu'
+						title={servicesArr[1].title}
+						image={servicesArr[1].image}
+						imageAlt={servicesArr[1].imageAlt}
 						links={interiorDesignLinks}
 						reverse>
-						Marzysz o pięknie wykończonym wnętrzu? Nasz zespół specjalizuje się
-						w kompleksowych wykończeniach mieszkań i domów w Żywcu i okolicach.
-						Oferujemy m.in. remonty łazienek, adaptacje poddaszy, układanie
-						podłóg, a także montaż stolarki okiennej. Stawiamy na profesjonalne
-						doradztwo oraz indywidualne podejście do każdego projektu, abyś mógł
-						cieszyć się wymarzonym efektem końcowym.
+						{servicesArr[1].content}
 					</ServiceBox>
 
 					<ServiceBox
-						title='Techniki dekoracyjne'
-						image={decorationImg}
-						imageAlt='Tynki dekoracyjne'
+						title={servicesArr[2].title}
+						image={servicesArr[2].image}
+						imageAlt={servicesArr[2].imageAlt}
 						links={decorationsLinks}>
-						Chcesz nadać wnętrzu unikalny charakter? Proponujemy szereg
-						dekoracyjnych rozwiązań, które wyróżnią Twoje wnętrze. Wykonujemy
-						m.in. imitację betonu, glinkę wenecką, trawertyn czy tynki
-						dekoracyjne, dodając przestrzeni elegancji i niepowtarzalnego stylu.
-						Zadbamy o odpowiedni dobór materiałów i perfekcyjne wykonanie, tak
-						aby efekt zachwycał przez lata.
+						{servicesArr[2].content}
 					</ServiceBox>
 				</div>
 			</Wrapper>
 
-			<BrandCarousel className={styles.carousel}/>
+			<BrandCarousel className={styles.carousel} />
 		</section>
 	);
 };
