@@ -10,14 +10,14 @@ import magnifyingGlassIcon from '../../assets/icons/magnifying-glass-icon.png';
 import { usePathname } from 'next/navigation';
 import { useInView } from 'framer-motion';
 
-export const Locations = () => {
+export const Locations = ({ className }: {className?: string}) => {
 	const ref = useRef(null);
 	const inView = useInView(ref, { amount: 1, once: true });
 	const pathname = usePathname();
 	const currentSlug = pathname.split('/')[2];
 
 	return (
-		<div className={styles.locations}>
+		<div className={`${styles.locations} ${className}`}>
 			<h3>Firma budowlana PRO Wnętrze - nasz obszar działania</h3>
 			<ul ref={ref}>
 				{locationLinks

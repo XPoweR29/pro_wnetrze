@@ -5,12 +5,12 @@ import styles from './CtaFrame.module.scss';
 import Link from 'next/link';
 import { useInView } from 'framer-motion';
 
-export const CtaFrame = () => {
+export const CtaFrame = ({ className }: {className?: string;}) => {
     const ref = useRef<HTMLDivElement>(null);
     const inView = useInView(ref, {amount: 0.7, once: true});
 
 	return (
-		<div className={`${styles.ctaSection} `}>
+		<div className={`${styles.ctaSection} ${className}`}>
 			<div className={`${styles.container} ${inView?styles['fade-in-bottom']:''}`} ref={ref}>
 				<h4>Pierwszy krok do udanej współpracy to rozmowa</h4>
 				<p>

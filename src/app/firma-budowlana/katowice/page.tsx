@@ -37,6 +37,7 @@ const services: ServiceBoxType[] = [
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'HomeAndConstructionBusiness',
+	'@id': 'https://pro-wnetrze.pl/firma-budowlana/katowice#business',
 	name: 'PRO Wnętrze',
 	alternateName:
 		'Firma budowlana Katowice | Kompleksowe usługi remontowo-budowlane',

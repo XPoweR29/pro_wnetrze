@@ -1,0 +1,148 @@
+@use '../../sass/common' as *;
+
+.about {
+	position: relative;
+	padding-top: 7em;
+	padding-bottom: 5em;
+	background-color: $white;
+	color: $black;
+	overflow: hidden;
+	z-index: 2;
+
+	.wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.heading {
+		font-size: 2em;
+		text-align: center;
+
+		.word {
+			position: relative;
+			z-index: 1;
+
+			img {
+				position: absolute;
+				bottom: -3px;
+				left: 50%;
+				width: 110%;
+				height: 17px;
+				transform: translateX(-50%);
+				z-index: -1;
+			}
+		}
+
+		span {
+			white-space: nowrap;
+		}
+	}
+
+	.text {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+		margin-top: 1.5em;
+		font-weight: 500;
+	}
+
+	.image {
+		margin: 4em auto;
+	}
+
+	.content {
+		h3 {
+			font-size: 1.3em;
+		}
+
+		p {
+			margin-top: 1em;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 1.5em;
+			margin-top: 3em;
+			padding-left: 2em;
+			list-style: none;
+		}
+
+		li {
+			opacity: 0;
+		}
+
+		.link {
+			display: flex;
+			justify-content: center;
+			align-items: start;
+			gap: 0.5em;
+			text-transform: uppercase;
+
+			img {
+				width: 17px;
+			}
+		}
+	}
+}
+
+@media (width >= 450px) {
+	.about {
+		.content {
+			ul {
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-items: start;
+				gap: 2em;
+				padding-left: 2em;
+
+				li {
+					width: calc(50% - 1em);
+				}
+
+				.link {
+					justify-content: start;
+				}
+			}
+		}
+	}
+}
+
+@media (width >= 576px) {
+	.about {
+		.heading {
+			text-align: left;
+		}
+	}
+}
+
+@media (width >= 768px) {
+	.about {
+		.content {
+			ul {
+				max-width: 930px;
+			}
+		}
+	}
+}
+
+@media (width >= 992px) {
+	.about {
+		.flexContainer {
+			display: flex;
+			flex-direction: row-reverse;
+			gap: 2em;
+			margin-top: 5em;
+		}
+
+		.image {
+			width: 50%;
+		}
+
+		.content {
+			width: 90%;
+		}
+	}
+}

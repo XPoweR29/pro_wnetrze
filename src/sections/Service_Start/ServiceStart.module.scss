@@ -1,0 +1,105 @@
+@use '../../sass/common' as *;
+
+.start {
+	position: relative;
+	height: calc(100svh + 30px);
+	min-height: 660px;
+	color: $white;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: $dark;
+		opacity: 80%;
+		z-index: -1;
+	}
+
+	.fixedBackground {
+		z-index: -2;
+	}
+
+	.wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-bottom: 5em;
+		z-index: 2;
+	}
+
+	.heading {
+		position: relative;
+		width: fit-content;
+		font-size: 2.6em;
+		text-transform: uppercase;
+		text-align: left;
+		animation: fade-in-bottom 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+		animation-delay: 0.5s;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 20%;
+			height: 2px;
+			background-color: $accent;
+		}
+	}
+
+	.text {
+		margin-top: 2em;
+		max-width: 720px;
+		font-size: 1.15em;
+		font-weight: 500;
+		animation: fade-in-bottom 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+		animation-delay: 0.5s;
+	}
+
+	.scrollDownBtn {
+		position: absolute;
+		bottom: 10%;
+		right: 20%;
+		width: 45px;
+		background-color: transparent;
+		animation: bounceTwice 5s infinite;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.divider {
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 50%;
+		height: 30px;
+		background-color: $white;
+		clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0 100%);
+
+		@media (width >= 992px) {
+			height: 40px;
+			clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 100%, 0 100%);
+		}
+	}
+}
+
+@media (width >= 576px) {
+	.start {
+		.scrollDownBtn {
+			width: 55px;
+		}
+	}
+}
+
+@media (width >= 992px) {
+	.start {
+		height: calc(100svh + 40px);
+	}
+}

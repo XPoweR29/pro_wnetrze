@@ -37,6 +37,7 @@ const services: ServiceBoxType[] = [
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'HomeAndConstructionBusiness',
+	'@id': 'https://pro-wnetrze.pl/firma-budowlana/bielsko-biala#business',
 	name: 'PRO Wnętrze',
 	alternateName:
 		'Firma budowlana Bielsko-Biała | Kompleksowe usługi remontowo-budowlane',

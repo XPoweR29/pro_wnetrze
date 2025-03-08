@@ -37,6 +37,7 @@ const services: ServiceBoxType[] = [
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'HomeAndConstructionBusiness',
+	'@id': 'https://pro-wnetrze.pl/firma-budowlana/wadowice#business',
 	name: 'PRO Wnętrze',
 	alternateName:
 		'Firma budowlana Wadowice | Kompleksowe usługi remontowo-budowlane',

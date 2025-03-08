@@ -37,6 +37,7 @@ const services: ServiceBoxType[] = [
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'HomeAndConstructionBusiness',
+	'@id': 'https://pro-wnetrze.pl/firma-budowlana/krakow#business',
 	name: 'PRO Wnętrze',
 	alternateName:
 		'Firma budowlana Kraków | Kompleksowe usługi remontowo-budowlane',

@@ -1,6 +1,7 @@
 export const businessSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'HomeAndConstructionBusiness',
+	'@id': 'https://pro-wnetrze.pl#business',
 	name: 'PRO Wnętrze',
 	alternateName: 'Firma budowlana PRO Wnętrze | Usługi remontowo-budowlane',
 	url: 'https://pro-wnetrze.pl',

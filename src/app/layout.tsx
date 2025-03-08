@@ -4,7 +4,6 @@ import { Header } from '@/components/Header/Header';
 import { Rubik_Dirt, Manrope, Rubik } from 'next/font/google';
 import '../sass/globals.scss';
 import { Footer } from '@/components/Footer/Footer';
-import { businessSchema } from '@/data/schema';
 import Script from 'next/script';
 
 const manrope = Manrope({
