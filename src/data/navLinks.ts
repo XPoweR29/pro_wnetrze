@@ -11,7 +11,7 @@ export const renovationServicesLinks: LinkData[] = [
 	{ slug: 'glazurnictwo-ukladanie-plytek-kafelkowanie', label: 'Glazurnictwo' },
 	{ slug: 'malowanie-scian', label: 'Malowanie ścian' },
 	{ slug: 'tapetowanie-scian', label: 'Tapetowanie' },
-	{ slug: 'wykonywanie-galdzi-gipsowych', label: 'Gładzie gipsowe' },
+	{ slug: 'gladzie-gipsowe', label: 'Gładzie gipsowe' },
 	{ slug: 'sucha-zabudowa', label: 'Sucha zabudowa' },
 	{ slug: 'sufity-podwieszane', label: 'Sufity podwieszane' },
 ];
@@ -28,6 +28,5 @@ export const decorationsLinks: LinkData[] = [
 	{ slug: 'imitacja-betonu', label: 'Imitacja betonu' },
 	{ slug: 'glinka-wenecka', label: 'Glinka wenecka' },
 	{ slug: 'trawertyn', label: 'Trawertyn' },
-	{ slug: 'tynki-dekoracyjne', label: 'Tynki dekoracyjne' },
-	{ slug: 'stuiki', label: 'Stiuki' },
+	{ slug: 'stiuki-weneckie', label: 'Stiuki weneckie' },
 ];

@@ -10,6 +10,7 @@ import { useBreakpoints } from '@/hooks/useBreakpoint';
 
 interface Props {
 	title: string;
+	categorySlug: string;
 	links: LinkData[];
 	image: string | StaticImageData;
 	imageAlt: string;
@@ -17,6 +18,7 @@ interface Props {
 	children?: React.ReactNode;
 }
 export const ServiceBox = ({
+	categorySlug,
 	links,
 	image,
 	imageAlt,
@@ -70,7 +72,7 @@ export const ServiceBox = ({
 						{links.map(({ slug, label }, i) => (
 							<li key={slug} className={linkInView ? styles['fade-in-left'] : ''} style={{animationDelay: `0.${i}s`, animationDuration: '1s'}}>
 								<Image src={icon} alt='' aria-hidden />
-								<Link href={`/uslugi-remotnowe/${slug}`}>{label}</Link>
+								<Link href={`/${categorySlug}/${slug}`}>{label}</Link>
 							</li>
 						))}
 					</ul>

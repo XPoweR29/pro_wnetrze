@@ -77,6 +77,7 @@ const CategoryPage = () => {
 				text='Szukasz sprawdzonej firmy oferującej usługi remontowo budowlane od A do Z? Dobrze trafiłeś! Nasz zespół zapewnia kompleksowe remonty, w tym remonty mieszkań oraz remonty domów – zarówno tych nowych, jak i w stanie wymagającym gruntownej renowacji. Jeśli planujesz remont starego domu albo masz mieszkanie do remontu, możesz liczyć na nasze usługi remontowo-wykończeniowe dostosowane do Twoich potrzeb.'
 				graphicTitle='Szeroki zakres prac remontowych'
 				graphicText='Realizując usługę remontową, przykładamy szczególną wagę do każdego detalu, aby efekty były trwałe, estetyczne i funkcjonalne. Czym zajmuje się firma remontowo-wykończeniowa? Oferujemy kompleksowe rozwiązania – od precyzyjnych prac budowlanych po nowoczesne wykończenia wnętrz, realizując m.in. remonty mieszkań, domów oraz modernizacje istniejących przestrzeni.'
+				categorySlug='uslugi-remontowo-budowlane'
 				linkArr={renovationServicesLinks}
 				img1={image1}
 				img2={image2}

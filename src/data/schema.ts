@@ -8,7 +8,7 @@ export const businessSchema = {
 	logo: 'https://pro-wnetrze.pl/logo.jpg',
 	image: 'https://pro-wnetrze.pl/og_img.jpg',
 	description:
-		'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz na terenie województwa Śląskiego oraz Małopolskiego. Zaufaj naszym fachowcom!',
+		'PRO Wnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz na terenie województwa Śląskiego oraz Małopolskiego. Zaufaj naszym fachowcom!',
 	telephone: '+48 515-484-232',
 	email: 'prownetrze.zywiec@gmail.com',
 	address: {

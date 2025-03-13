@@ -22,6 +22,7 @@ interface Props {
 	img2: string | StaticImageData;
 	img3: string | StaticImageData;
 	img4: string | StaticImageData;
+	categorySlug: string;
 	linkArr: LinkData[];
 }
 
@@ -37,6 +38,7 @@ export const CategoryAbout = ({
 	img3,
 	img4,
 	linkArr,
+	categorySlug
 }: Props) => {
 	const ref = useRef(null);
 	const inView = useInView(ref, { amount: 1, once: true });
@@ -75,7 +77,7 @@ export const CategoryAbout = ({
 										animationDuration: '1s',
 									}}>
 									<Link
-										href={`/uslugi-remontowo-budowlane/${slug}`}
+										href={`/${categorySlug}/${slug}`}
 										className={styles.link}>
 										<Image src={circleArrowIcon} aria-hidden alt={slug} />
 										<span>{label}</span>

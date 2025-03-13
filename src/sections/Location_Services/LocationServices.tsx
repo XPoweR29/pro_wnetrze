@@ -11,10 +11,6 @@ import { renovationServicesLinks } from '@/data/navLinks';
 import { interiorDesignLinks } from '@/data/navLinks';
 import { decorationsLinks } from '@/data/navLinks';
 
-import renovationImg from '../../assets/img/uslugi-remontowe.jpg';
-import renovation2Img from '../../assets/img/kompleksowy-remont.webp';
-import decorationImg from '../../assets/img/dekorowanie-scian.webp';
-
 interface Props {
 	className?: string;
 	heading: string;
@@ -53,6 +49,7 @@ export const LocationServices = ({
 						title={servicesArr[0].title}
 						image={servicesArr[0].image}
 						imageAlt={servicesArr[0].imageAlt}
+						categorySlug='uslugi-remontowo-budowlane'
 						links={renovationServicesLinks}>
 						{servicesArr[0].content}
 					</ServiceBox>
@@ -61,6 +58,7 @@ export const LocationServices = ({
 						title={servicesArr[1].title}
 						image={servicesArr[1].image}
 						imageAlt={servicesArr[1].imageAlt}
+						categorySlug='wykonczenia-wnetrz-mieszkan-domow'
 						links={interiorDesignLinks}
 						reverse>
 						{servicesArr[1].content}
@@ -70,6 +68,7 @@ export const LocationServices = ({
 						title={servicesArr[2].title}
 						image={servicesArr[2].image}
 						imageAlt={servicesArr[2].imageAlt}
+						categorySlug='tynki-dekoracyjne-i-wykonczenia-scian'
 						links={decorationsLinks}>
 						{servicesArr[2].content}
 					</ServiceBox>

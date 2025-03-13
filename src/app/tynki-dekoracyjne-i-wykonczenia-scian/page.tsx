@@ -62,7 +62,7 @@ const CategoryPage = () => {
 			/>
 
 			<ServiceStart
-				title='Dekoracje ścian'
+				title='Tynki dekoracyjne'
 				text='Ściany to nie tylko tło – to kluczowy element aranżacji wnętrza, który nadaje mu charakter. Oferujemy szeroki wybór technik dekoracyjnych, takich jak tynki dekoracyjne, tynki strukturalne i modne dekoracje ścian, które podkreślą styl Twojego wnętrza. Niezależnie od tego, czy marzysz o surowym wyglądzie imitacji betonu, eleganckich stiukach, czy oryginalnych fakturach, pomożemy stworzyć wyjątkową przestrzeń dopasowaną do Twojego gustu.'
 				bgImage={backgroundImage}
 			/>
@@ -85,6 +85,7 @@ const CategoryPage = () => {
 				}
 				graphicTitle='Nasza oferta dekoracji ścian '
 				graphicText='Oferujemy szeroki wybór dekoracji ścian, które nadadzą wnętrzom unikalny charakter i wyjątkowy styl. Wśród naszych propozycji znajdziesz ściany dekoracyjne, które doskonale sprawdzą się jako dekoracja ściany z telewizorem lub efektowny akcent w salonie. Jeśli szukasz nowoczesnych rozwiązań, postaw na modne dekoracje na ścianę, które podkreślą wyjątkowy klimat Twojego wnętrza. Każde rozwiązanie łączy estetykę z trwałością, dzięki czemu efekt cieszy oko przez lata.'
+				categorySlug='tynki-dekoracyjne-i-wykonczenia-scian'
 				linkArr={decorationsLinks}
 				img1={image1}
 				img2={image2}

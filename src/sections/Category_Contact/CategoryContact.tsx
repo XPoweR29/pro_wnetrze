@@ -6,13 +6,13 @@ import Image from 'next/image';
 import { Locations } from '@/components/Locations/Locations';
 import { CtaFrame } from '@/components/CtaFrame/CtaFrame';
 
-export const CategoryContact = ({
-	helpWithHeading,
-	children,
-}: {
+interface Props {
 	helpWithHeading: string;
 	children: React.ReactNode;
-}) => {
+	textClass?: string;
+}
+
+export const CategoryContact = ({ helpWithHeading, children, textClass}: Props) => {
 	return (
 		<section className={styles.area}>
 			<div className={styles.divider} />
@@ -29,7 +29,7 @@ export const CategoryContact = ({
 						{` ${helpWithHeading}`}
 					</h2>
 				</div>
-				<p className={styles.text}>{children}</p>
+				<p className={`${styles.text} ${textClass}`}>{children}</p>
 
 				<CtaFrame className={styles.cta} />
 

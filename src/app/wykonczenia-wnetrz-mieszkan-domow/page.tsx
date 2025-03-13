@@ -75,6 +75,7 @@ const CategoryPage = () => {
 				text='Zadbamy o każdy detal, aby Twoje wnętrze było nie tylko estetyczne, ale i funkcjonalne. Oferujemy pełen zakres prac wykończeniowych – od gładzi i malowania, po układanie podłóg i tynki dekoracyjne. Stawiamy na wysoką jakość, terminowość i precyzję, dzięki czemu efekt końcowy spełni Twoje oczekiwania. Sprawdź, jak możemy odmienić Twoją przestrzeń!'
 				graphicTitle='Szeroki zakres prac wykończeniowych'
 				graphicText='Oferujemy kompleksowe usługi, dzięki którym Twoje wnętrza zyskają nowy wygląd i pełną funkcjonalność. Realizujemy zarówno drobne prace montażowe, jak i kompleksowe remonty – od łazienek, przez adaptację poddasza, aż po wykończenia pod klucz. Każdy etap pracy wykonujemy z dbałością o detale, aby efekt spełniał Twoje oczekiwania na długie lata.'
+				categorySlug='wykonczenia-wnetrz-mieszkan-domow'
 				linkArr={interiorDesignLinks}
 				img1={image1}
 				img2={image2}
