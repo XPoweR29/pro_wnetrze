@@ -60,6 +60,7 @@ const schema = {
 		},
 		sameAs: [
 			'https://www.instagram.com/prownetrze/profilecard/?igsh=NWxrOGMzazA2M29s',
+			'https://g.co/kgs/2t1nJxJ',
 		],
 		serviceType: 'Usługi remontowo-budowlane',
 		contactPoint: {

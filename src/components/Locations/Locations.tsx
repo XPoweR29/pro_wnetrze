@@ -10,15 +10,36 @@ import magnifyingGlassIcon from '../../assets/icons/magnifying-glass-icon.png';
 import { usePathname } from 'next/navigation';
 import { useInView } from 'framer-motion';
 
-export const Locations = ({ className }: {className?: string}) => {
+interface Props {
+	className?: string;
+	children?: React.ReactNode;
+	scrollLink?: boolean;
+	scrollToId?: string;
+}
+
+export const Locations = ({
+	className,
+	children,
+	scrollLink,
+	scrollToId,
+}: Props) => {
 	const ref = useRef(null);
 	const inView = useInView(ref, { amount: 1, once: true });
 	const pathname = usePathname();
 	const currentSlug = pathname.split('/')[2];
 
+	const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		e.preventDefault();
+		const section = document.getElementById(scrollToId!);
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
+	};
+
 	return (
 		<div className={`${styles.locations} ${className}`}>
-			<h3>Firma budowlana PRO Wnętrze - nasz obszar działania</h3>
+			{children ?? <h3>Firma budowlana PRO Wnętrze - nasz obszar działania</h3>}
+
 			<ul ref={ref}>
 				{locationLinks
 					.filter(({ slug }) => slug !== currentSlug)
@@ -26,9 +47,9 @@ export const Locations = ({ className }: {className?: string}) => {
 						<li
 							key={slug}
 							className={inView ? 'fade-in-left' : ''}
-							style={{ 
-								animationDelay: `0.${i + 1}s`, 
-								animationDuration: '1s'
+							style={{
+								animationDelay: `0.${i + 1}s`,
+								animationDuration: '1s',
 							}}>
 							<Link href={`/firma-budowlana/${slug}`} className={styles.link}>
 								<Image
@@ -45,8 +66,13 @@ export const Locations = ({ className }: {className?: string}) => {
 			<p className={styles.text}>
 				<Image src={magnifyingGlassIcon} aria-hidden alt='' /> Nie widzisz
 				swojego miasta na liście? Jest duża szansa, że działamy również w Twojej
-				okolicy – <Link href={'/kontakt'}>skontaktuj się z nami</Link>, a
-				sprawdzimy możliwość realizacji Twojego projektu!
+				okolicy –{' '}
+				<Link
+					href={scrollLink ? '#' : '/kontakt'}
+					onClick={scrollLink ? handleScroll : undefined}>
+					skontaktuj się z nami
+				</Link>
+				, a sprawdzimy możliwość realizacji Twojego projektu!
 			</p>
 		</div>
 	);

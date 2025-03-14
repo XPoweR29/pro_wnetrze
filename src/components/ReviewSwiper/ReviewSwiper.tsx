@@ -28,7 +28,7 @@ export const ReviewSwiper = ({ className }: { className?: string }) => {
 			loop={true}>
 			{reviews.map(({ author, comment }, index) => (
 				<SwiperSlide key={index}>
-					<div className={styles.reviewCard}>
+					<div className={`${styles.reviewCard} reviewCard`}>
 						<Image src={icon_quote} alt='' aria-hidden />
 						<p className={styles.comment}>{comment}</p>
 						<p className={styles.author}>{`- ${author}`}</p>

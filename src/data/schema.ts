@@ -1,8 +1,8 @@
 export const businessSchema = {
 	'@context': 'https://schema.org',
-	'@type': 'HomeAndConstructionBusiness',
-	'@id': 'https://pro-wnetrze.pl#business',
-	name: 'PRO Wnętrze',
+	'@type': 'ContactPage',
+	'@id': 'https://pro-wnetrze.pl/kontakt',
+	name: 'Kontakt - PRO Wnętrze',
 	alternateName: 'Firma budowlana PRO Wnętrze | Usługi remontowo-budowlane',
 	url: 'https://pro-wnetrze.pl',
 	logo: 'https://pro-wnetrze.pl/logo.jpg',
@@ -32,6 +32,7 @@ export const businessSchema = {
 	},
 	sameAs: [
 		'https://www.instagram.com/prownetrze/profilecard/?igsh=NWxrOGMzazA2M29s',
+		'https://g.co/kgs/2t1nJxJ',
 	],
 	serviceType: 'Usługi remontowo-budowlane',
 	contactPoint: {

@@ -18,13 +18,14 @@ interface Props {
 	title: string;
 	text: string;
 	bgImage: string | StaticImageData;
+	scrollToSection?: string;
 }
 
-export const ServiceStart = ({ title, bgImage, text, className }: Props) => {
+export const ServiceStart = ({ title, bgImage, text, className, scrollToSection='about_section' }: Props) => {
 	const handleButton = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
-		const aboutSection = document.getElementById('about_section');
-		if (aboutSection) aboutSection.scrollIntoView({ behavior: 'smooth' });
+		const section = document.getElementById(scrollToSection);
+		if (section) section.scrollIntoView({ behavior: 'smooth' });
 	};
 
 	return (

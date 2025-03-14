@@ -55,7 +55,7 @@ export const ContactForm = ({ className }: { className?: string }) => {
 	const { register, submitHandler, errors, reset } = useContactForm(onSubmit);
 
 	return (
-		<form onSubmit={submitHandler} className={`${styles.form} ${className}`}>
+		<form id='formularz' onSubmit={submitHandler} className={`${styles.form} ${className}`}>
 			<div className={styles.formGroup}>
 				<label htmlFor='name' className={`${styles.label} ${styles.srOnly}`}>
 					Imię:
