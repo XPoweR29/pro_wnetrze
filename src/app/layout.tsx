@@ -5,6 +5,7 @@ import { Rubik_Dirt, Manrope, Rubik } from 'next/font/google';
 import '../sass/globals.scss';
 import { Footer } from '@/components/Footer/Footer';
 import Script from 'next/script';
+import { MegaMenuProvider } from '@/contexts/megaMenu.context';
 
 const manrope = Manrope({
 	subsets: ['latin'],
@@ -79,9 +80,11 @@ export default function RootLayout({
 
 				<body className={manrope.className}>
 					<ContextProvider>
-						<Header />
-						{children}
-						<Footer />
+						<MegaMenuProvider>
+							<Header />
+							{children}
+							<Footer />
+						</MegaMenuProvider>
 					</ContextProvider>
 				</body>
 			</html>

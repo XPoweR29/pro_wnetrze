@@ -13,6 +13,7 @@ import { LinkBar } from '@/components/LinkBar/LinkBar';
 import { MobileMenu } from '@/components/MobileMenu/MobileMenu';
 import { usePathname } from 'next/navigation';
 import { useAppContext } from '@/hooks/useAppContext';
+import { MegaMenu } from '../MegaMenu/MegaMenu';
 
 export const Header = () => {
 	const { breakpoint } = useBreakpoints();
@@ -66,7 +67,9 @@ export const Header = () => {
 				) : (
 					<BurgerBtn className={styles.burgerBtn} />
 				)}
-				<MobileMenu />
+				<MobileMenu/>
+
+				<MegaMenu />
 			</Wrapper>
 		</header>
 	);
