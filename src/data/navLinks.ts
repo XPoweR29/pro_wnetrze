@@ -9,7 +9,7 @@ export const navLinks: NavLink[] = [
 				slug: '/uslugi-remontowo-budowlane',
 				children: [
 					{
-						slug: 'glazurnictwo-ukladanie-plytek-kafelkowanie',
+						slug: 'glazurnictwo-ukladanie-plytek',
 						label: 'Glazurnictwo',
 					},
 					{ slug: 'malowanie-scian', label: 'Malowanie ścian' },
@@ -21,7 +21,7 @@ export const navLinks: NavLink[] = [
 			},
 			{
 				label: 'Wykończenia wnętrz',
-				slug: '/wykonczenia-wnetrz-mieszkan-domow',
+				slug: '/wykonczenia-wnetrz',
 				children: [
 					{ slug: 'remont-lazienki', label: 'Remont łazienki' },
 					{ slug: 'adaptacja-poddasza', label: 'Adaptacja poddasza' },
@@ -30,7 +30,7 @@ export const navLinks: NavLink[] = [
 						label: 'Montaż drzwi wewnętrznych',
 					},
 					{
-						slug: 'ukladanie-podlog-i-parkietow-ukladanie-paneli',
+						slug: 'ukladanie-paneli-parkietow',
 						label: 'Ukladanie podłóg',
 					},
 					{ slug: 'wykonczenia-pod-klucz', label: 'Wykończenia pod klucz' },
@@ -38,7 +38,7 @@ export const navLinks: NavLink[] = [
 			},
 			{
 				label: 'Tynki dekoracyjne',
-				slug: '/tynki-dekoracyjne-i-wykonczenia-scian',
+				slug: '/tynki-dekoracyjne',
 				children: [
 					{ slug: 'imitacja-betonu', label: 'Imitacja betonu' },
 					{ slug: 'glinka-wenecka', label: 'Glinka wenecka' },

@@ -38,10 +38,10 @@ export const LocationStart = ({titleRow1, titleRow2, text1, text2, className}: P
 				</p>
 
 				<div className={styles.buttons}>
-					<Link href='#kontakt' className={styles.contact}>
+					<Link href='/kontakt' className={styles.contact}>
 						Zapytaj o wycenę
 					</Link>
-					<Link href='#portfolio' className={styles.portfolio}>
+					<Link href='/#portfolio' className={styles.portfolio}>
 						<span>Nasze realizacje</span>
 						<Image src={arrow} className={styles.icon} alt='' aria-hidden />
 					</Link>

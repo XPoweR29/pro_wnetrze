@@ -7,6 +7,7 @@ import logo from '../../assets/logo.svg';
 import Image from 'next/image';
 import dev_logo from '../../assets/dev_logo.svg';
 import toolsImg from '../../assets/img/tools.svg';
+import arrow from '../../assets/icons/icon_arrow.svg';
 
 export const Footer = () => {
 	return (
@@ -59,13 +60,20 @@ export const Footer = () => {
 					</address>
 
 					<div className={styles.col3}>
-						<p>
-							<Link
-								href='/polityka-prywatnosci'
-								className={styles.link}>
-								Polityka Prywatności
+						<div className={styles.container}>
+							<Link className={styles.link} href='/uslugi-remontowo-budowlane'>
+								<Image src={arrow} alt='' aria-hidden /> usługi remontowe
 							</Link>
-						</p>
+							<Link className={styles.link} href='/uslugi-remontowo-budowlane'>
+								<Image src={arrow} alt='' aria-hidden /> wykończenia wnętrz
+							</Link>
+							<Link className={styles.link} href='/uslugi-remontowo-budowlane'>
+								<Image src={arrow} alt='' aria-hidden /> tynki dekoracyjne
+							</Link>
+							<Link href='/polityka-prywatnosci' className={styles.link}>
+								<Image src={arrow} alt='' aria-hidden /> Polityka Prywatności
+							</Link>
+						</div>
 						<p className={styles.copyright}>
 							© {new Date().getFullYear()} PROWnętrze <br /> Wszelkie prawa
 							zastrzeżone.
