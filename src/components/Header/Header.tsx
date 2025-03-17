@@ -51,7 +51,7 @@ export const Header = () => {
 
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, [pathname]);
+	}, [pathname, setMobileMenuShown]);
 
 	return (
 		<header

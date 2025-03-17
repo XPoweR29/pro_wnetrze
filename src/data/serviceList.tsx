@@ -4,7 +4,6 @@ import renovations from '../assets/img/uslugi-remontowo-budowlane.webp';
 import icon from '../assets/icons/circle-arrow.png';
 
 import Link from 'next/link';
-import { iconExists } from '@iconify/react/dist/iconify.js';
 import Image from 'next/image';
 
 export const serviceList: ServiceItem[] = [

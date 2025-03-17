@@ -1,12 +1,11 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
 
 import styles from './ServiceAbout.module.scss';
 import underline from '../../assets/underline.svg';
-import { useInView } from 'framer-motion';
 import { ServicePost } from '@/types/servicePost.type';
 import { ServicePosts } from '@/components/ServicePosts/ServicePosts';
 
@@ -25,9 +24,6 @@ export const ServiceAbout = ({
 	text,
 	posts
 }: Props) => {
-	const ref = useRef(null);
-	const inView = useInView(ref, { amount: 1, once: true });
-
 	return (
 		<section className={`${styles.about} ${className}`} id='about_section'>
 			<Wrapper className={styles.wrapper}>

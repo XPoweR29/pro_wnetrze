@@ -8,7 +8,6 @@ import bgImg from '../../assets/img/lazienka-po-remoncie.webp';
 import FixedBackground from '@/components/FixedBackground/FixedBackground';
 import Image from 'next/image';
 import { CoopSwiper } from '@/components/CoopSwiper/CoopSwiper';
-import Link from 'next/link';
 import { CtaFrame } from '@/components/CtaFrame/CtaFrame';
 
 export const LocationCoop = () => {

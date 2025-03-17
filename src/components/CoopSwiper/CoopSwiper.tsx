@@ -6,7 +6,6 @@ import { A11y, Autoplay } from 'swiper/modules';
 import { useBreakpoints } from '@/hooks/useBreakpoint';
 import 'swiper/css';
 
-import reviewJson from '../../data/reviews.json';
 import { coopStep } from '@/data/coopSwiperSteps';
 import { CoopCard } from '../CoopCard/CoopCard';
 

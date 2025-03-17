@@ -4,7 +4,6 @@ import { navLinks } from '@/data/navLinks';
 import Link from 'next/link';
 import { Wrapper } from '../Wrapper/Wrapper';
 import { Variants, motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
 import { useMegaMenu } from '@/hooks/useMegaMenu';
 
 export const MegaMenu = () => {
