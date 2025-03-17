@@ -78,7 +78,7 @@ export default function RootLayout({
 					</Script>
 				</head>
 
-				<body className={manrope.className}>
+				<body className={`${manrope.className} loading`}>
 					<ContextProvider>
 						<MegaMenuProvider>
 							<Header />

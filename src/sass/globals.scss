@@ -10,10 +10,15 @@ html {
 body {
 	font-size: 1.4rem;
 	min-width: 340px;
-	background-color: $dark;
+	background-color: $black;
 
 	@media (min-width: 400px) {
 		font-size: 1.6rem;
+	}
+
+	&.loading footer{
+		opacity: 0;
+		visibility: hidden;
 	}
 }
 
