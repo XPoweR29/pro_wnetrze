@@ -1,0 +1,113 @@
+@use '../../sass/common' as *;
+
+.section {
+	position: relative;
+	padding-top: 10em;
+	background-color: black;
+	background-image: url('../../assets/img/abstract.webp');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: $white;
+	overflow: hidden;
+	z-index: 1;
+	box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.3);
+
+	.reviews {
+		margin-bottom: 15em;
+		background-color: transparent;
+
+		:global(.reviewCard) {
+			background-color: rgba(0, 0, 0, 0.3);
+			backdrop-filter: blur(4px);
+		}
+
+		:global(.reviewHeading) {
+			font-size: 2em;
+			
+			span {
+				position: relative;
+				white-space: nowrap;
+				z-index: 1;
+
+				img {
+					position: absolute;
+					bottom: -5px;
+					left: 50%;
+					width: 100%;
+					transform: translateX(-50%);
+					z-index: -1;
+				}
+			}
+		}
+
+		:global(.reviewText) {
+			font-weight: bold;
+		}
+	}
+	
+
+	.headingContainer {
+		@include sectionHeading;
+
+		.bg_heading {
+			top: 0%;
+			left: -5%;
+			color: $white;
+			z-index: -1;
+		}
+
+		.heading {
+			max-width: 360px;
+			text-align: left;
+			color: $white;
+			z-index: 0;
+
+			img {
+				bottom: -0.2em;
+				height: 15px;
+				opacity: 0.8;
+			}
+		}
+	}
+
+	.text {
+		margin-top: 2.5em;
+	}
+
+	.divider {
+		position: absolute;
+		top: -1px;
+		right: 0;
+		width: 50%;
+		height: 30px;
+		background-color: $white;
+		clip-path: polygon(100% 100%, 30px 100%, 0 0, 100% 0);
+
+		@media (width >= 992px) {
+			height: 40px;
+			clip-path: polygon(100% 100%, 40px 100%, 0 0, 100% 0);
+		}
+	}
+
+	form {
+		background-color: rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(4px);
+	}
+}
+
+@media(width >= 992px) {
+	.section {
+		padding-bottom: 5em;
+	}
+}
+
+@media (width >= 768px) {
+	.section {
+		padding-top: 12em;
+		.text {
+			width: 80%;
+			max-width: 750px;
+		}
+	}
+}

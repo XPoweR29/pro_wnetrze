@@ -1,0 +1,160 @@
+@use '../../sass/common' as *;
+
+.serviceBox {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1110px;
+	padding: 2em 0;
+	z-index: 1;
+
+	&.reverse::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 150vw;
+		background-color: $dark;
+		opacity: 0.1;
+		z-index: -1;
+	}
+
+	.linkContainer {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		h3 {
+			font-size: 1.3em;
+			opacity: 0;
+		}
+
+		.text {
+			margin-top: 1em;
+			margin-bottom: 1em;
+			max-width: 690px;
+			opacity: 0;
+		}
+
+		.flexContainer {
+			display: flex;
+			flex-direction: column;
+		}
+
+		ul {
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			margin-top: 1em;
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
+			padding-left: 0.5em;
+			opacity: 0;
+
+			img {
+				width: 17px;
+			}
+		}
+
+		a {
+			text-transform: uppercase;
+		}
+	}
+
+	.serviceImage {
+		align-self: center;
+		width: 100%;
+		max-width: 510px;
+		margin: 1em 0;
+		aspect-ratio: 16/10;
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+		opacity: 0;
+	}
+}
+
+.fade-in-bottom {
+	animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.fade-in-left {
+	animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@media (width >= 576px) {
+	.serviceBox {
+		.linkContainer {
+			ul {
+				flex-direction: row;
+				flex-wrap: wrap;
+				gap: 1em;
+				max-width: 510px;
+				align-self: center;
+			}
+
+			li {
+				width: calc(50% - 0.5em);
+			}
+		}
+	}
+}
+
+@media (width >= 992px) {
+	.serviceBox {
+		.linkContainer {
+			h3.reverse {
+				align-self: flex-end;
+			}
+
+			.text.reverse {
+				align-self: flex-end;
+				text-align: right;
+			}
+
+			.flexContainer {
+				flex-direction: row;
+				justify-content: start;
+				gap: 6em;
+
+				&.reverse {
+					flex-direction: row-reverse;
+					justify-content: space-between;
+
+					ul {
+						margin: 0 auto;
+					}
+				}
+			}
+
+			ul {
+				flex-wrap: nowrap;
+				flex-direction: column;
+			}
+
+			li {
+				width: fit-content;
+			}
+		}
+	}
+}
+
+@media (width >=1200px) {
+	.serviceBox {
+		.linkContainer {
+			.flexContainer {
+				&.reverse {
+					ul {
+						margin: 0;
+						margin-left: auto;
+						margin-right: 5em;
+					}
+				}
+			}
+		}
+	}
+}

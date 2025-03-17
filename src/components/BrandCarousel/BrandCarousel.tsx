@@ -34,10 +34,10 @@ const brands: {name: string; src: StaticImageData}[] = [
 	{ name: 'Weber', src: weberLogo },
 	{ name: 'Egger', src: eggerLogo },
 ];
-export const BrandCarousel = () => {
+export const BrandCarousel = ({ className }: {className?: string;}) => {
 	return (
 		<Marquee 
-			className={styles.carousel} 
+			className={`${styles.carousel} ${className}`} 
 			speed={35}
 		>
 			{brands.map((brandLogo) => (

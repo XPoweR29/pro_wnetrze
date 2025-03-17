@@ -1,0 +1,47 @@
+.multiImg {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 15px; 
+  max-width: 500px; 
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.multiImg img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: -4px 4px 7px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.image1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+}
+
+.image2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.image3 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.image4 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+/* Responsywność - zmniejszamy cały układ */
+@media (max-width: 768px) {
+  .multiImg {
+    max-width: 90%; /* Dostosowanie szerokości */
+  }
+}

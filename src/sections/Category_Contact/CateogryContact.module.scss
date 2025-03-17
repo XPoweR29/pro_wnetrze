@@ -1,0 +1,68 @@
+@use '../../sass/common' as *;
+
+.area {
+	position: relative;
+	padding-top: 10em;
+	padding-bottom: 10em;
+	background-color: rgb(0, 0, 0);
+	background-image: url('../../assets/img/abstract.webp');
+	background-position: center;
+	background-size: cover;
+	color: $white;
+	overflow: hidden;
+	box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.3);
+
+	.divider {
+		position: absolute;
+		top: -1px;
+		right: 0;
+		width: 50%;
+		height: 30px;
+		background-color: $white;
+		clip-path: polygon(100% 100%, 30px 100%, 0 0, 100% 0);
+
+		@media (width >= 992px) {
+			height: 40px;
+			clip-path: polygon(100% 100%, 40px 100%, 0 0, 100% 0);
+		}
+	}
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.headingContainer {
+		@include sectionHeading;
+		margin: 0 auto;
+
+		.heading {
+			text-align: center;
+			color: $white;
+			z-index: 0;
+
+			img {
+				bottom: -0.2em;
+				height: 12px;
+				width: 100%;
+				opacity: 0.8;
+			}
+		}
+	}
+
+	.text {
+		margin: 0 auto;
+		margin-top: 2.5em;
+
+		@media (width>=768px) {
+			max-width: 690px;
+			text-align: center;
+		}
+	}
+
+	.cta {
+		margin-bottom: 4em;
+	}
+}

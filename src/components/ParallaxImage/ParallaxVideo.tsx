@@ -39,7 +39,7 @@ const ParallaxVideo: FC<Props> = ({ src, speed = 0.5, className }) => {
 		}
 
 		return () => window.removeEventListener('load', handleLoad);
-	}, []);
+	}, [setIsBgLoaded]);
 
 	return (
 		<>

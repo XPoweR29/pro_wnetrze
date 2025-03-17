@@ -1,0 +1,57 @@
+.extraLabel {
+	margin-top: 6em;
+	max-width: 1110px;
+
+	.title {
+		opacity: 0;
+	}
+
+	h2 {
+		font-size: 2em;
+		white-space: nowrap;
+	}
+
+	h3 {
+		font-size: 1.2em;
+		white-space: nowrap;
+
+		span {
+			position: relative;
+		}
+
+		img {
+			position: absolute;
+			width: 110%;
+			bottom: -4px;
+			left: 0px;
+		}
+	}
+
+	p {
+		margin-top: 2em;
+		font-weight: 100;
+		opacity: 0;
+	}
+}
+
+@media (width >=768px) {
+	.extraLabel {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+	}
+}
+
+@media (width >=992px) {
+	.extraLabel {
+		gap: 4em;
+	}
+}
+
+@media (width >=1200px) {
+	.extraLabel {
+		gap: 6em;
+	}
+}
+

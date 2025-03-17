@@ -1,14 +1,14 @@
 export const businessSchema = {
 	'@context': 'https://schema.org',
-	'@type': 'HomeAndConstructionBusiness',
-	name: 'PROWnętrze',
-	alternateName:
-		'PROWnętrze - Firma budowlana Żywiec | usługi remontowo-budowlane',
+	'@type': 'ContactPage',
+	'@id': 'https://pro-wnetrze.pl/kontakt',
+	name: 'Kontakt - PRO Wnętrze',
+	alternateName: 'Firma budowlana PRO Wnętrze | Usługi remontowo-budowlane',
 	url: 'https://pro-wnetrze.pl',
 	logo: 'https://pro-wnetrze.pl/logo.jpg',
 	image: 'https://pro-wnetrze.pl/og_img.jpg',
 	description:
-		'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz w Żywcu oraz regionach Krakowa, Andrychowa, Kęt i Bielsko-Białej. Zaufaj naszym fachowcom i ciesz się nową jakością przestrzeni!',
+		'PRO Wnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz na terenie województwa Śląskiego oraz Małopolskiego. Zaufaj naszym fachowcom!',
 	telephone: '+48 515-484-232',
 	email: 'prownetrze.zywiec@gmail.com',
 	address: {
@@ -32,6 +32,7 @@ export const businessSchema = {
 	},
 	sameAs: [
 		'https://www.instagram.com/prownetrze/profilecard/?igsh=NWxrOGMzazA2M29s',
+		'https://g.co/kgs/2t1nJxJ',
 	],
 	serviceType: 'Usługi remontowo-budowlane',
 	contactPoint: {
@@ -41,66 +42,13 @@ export const businessSchema = {
 		email: 'prownetrze.zywiec@gmail.com',
 	},
 	areaServed: [
-		{ '@type': 'City', name: 'Żywiec' },
-		{ '@type': 'City', name: 'Kraków' },
-		{ '@type': 'City', name: 'Andrychów' },
-		{ '@type': 'City', name: 'Kęty' },
-		{ '@type': 'City', name: 'Bielsko-Biała' },
-	],
-	makesOffer: [
 		{
-			'@type': 'Offer',
-			itemOffered: {
-				'@type': 'Service',
-				name: 'Kompleksowe wykończenia wnętrz',
-				description:
-					'Kompleksowe wykończenia wnętrz obejmujące wszystkie etapy prac wykończeniowych.',
-			},
+			'@type': 'AdministrativeArea',
+			name: 'Województwo Śląskie',
 		},
 		{
-			'@type': 'Offer',
-			itemOffered: {
-				'@type': 'Service',
-				name: 'Gładzie gipsowe i montaż płyt GK',
-				description:
-					'Wykonujemy gładzie gipsowe oraz montaż płyt GK, gwarantując idealną powierzchnię pod dalsze prace wykończeniowe.',
-			},
-		},
-		{
-			'@type': 'Offer',
-			itemOffered: {
-				'@type': 'Service',
-				name: 'Malowanie i dekoracje ścian (tapetowanie)',
-				description:
-					'Profesjonalne malowanie, dekoracje ścian oraz tapetowanie, dostosowane do indywidualnych potrzeb klienta.',
-			},
-		},
-		{
-			'@type': 'Offer',
-			itemOffered: {
-				'@type': 'Service',
-				name: 'Tapety z włókna szklanego',
-				description:
-					'Instalacja tapet z włókna szklanego, które są trwałe i łatwe do utrzymania w czystości.',
-			},
-		},
-		{
-			'@type': 'Offer',
-			itemOffered: {
-				'@type': 'Service',
-				name: 'Układanie podłóg i paneli',
-				description:
-					'Profesjonalne układanie podłóg oraz paneli, gwarantujące estetyczny i trwały efekt.',
-			},
-		},
-		{
-			'@type': 'Offer',
-			itemOffered: {
-				'@type': 'Service',
-				name: 'Kafelkowanie i remonty łazienek',
-				description:
-					'Kompleksowe usługi kafelkowania i remontów łazienek, zapewniające nowoczesne i funkcjonalne rozwiązania.',
-			},
+			'@type': 'AdministrativeArea',
+			name: 'Województwo Małopolskie',
 		},
 	],
 };
