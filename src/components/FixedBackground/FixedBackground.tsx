@@ -2,7 +2,6 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import styles from './FixedBackground.module.scss';
-import { useAppContext } from '@/hooks/useAppContext';
 
 interface FixedBackgroundProps {
 	src: string | StaticImageData;
