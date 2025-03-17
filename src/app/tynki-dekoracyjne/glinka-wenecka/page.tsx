@@ -20,10 +20,10 @@ const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
 	'@id':
-		'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/glinka-wenecka',
+		'https://pro-wnetrze.pl/tynki-dekoracyjne/glinka-wenecka',
 	isPartOf: {
 		'@type': 'CollectionPage',
-		'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian',
+		'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne',
 	},
 	name: 'Glinka wenecka – dekoracyjne wykończenie ścian | Efekt przetartego tynku',
 	description:
@@ -145,7 +145,7 @@ export const metadata: Metadata = {
 
 	alternates: {
 		canonical:
-			'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/glinka-wenecka',
+			'https://pro-wnetrze.pl/tynki-dekoracyjne/glinka-wenecka',
 	},
 
 	openGraph: {
@@ -153,7 +153,7 @@ export const metadata: Metadata = {
 			'Glinka wenecka – dekoracyjne wykończenie ścian | Efekt przetartego tynku',
 		description:
 			'Profesjonalne położenie glinki weneckiej – trwałe i eleganckie wykończenie ścian. Sprawdź kolory, efekt dekoracyjny i koszt aplikacji!',
-		url: 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/glinka-wenecka',
+		url: 'https://pro-wnetrze.pl/tynki-dekoracyjne/glinka-wenecka',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{
@@ -184,7 +184,7 @@ const posts: ServicePost[] = [
 					marmurowego, która po wypolerowaniu tworzy efekt wysokiego połysku i
 					głębokiego odbicia światła. Jeśli chcesz dowiedzieć się więcej o tej
 					technice, sprawdź naszą stronę:{' '}
-					<Link href='/tynki-dekoracyjne-i-wykonczenia-scian/stiuki'>
+					<Link href='/tynki-dekoracyjne/stiuki-weneckie'>
 						stuiki weneckie
 					</Link>
 					.
@@ -230,7 +230,7 @@ const posts: ServicePost[] = [
 					wygląd do stylu wnętrza, tworząc eleganckie i trwałe wykończenie.
 					Jeśli szukasz innych efektownych technik dekoracyjnych, sprawdź
 					również nasze propozycje na stronie dotyczącej{' '}
-					<Link href='/tynki-dekoracyjne-i-wykonczenia-scian'>
+					<Link href='/tynki-dekoracyjne'>
 						dekoracji ścian
 					</Link>
 					.

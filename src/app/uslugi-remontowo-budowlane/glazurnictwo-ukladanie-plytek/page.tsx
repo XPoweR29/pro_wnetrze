@@ -20,7 +20,7 @@ const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
 	'@id':
-		'https://pro-wnetrze.pl/uslugi-remontowo-budowlane/glazurnictwo-ukladanie-plytek-kafelkowanie',
+		'https://pro-wnetrze.pl/uslugi-remontowo-budowlane/glazurnictwo-ukladanie-plytek',
 	isPartOf: {
 		'@type': 'CollectionPage',
 		'@id': 'https://pro-wnetrze.pl/uslugi-remontowo-budowlane',
@@ -117,14 +117,14 @@ export const metadata: Metadata = {
 
 	alternates: {
 		canonical:
-			'https://pro-wnetrze.pl/uslugi-remontowo-budowlane/glazurnictwo-ukladanie-plytek-kafelkowanie',
+			'https://pro-wnetrze.pl/uslugi-remontowo-budowlane/glazurnictwo-ukladanie-plytek',
 	},
 
 	openGraph: {
 		title: 'Usługi glazurnicze - układanie płytek i kafelkowanie łazienek',
 		description:
 			'Oferujemy usługi glazurnicze – układanie płytek na podłodze, ścianach i balkonach oraz kafelkowanie łazienek. Zapewniamy trwałość i precyzję wykonania.',
-		url: 'https://pro-wnetrze.pl/uslugi-remontowo-budowlane/glazurnictwo-ukladanie-plytek-kafelkowanie',
+		url: 'https://pro-wnetrze.pl/uslugi-remontowo-budowlane/glazurnictwo-ukladanie-plytek',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{
@@ -248,7 +248,7 @@ const ServicePage = () => {
 						<span>
 							Jeżeli planujesz kompleksową renowację wnętrza, warto również
 							zapoznać się z naszą ofertą{' '}
-							<Link href={'/wykonczenia-wnetrz-mieszkan-domow/remont-lazienki'}>
+							<Link href={'/wykonczenia-wnetrz/remont-lazienki'}>
 								Remontu łazienki
 							</Link>
 							, która łączy w sobie elementy glazurnictwa z całościowym

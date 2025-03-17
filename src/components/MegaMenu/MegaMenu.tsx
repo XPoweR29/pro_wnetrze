@@ -8,9 +8,7 @@ import { usePathname } from 'next/navigation';
 import { useMegaMenu } from '@/hooks/useMegaMenu';
 
 export const MegaMenu = () => {
-	const pathname = usePathname();
 	const { openMenu, closeMenu, isSubmenuOpen } = useMegaMenu();
-	let hideTimeout: NodeJS.Timeout | null = null;
 	// 	hideTimeout = setTimeout(() => {
 	// 		setIsSubMenuOpen(false);
 	// 	}, 200);

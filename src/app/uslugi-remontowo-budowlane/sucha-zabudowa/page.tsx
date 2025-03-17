@@ -217,7 +217,7 @@ const posts: ServicePost[] = [
 				<span>
 					Jeśli planujesz gruntowną przemianę tej strefy domu, zachęcamy do
 					zapoznania się z naszą usługą{' '}
-					<Link href='/wykonczenia-wnetrz-mieszkan-domow/adaptacja-poddasza'>
+					<Link href='/wykonczenia-wnetrz/adaptacja-poddasza'>
 						adaptacji poddasza
 					</Link>
 					. Połączenie suchej zabudowy poddasza GK z profesjonalnym ociepleniem

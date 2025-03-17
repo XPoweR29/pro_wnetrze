@@ -12,7 +12,6 @@ import { CoopCard } from '../CoopCard/CoopCard';
 
 export const CoopSwiper = ({ className }: { className?: string }) => {
 	const { breakpoint } = useBreakpoints();
-	const reviews: Review[] = reviewJson;
 
 	return (
 		<Swiper

@@ -182,7 +182,7 @@ const posts: ServicePost[] = [
 					Dodatkowo, nasze produkty gwarantują długotrwałą satysfakcję i
 					minimalne koszty konserwacji, co czyni je atrakcyjnym rozwiązaniem dla
 					każdego domu. Jeśli planujesz{' '}
-					<Link href={'/wykonczenia-wnetrz-mieszkan-domow/remont-lazienki'}>
+					<Link href={'/wykonczenia-wnetrz/remont-lazienki'}>
 						remont łazienki
 					</Link>
 					, nasze tapety wodoodporne pomogą Ci stworzyć przestrzeń, która zyska
@@ -208,7 +208,7 @@ const posts: ServicePost[] = [
 				<span>
 					Jeśli zależy Ci na kompleksowym wykończeniu wnętrza, warto rozważyć
 					również nasze{' '}
-					<Link href='/tynki-dekoracyjne-i-wykonczenia-scian'>
+					<Link href='/tynki-dekoracyjne'>
 						dekoracje ścian
 					</Link>
 					, które idealnie dopełnią aranżację, nadając przestrzeni spójny i
@@ -268,7 +268,7 @@ const ServicePage = () => {
 							naszą ofertą{' '}
 							<Link
 								href={
-									'/wykonczenia-wnetrz-mieszkan-domow/wykonczenia-pod-klucz'
+									'/wykonczenia-wnetrz/wykonczenia-pod-klucz'
 								}>
 								wykończenia wnętrz
 							</Link>

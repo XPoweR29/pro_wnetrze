@@ -20,10 +20,10 @@ const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
 	'@id':
-		'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/stiuki-weneckie',
+		'https://pro-wnetrze.pl/tynki-dekoracyjne/stiuki-weneckie',
 	isPartOf: {
 		'@type': 'CollectionPage',
-		'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian',
+		'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne',
 	},
 	name: 'Stiuk Wenecki – Eleganckie Wykończenie Ścian | Profesjonalna Aplikacja',
 	description:
@@ -146,7 +146,7 @@ export const metadata: Metadata = {
 
 	alternates: {
 		canonical:
-			'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/stiuki-weneckie',
+			'https://pro-wnetrze.pl/tynki-dekoracyjne/stiuki-weneckie',
 	},
 
 	openGraph: {
@@ -154,7 +154,7 @@ export const metadata: Metadata = {
 			'Stiuk Wenecki – Eleganckie Wykończenie Ścian | Profesjonalna Aplikacja',
 		description:
 			'Oferujemy profesjonalne położenie stiuku weneckiego – stiuk lustrzany, tynki stiukowe i dekoracyjne wykończenia ścian.',
-		url: 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/stiuki-weneckie',
+		url: 'https://pro-wnetrze.pl/tynki-dekoracyjne/stiuki-weneckie',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{
@@ -185,7 +185,7 @@ const posts: ServicePost[] = [
 				</span>
 				<span>
 					Alternatywą dla stiuku jest{' '}
-					<Link href='/tynki-dekoracyjne-i-wykonczenia-scian/glinka-wenecka'>
+					<Link href='/tynki-dekoracyjne/glinka-wenecka'>
 						glinka wenecka
 					</Link>
 					, która oferuje równie elegancki wygląd, ale o bardziej subtelnej
@@ -225,7 +225,7 @@ const posts: ServicePost[] = [
 				<span>
 					Jeśli planujesz większą modernizację swojej łazienki, sprawdź naszą
 					usługę{' '}
-					<Link href='/wykonczenia-wnetrz-mieszkan-domow/remont-lazienki'>
+					<Link href='/wykonczenia-wnetrz/remont-lazienki'>
 						remontu łazienki
 					</Link>
 					, która obejmuje kompleksowe wykończenia dostosowane do Twoich
@@ -330,7 +330,7 @@ const ServicePage = () => {
 						<span>
 							Dla osób szukających innych stylowych rozwiązań, warto również
 							rozważyć{' '}
-							<Link href='/tynki-dekoracyjne-i-wykonczenia-scian/imitacja-betonu'>
+							<Link href='/tynki-dekoracyjne/imitacja-betonu'>
 								imitację betonu
 							</Link>
 							, która oferuje surowy, industrialny charakter w podobnym duchu

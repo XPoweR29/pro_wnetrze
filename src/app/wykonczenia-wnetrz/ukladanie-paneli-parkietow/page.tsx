@@ -4,7 +4,6 @@ import styles from './index.module.scss';
 
 import { Metadata } from 'next';
 import { ServiceStart } from '@/sections/Service_Start/ServiceStart';
-import Link from 'next/link';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
 import { CategoryFeatures } from '@/components/CategoryFeatures/CategoryFeatures';
 import { CategoryContact } from '@/sections/Category_Contact/CategoryContact';
@@ -20,10 +19,10 @@ const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
 	'@id':
-		'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/ukladanie-podlog-i-parkietow-ukladanie-paneli',
+		'https://pro-wnetrze.pl/wykonczenia-wnetrz/ukladanie-paneli-parkietow',
 	isPartOf: {
 		'@type': 'CollectionPage',
-		'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow',
+		'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz',
 	},
 	name: 'Układanie podłóg – montaż partkietu i układanie paneli podłogowych',
 	description:
@@ -154,14 +153,14 @@ export const metadata: Metadata = {
 
 	alternates: {
 		canonical:
-			'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/ukladanie-podlog-i-parkietow-ukladanie-paneli',
+			'https://pro-wnetrze.pl/wykonczenia-wnetrz/ukladanie-paneli-parkietow',
 	},
 
 	openGraph: {
 		title: 'Układanie podłóg – montaż partkietu i układanie paneli podłogowych',
 		description:
 			'Profesjonalne układanie podłóg – montaż paneli podłogowych, parkietu i paneli winylowych. Oferujemy także cyklinowanie parkietu i doradztwo w wyborze wzoru podłogi. ',
-		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/ukladanie-podlog-i-parkietow-ukladanie-paneli',
+		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz/ukladanie-paneli-parkietow',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{

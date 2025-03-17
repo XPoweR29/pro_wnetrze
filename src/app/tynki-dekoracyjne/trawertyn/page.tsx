@@ -20,10 +20,10 @@ const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
 	'@id':
-		'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/trawertyn',
+		'https://pro-wnetrze.pl/tynki-dekoracyjne/trawertyn',
 	isPartOf: {
 		'@type': 'CollectionPage',
-		'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian',
+		'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne',
 	},
 	name: 'Położenie trawertynu – tynk dekoracyjny i płytki',
 	description:
@@ -145,14 +145,14 @@ export const metadata: Metadata = {
 
 	alternates: {
 		canonical:
-			'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/trawertyn',
+			'https://pro-wnetrze.pl/tynki-dekoracyjne/trawertyn',
 	},
 
 	openGraph: {
 		title: 'Położenie trawertynu – tynk dekoracyjny i płytki',
 		description:
 			'Oferujemy położenie trawertynu – dekoracyjny tynk oraz montaż płytek trawertynowych na ścianach, podłogach i tarasach.',
-		url: 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/trawertyn',
+		url: 'https://pro-wnetrze.pl/tynki-dekoracyjne/trawertyn',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{
@@ -239,7 +239,7 @@ const posts: ServicePost[] = [
 				<span>
 					Jeśli szukasz innych rozwiązań do wykończenia tarasu, warto rozważyć
 					również{' '}
-					<Link href='/uslugi-remontowo-budowlane/glazurnictwo-ukladanie-plytek-kafelkowanie'>
+					<Link href='/uslugi-remontowo-budowlane/glazurnictwo-ukladanie-plytek'>
 						glazurnictwo
 					</Link>
 					, które pozwala na zastosowanie odpornych płytek gresowych, idealnych
@@ -284,7 +284,7 @@ const ServicePage = () => {
 							rezultat. Jest to rozwiązanie, które nadaje się zarówno do
 							salonów, korytarzy, jak i przestrzeni użytkowych. <br />
 							Podobnie jak{' '}
-							<Link href='/tynki-dekoracyjne-i-wykonczenia-scian/glinka-wenecka'>
+							<Link href='/tynki-dekoracyjne/glinka-wenecka'>
 								glinka wenecka
 							</Link>
 							, tynk trawertyn to świetna alternatywa dla klasycznych farb i

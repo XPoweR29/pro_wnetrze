@@ -64,10 +64,10 @@ export const Footer = () => {
 							<Link className={styles.link} href='/uslugi-remontowo-budowlane'>
 								<Image src={arrow} alt='' aria-hidden /> usługi remontowe
 							</Link>
-							<Link className={styles.link} href='/uslugi-remontowo-budowlane'>
+							<Link className={styles.link} href='/wykonczenia-wnetrz'>
 								<Image src={arrow} alt='' aria-hidden /> wykończenia wnętrz
 							</Link>
-							<Link className={styles.link} href='/uslugi-remontowo-budowlane'>
+							<Link className={styles.link} href='/tynki-dekoracyjne'>
 								<Image src={arrow} alt='' aria-hidden /> tynki dekoracyjne
 							</Link>
 							<Link href='/polityka-prywatnosci' className={styles.link}>

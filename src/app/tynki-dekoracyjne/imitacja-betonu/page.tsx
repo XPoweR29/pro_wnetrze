@@ -20,10 +20,10 @@ const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
 	'@id':
-		'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/imitacja-betonu',
+		'https://pro-wnetrze.pl/tynki-dekoracyjne/imitacja-betonu',
 	isPartOf: {
 		'@type': 'CollectionPage',
-		'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian',
+		'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne',
 	},
 	name: 'Imitacja betonu na ścianie – beton dekoracyjny',
 	description:
@@ -137,14 +137,14 @@ export const metadata: Metadata = {
 
 	alternates: {
 		canonical:
-			'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/imitacja-betonu',
+			'https://pro-wnetrze.pl/tynki-dekoracyjne/imitacja-betonu',
 	},
 
 	openGraph: {
 		title: 'Imitacja betonu na ścianie – beton dekoracyjny',
 		description:
 			'Chcesz uzyskać imitację betonu na ścianie? Oferujemy beton dekoracyjny, farby imitujące beton i płyty betonowe. Nadaj wnętrzu industrialny charakter.',
-		url: 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian/imitacja-betonu',
+		url: 'https://pro-wnetrze.pl/tynki-dekoracyjne/imitacja-betonu',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{
@@ -177,7 +177,7 @@ const posts: ServicePost[] = [
 					loftowych, nowoczesnych apartamentach oraz wnętrzach komercyjnych,
 					nadając im niepowtarzalny styl. Alternatywą dla surowego betonu może
 					być{' '}
-					<Link href='/tynki-dekoracyjne-i-wykonczenia-scian/trawertyn'>
+					<Link href='/tynki-dekoracyjne/trawertyn'>
 						trawertyn
 					</Link>
 					, który zachwyca naturalną fakturą i subtelnymi przejściami
@@ -207,7 +207,7 @@ const posts: ServicePost[] = [
 				<span>
 					Dla osób poszukujących bardziej wyrafinowanego wykończenia świetnym
 					wyborem jest{' '}
-					<Link href='/tynki-dekoracyjne-i-wykonczenia-scian/glinka-wenecka'>
+					<Link href='/tynki-dekoracyjne/glinka-wenecka'>
 						glinka wenecka
 					</Link>
 					, która łączy efekt betonu z delikatnym połyskiem. Dzięki swojej
@@ -292,7 +292,7 @@ const ServicePage = () => {
 						</span>
 						<span>
 							Alternatywą dla imitacji betonu są{' '}
-							<Link href='/tynki-dekoracyjne-i-wykonczenia-scian/tynki-dekoracyjne'>
+							<Link href='/tynki-dekoracyjne'>
 								tynki dekoracyjne
 							</Link>
 							, które pozwalają uzyskać równie interesujące efekty wizualne.

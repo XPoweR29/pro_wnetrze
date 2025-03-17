@@ -20,10 +20,10 @@ const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
 	'@id':
-		'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/adaptacja-poddasza',
+		'https://pro-wnetrze.pl/wykonczenia-wnetrz/adaptacja-poddasza',
 	isPartOf: {
 		'@type': 'CollectionPage',
-		'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow',
+		'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz',
 	},
 	name: 'Adaptacja poddasza – kompleksowe wykończenie i zagospodarowanie strychu',
 	description:
@@ -139,7 +139,7 @@ export const metadata: Metadata = {
 
 	alternates: {
 		canonical:
-			'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/adaptacja-poddasza',
+			'https://pro-wnetrze.pl/wykonczenia-wnetrz/adaptacja-poddasza',
 	},
 
 	openGraph: {
@@ -147,7 +147,7 @@ export const metadata: Metadata = {
 			'Adaptacja poddasza – kompleksowe wykończenie i zagospodarowanie strychu',
 		description:
 			'Planujesz adaptację poddasza? Oferujemy kompleksowe usługi – od ocieplenia i zabudowy strychu po pełne wykończenie poddasza. Sprawdź naszą ofertę!',
-		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/adaptacja-poddasza',
+		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz/adaptacja-poddasza',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{
@@ -211,7 +211,7 @@ const posts: ServicePost[] = [
 					konstrukcji, montaż nowych okien dachowych i zastosowanie nowoczesnych
 					materiałów wykończeniowych. Prace te najlepiej połączyć z
 					profesjonalnym{' '}
-					<Link href='/wykonczenia-wnetrz-mieszkan-domow/wykonczenia-pod-klucz'>
+					<Link href='/wykonczenia-wnetrz/wykonczenia-pod-klucz'>
 						wykończeniem pod klucz
 					</Link>
 					, które zapewni spójny wygląd całego wnętrza oraz oszczędność czasu.
@@ -278,7 +278,7 @@ const ServicePage = () => {
 							Oferujemy kompleksowe adaptacje poddaszy, obejmujące instalację
 							płyt gipsowo-kartonowych, zabudowę sufitów oraz montaż podłóg. W
 							przypadku modernizacji strychu warto skorzystać z naszej usługi{' '}
-							<Link href='/wykonczenia-wnetrz-mieszkan-domow/ukladanie-podlog-i-parkietow-ukladanie-paneli'>
+							<Link href='/wykonczenia-wnetrz/ukladanie-paneli-parkietow'>
 								układania podłóg
 							</Link>
 							, dzięki której wnętrze zyska na estetyce i funkcjonalności.

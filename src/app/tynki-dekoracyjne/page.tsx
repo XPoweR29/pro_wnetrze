@@ -20,11 +20,11 @@ import { CategoryContact } from '@/sections/Category_Contact/CategoryContact';
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'CollectionPage',
-	'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian',
+	'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne',
 	name: 'Techniki dekoracyjne | nowoczesne wykończenia i dekoracje ścian',
 	description:
 		'Odkryj techniki dekoracyjne, które nadadzą wnętrzom wyjątkowy styl. Tynki dekoracyjne, tynki strukturalne, dekoracje ścian i inne nowoczesne rozwiązania dla Twojego domu.',
-	url: 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian',
+	url: 'https://pro-wnetrze.pl/tynki-dekoracyjne',
 };
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 		title: 'Techniki dekoracyjne | nowoczesne wykończenia i dekoracje ścian',
 		description:
 			'Techniki dekoracyjne, które nadadzą wnętrzom wyjątkowy styl. Tynki dekoracyjne, strukturalne i inne nowoczesne rozwiązania dla Twojego domu.',
-		url: 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian',
+		url: 'https://pro-wnetrze.pl/tynki-dekoracyjne',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 		locale: 'pl_PL',
 	},
 	alternates: {
-		canonical: 'https://pro-wnetrze.pl/tynki-dekoracyjne-i-wykonczenia-scian',
+		canonical: 'https://pro-wnetrze.pl/tynki-dekoracyjne',
 	},
 };
 
@@ -85,7 +85,7 @@ const CategoryPage = () => {
 				}
 				graphicTitle='Nasza oferta dekoracji ścian '
 				graphicText='Oferujemy szeroki wybór dekoracji ścian, które nadadzą wnętrzom unikalny charakter i wyjątkowy styl. Wśród naszych propozycji znajdziesz ściany dekoracyjne, które doskonale sprawdzą się jako dekoracja ściany z telewizorem lub efektowny akcent w salonie. Jeśli szukasz nowoczesnych rozwiązań, postaw na modne dekoracje na ścianę, które podkreślą wyjątkowy klimat Twojego wnętrza. Każde rozwiązanie łączy estetykę z trwałością, dzięki czemu efekt cieszy oko przez lata.'
-				categorySlug='tynki-dekoracyjne-i-wykonczenia-scian'
+				categorySlug='tynki-dekoracyjne'
 				linkArr={decorationsLinks}
 				img1={image1}
 				img2={image2}
@@ -101,7 +101,7 @@ const CategoryPage = () => {
 						stworzyć niepowtarzalny klimat w każdym wnętrzu. Jeśli chcesz nadać
 						charakteru przestrzeni w której mieszkasz, sprawdź co jeszcze
 						oferujemy w zakresie{' '}
-						<Link href={'/wykonczenia-wnetrz-mieszkan-domow'}>
+						<Link href={'/wykonczenia-wnetrz'}>
 							wykończenia wnętrz
 						</Link>
 						. Jeśli planujesz większą metamorfozę mieszkania lub domu,

@@ -92,7 +92,7 @@ const CategoryPage = () => {
 					</h3>
 					<p className={styles.linkingText}>
 						Oprócz usług typowo remontowych oferujemy również{' '}
-						<Link href={'/wykonczenia-wnetrz-mieszkan-domow'}>
+						<Link href={'/wykonczenia-wnetrz'}>
 							wykończenia wnętrz
 						</Link>
 						, dzięki czemu możemy przeprowadzić cały proces – od przygotowania
@@ -102,7 +102,7 @@ const CategoryPage = () => {
 						doboru kolorów i faktur, tak aby wnętrze odzwierciedlało Twój styl i
 						potrzeby. Chcesz nadać pomieszczeniom wyjątkowy charakter? Zapoznaj
 						się z naszymi{' '}
-						<Link href={'/tynki-dekoracyjne-i-wykonczenia-scian'}>
+						<Link href={'/tynki-dekoracyjne'}>
 							{' '}
 							technikami dekoracyjnymi
 						</Link>

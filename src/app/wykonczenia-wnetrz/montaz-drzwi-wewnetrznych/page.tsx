@@ -20,10 +20,10 @@ const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
 	'@id':
-		'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/montaz-drzwi-wewnetrznych',
+		'https://pro-wnetrze.pl/wykonczenia-wnetrz/montaz-drzwi-wewnetrznych',
 	isPartOf: {
 		'@type': 'CollectionPage',
-		'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow',
+		'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz',
 	},
 	name: 'Montaż drzwi wewnętrznych – fachowe wstawianie i wymiana drzwi',
 	description:
@@ -145,14 +145,14 @@ export const metadata: Metadata = {
 
 	alternates: {
 		canonical:
-			'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/montaz-drzwi-wewnetrznych',
+			'https://pro-wnetrze.pl/wykonczenia-wnetrz/montaz-drzwi-wewnetrznych',
 	},
 
 	openGraph: {
 		title: 'Montaż drzwi wewnętrznych – fachowe wstawianie i wymiana drzwi',
 		description:
 			'Szukasz profesjonalnego montażu drzwi wewnętrznych? Oferujemy precyzyjne wstawianie drzwi, wymianę z ościeżnicą regulowaną i stałą. Sprawdź naszą ofertę!',
-		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/montaz-drzwi-wewnetrznych',
+		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz/montaz-drzwi-wewnetrznych',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{
@@ -187,7 +187,7 @@ const posts: ServicePost[] = [
 					rozwiązanie, które nie tylko poprawi estetykę pomieszczenia, ale także
 					zwiększy wygodę użytkowania. Jeśli remontujesz mieszkanie i chcesz
 					kompleksowo odmienić jego wygląd, warto skorzystać z naszej usługi{' '}
-					<Link href='/wykonczenia-wnetrz-mieszkan-domow/wykonczenia-pod-klucz'>
+					<Link href='/wykonczenia-wnetrz/wykonczenia-pod-klucz'>
 						wykończenia pod klucz
 					</Link>
 					, która obejmuje nie tylko montaż drzwi wewnętrznych, ale także inne
@@ -323,7 +323,7 @@ const ServicePage = () => {
 							instalacji. Aby uzyskać precyzyjną wycenę, warto skontaktować się
 							z nami i określić zakres usług. Jeśli oprócz wstawienia drzwi
 							wewnętrznych planujesz także wymianę podłóg, sprawdź naszą usługę{' '}
-							<Link href='/wykonczenia-wnetrz-mieszkan-domow/ukladanie-podlog-i-parkietow-ukladanie-paneli'>
+							<Link href='/wykonczenia-wnetrz/ukladanie-paneli-parkietow'>
 								układania podłóg
 							</Link>
 							, która pozwoli na kompleksowe wykończenie wnętrza, zapewniając

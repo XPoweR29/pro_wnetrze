@@ -54,7 +54,7 @@ export const navLinks: NavLink[] = [
 ];
 
 export const renovationServicesLinks: LinkData[] = [
-	{ slug: 'glazurnictwo-ukladanie-plytek-kafelkowanie', label: 'Glazurnictwo' },
+	{ slug: 'glazurnictwo-ukladanie-plytek', label: 'Glazurnictwo' },
 	{ slug: 'malowanie-scian', label: 'Malowanie ścian' },
 	{ slug: 'tapetowanie-scian', label: 'Tapetowanie' },
 	{ slug: 'gladzie-gipsowe', label: 'Gładzie gipsowe' },
@@ -66,7 +66,7 @@ export const interiorDesignLinks: LinkData[] = [
 	{ slug: 'remont-lazienki', label: 'Remont łazienki' },
 	{ slug: 'adaptacja-poddasza', label: 'Adaptacja poddasza' },
 	{ slug: 'montaz-drzwi-wewnetrznych', label: 'Montaż drzwi wewnętrznych' },
-	{ slug: 'ukladanie-podlog-i-parkietow-ukladanie-paneli', label: 'Ukladanie podłóg'},
+	{ slug: 'ukladanie-paneli-parkietow', label: 'Ukladanie podłóg' },
 	{ slug: 'wykonczenia-pod-klucz', label: 'Wykończenia pod klucz' },
 ];
 

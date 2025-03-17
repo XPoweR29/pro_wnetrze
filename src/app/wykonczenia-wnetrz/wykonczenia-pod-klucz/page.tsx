@@ -20,10 +20,10 @@ const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
 	'@id':
-		'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/wykonczenia-pod-klucz',
+		'https://pro-wnetrze.pl/wykonczenia-wnetrz/wykonczenia-pod-klucz',
 	isPartOf: {
 		'@type': 'CollectionPage',
-		'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow',
+		'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz',
 	},
 	name: 'Wykończenia pod klucz – kompleksowe wykończenie mieszkań i domów',
 	description:
@@ -137,14 +137,14 @@ export const metadata: Metadata = {
 
 	alternates: {
 		canonical:
-			'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/wykonczenia-pod-klucz',
+			'https://pro-wnetrze.pl/wykonczenia-wnetrz/wykonczenia-pod-klucz',
 	},
 
 	openGraph: {
 		title: 'Wykończenia pod klucz – kompleksowe wykończenie mieszkań i domów',
 		description:
 			'Kompleksowe wykończenia pod klucz mieszkań i domów. Zaufaj ekspertom i zamieszkaj w gotowym wnętrzu!',
-		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/wykonczenia-pod-klucz',
+		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz/wykonczenia-pod-klucz',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{

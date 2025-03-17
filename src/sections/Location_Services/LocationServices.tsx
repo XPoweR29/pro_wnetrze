@@ -58,7 +58,7 @@ export const LocationServices = ({
 						title={servicesArr[1].title}
 						image={servicesArr[1].image}
 						imageAlt={servicesArr[1].imageAlt}
-						categorySlug='wykonczenia-wnetrz-mieszkan-domow'
+						categorySlug='wykonczenia-wnetrz'
 						links={interiorDesignLinks}
 						reverse>
 						{servicesArr[1].content}
@@ -68,7 +68,7 @@ export const LocationServices = ({
 						title={servicesArr[2].title}
 						image={servicesArr[2].image}
 						imageAlt={servicesArr[2].imageAlt}
-						categorySlug='tynki-dekoracyjne-i-wykonczenia-scian'
+						categorySlug='tynki-dekoracyjne'
 						links={decorationsLinks}>
 						{servicesArr[2].content}
 					</ServiceBox>

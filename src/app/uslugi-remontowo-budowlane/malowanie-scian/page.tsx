@@ -159,7 +159,7 @@ const posts: ServicePost[] = [
 				<span>
 					Jeśli chcesz wzbogacić swoje wnętrze o nowoczesne akcenty, zachęcamy
 					również do zapoznania się z naszymi{' '}
-					<Link href='/tynki-dekoracyjne-i-wykonczenia-scian'>
+					<Link href='/tynki-dekoracyjne'>
 						technikami dekoracyjnymi
 					</Link>{' '}
 					ścian, które mogą stanowić doskonałe uzupełnienie tradycyjnego

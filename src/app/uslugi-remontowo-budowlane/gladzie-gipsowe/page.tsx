@@ -190,7 +190,7 @@ const posts: ServicePost[] = [
 					tylko estetycznym, ale i funkcjonalnym efektem, który idealnie
 					przygotowuje ściany pod dalsze prace, takie jak montaż dekoracyjnych
 					akcentów czy zaawansowane{' '}
-					<Link href={'/tynki-dekoracyjne-i-wykonczenia-scian'}>
+					<Link href={'/tynki-dekoracyjne'}>
 						techniki wykończeniowe
 					</Link>
 					.

@@ -20,11 +20,11 @@ import { CategoryContact } from '@/sections/Category_Contact/CategoryContact';
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'CollectionPage',
-	'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow',
+	'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz',
 	name: 'Wykończenia wnętrz | Kompleksowe prace wykończeniowe mieszkań i domów',
 	description:
 		'Profesjonalne wykończenia wnętrz – kompleksowe remonty mieszkań i domów, prace wykończeniowe, stylowe aranżacje i wykończenia pod klucz.',
-	url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow',
+	url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz',
 };
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 			'Wykończenia wnętrz | Kompleksowe prace wykończeniowe mieszkań i domów',
 		description:
 			'Profesjonalne wykończenia wnętrz – kompleksowe remonty mieszkań i domów, prace wykończeniowe, stylowe aranżacje i wykończenia pod klucz.',
-		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow',
+		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 		locale: 'pl_PL',
 	},
 	alternates: {
-		canonical: 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow',
+		canonical: 'https://pro-wnetrze.pl/wykonczenia-wnetrz',
 	},
 };
 
@@ -75,7 +75,7 @@ const CategoryPage = () => {
 				text='Zadbamy o każdy detal, aby Twoje wnętrze było nie tylko estetyczne, ale i funkcjonalne. Oferujemy pełen zakres prac wykończeniowych – od gładzi i malowania, po układanie podłóg i tynki dekoracyjne. Stawiamy na wysoką jakość, terminowość i precyzję, dzięki czemu efekt końcowy spełni Twoje oczekiwania. Sprawdź, jak możemy odmienić Twoją przestrzeń!'
 				graphicTitle='Szeroki zakres prac wykończeniowych'
 				graphicText='Oferujemy kompleksowe usługi, dzięki którym Twoje wnętrza zyskają nowy wygląd i pełną funkcjonalność. Realizujemy zarówno drobne prace montażowe, jak i kompleksowe remonty – od łazienek, przez adaptację poddasza, aż po wykończenia pod klucz. Każdy etap pracy wykonujemy z dbałością o detale, aby efekt spełniał Twoje oczekiwania na długie lata.'
-				categorySlug='wykonczenia-wnetrz-mieszkan-domow'
+				categorySlug='wykonczenia-wnetrz'
 				linkArr={interiorDesignLinks}
 				img1={image1}
 				img2={image2}
@@ -95,7 +95,7 @@ const CategoryPage = () => {
 						<Link href={'/uslugi-remontowo-budowlane'}>usługi remontowe</Link>,
 						dzięki którym możesz odmienić swoją przestrzeń od podstaw. Jeśli
 						zależy Ci na wyjątkowym efekcie wizualnym, sprawdź również nasze{' '}
-						<Link href={'/tynki-dekoracyjne-i-wykonczenia-scian'}>
+						<Link href={'/tynki-dekoracyjne'}>
 							{' '}
 							techniki dekoracyjne
 						</Link>

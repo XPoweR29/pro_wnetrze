@@ -233,7 +233,7 @@ const posts: ServicePost[] = [
 					dostosowanych do stylu wnętrza i indywidualnych potrzeb.
 					Wykorzystujemy trwałe materiały odporne na wilgoć, zapewniając
 					solidność konstrukcji. Jeśli planujesz kompleksowe{' '}
-					<Link href='/wykonczenia-wnetrz-mieszkan-domow'>
+					<Link href='/wykonczenia-wnetrz'>
 						wykończenia wnętrz
 					</Link>{' '}
 					i chcesz, aby Twój sufit podwieszany idealnie komponował się z

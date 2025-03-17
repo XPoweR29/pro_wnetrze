@@ -20,10 +20,10 @@ const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
 	'@id':
-		'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/remont-lazienki',
+		'https://pro-wnetrze.pl/wykonczenia-wnetrz/remont-lazienki',
 	isPartOf: {
 		'@type': 'CollectionPage',
-		'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow',
+		'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz',
 	},
 	name: 'Remont łazienki - układanie płytek i fachowe wykończenie',
 	description:
@@ -144,14 +144,14 @@ export const metadata: Metadata = {
 
 	alternates: {
 		canonical:
-			'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/remont-lazienki',
+			'https://pro-wnetrze.pl/wykonczenia-wnetrz/remont-lazienki',
 	},
 
 	openGraph: {
 		title: 'Remont łazienki - układanie płytek i fachowe wykończenie',
 		description:
 			'Planujesz remont łazienki? Oferujemy kompleksowe wykończenie, metamorfozę wnętrza i układanie płytek.',
-		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz-mieszkan-domow/remont-lazienki',
+		url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz/remont-lazienki',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{
@@ -191,7 +191,7 @@ const posts: ServicePost[] = [
 				<span>
 					Chcesz aby remont twojej łazienki poszedł szybko i sprawnie? Sprawdź
 					nasze{' '}
-					<Link href='/uslugi-remontowo-budowlane/glazurnictwo-ukladanie-plytek-kafelkowanie'>
+					<Link href='/uslugi-remontowo-budowlane/glazurnictwo-ukladanie-plytek'>
 						usługi glazurnicze
 					</Link>{' '}
 					i zobacz, jak możemy odmienić Twoje wnętrze!
