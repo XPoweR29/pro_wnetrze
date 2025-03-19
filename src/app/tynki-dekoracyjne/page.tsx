@@ -20,11 +20,20 @@ import { CategoryContact } from '@/sections/Category_Contact/CategoryContact';
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'CollectionPage',
-	'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne',
+	'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne#category',
 	name: 'Techniki dekoracyjne | nowoczesne wykończenia i dekoracje ścian',
 	description:
-		'Odkryj techniki dekoracyjne, które nadadzą wnętrzom wyjątkowy styl. Tynki dekoracyjne, tynki strukturalne, dekoracje ścian i inne nowoczesne rozwiązania dla Twojego domu.',
+	'Odkryj techniki dekoracyjne, które nadadzą wnętrzom wyjątkowy styl. Tynki dekoracyjne, tynki strukturalne, dekoracje ścian i inne nowoczesne rozwiązania dla Twojego domu.',
 	url: 'https://pro-wnetrze.pl/tynki-dekoracyjne',
+
+	isPartOf: {
+		'@type': 'WebPage',
+		'@id': 'https://pro-wnetrze.pl',
+	},
+	
+	provider: {
+		'@id': 'https://pro-wnetrze.pl#business',
+	},
 };
 
 export const metadata: Metadata = {
@@ -101,11 +110,9 @@ const CategoryPage = () => {
 						stworzyć niepowtarzalny klimat w każdym wnętrzu. Jeśli chcesz nadać
 						charakteru przestrzeni w której mieszkasz, sprawdź co jeszcze
 						oferujemy w zakresie{' '}
-						<Link href={'/wykonczenia-wnetrz'}>
-							wykończenia wnętrz
-						</Link>
-						. Jeśli planujesz większą metamorfozę mieszkania lub domu,
-						skorzystaj z naszych{' '}
+						<Link href={'/wykonczenia-wnetrz'}>wykończenia wnętrz</Link>. Jeśli
+						planujesz większą metamorfozę mieszkania lub domu, skorzystaj z
+						naszych{' '}
 						<Link href={'/uslugi-remontowo-budowlane'}> usług remontowych</Link>
 						, dzięki którym całkowicie odmienisz swoje wnętrze – od modernizacji
 						ścian po kompleksowe prace wykończeniowe. Bez względu na zakres

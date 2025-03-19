@@ -20,11 +20,19 @@ import { CategoryContact } from '@/sections/Category_Contact/CategoryContact';
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'CollectionPage',
-	'@id': 'https://pro-wnetrze.pl/uslugi-remontowo-budowlane',
+	'@id': 'https://pro-wnetrze.pl/uslugi-remontowo-budowlane#category',
 	name: 'Usługi remontowo-budowlane',
 	description:
 		'Profesjonalne remonty mieszkań i domów. Sprawdź naszą ofertę usług remontowo-budowlanych, w tym tynki dekoracyjne, malowanie ścian i remonty łazienek.',
 	url: 'https://pro-wnetrze.pl/uslugi-remontowo-budowlane',
+	isPartOf: {
+		'@type': 'WebPage',
+		'@id': 'https://pro-wnetrze.pl',
+	},
+
+	provider: {
+		'@id': 'https://pro-wnetrze.pl#business',
+	},
 };
 
 export const metadata: Metadata = {
@@ -92,21 +100,16 @@ const CategoryPage = () => {
 					</h3>
 					<p className={styles.linkingText}>
 						Oprócz usług typowo remontowych oferujemy również{' '}
-						<Link href={'/wykonczenia-wnetrz'}>
-							wykończenia wnętrz
-						</Link>
-						, dzięki czemu możemy przeprowadzić cały proces – od przygotowania
-						ścian po finalne dekoracje. Wykorzystujemy nowoczesne materiały oraz
+						<Link href={'/wykonczenia-wnetrz'}>wykończenia wnętrz</Link>, dzięki
+						czemu możemy przeprowadzić cały proces – od przygotowania ścian po
+						finalne dekoracje. Wykorzystujemy nowoczesne materiały oraz
 						sprawdzone technologie, aby osiągnąć wyjątkowy efekt wizualny i
 						maksymalną funkcjonalność. Co więcej, nasz zespół doradzi w kwestii
 						doboru kolorów i faktur, tak aby wnętrze odzwierciedlało Twój styl i
 						potrzeby. Chcesz nadać pomieszczeniom wyjątkowy charakter? Zapoznaj
 						się z naszymi{' '}
-						<Link href={'/tynki-dekoracyjne'}>
-							{' '}
-							technikami dekoracyjnymi
-						</Link>
-						, takimi jak imitacja betonu czy stiuki.
+						<Link href={'/tynki-dekoracyjne'}> technikami dekoracyjnymi</Link>,
+						takimi jak imitacja betonu czy stiuki.
 					</p>
 
 					<CategoryFeatures title='Dlaczego warto wybrać nasze usługi remontowe?' />

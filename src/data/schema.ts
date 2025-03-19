@@ -1,9 +1,9 @@
 export const businessSchema = {
 	'@context': 'https://schema.org',
-	'@type': 'ContactPage',
-	'@id': 'https://pro-wnetrze.pl/kontakt',
-	name: 'Kontakt - PRO Wnętrze',
-	alternateName: 'Firma budowlana PRO Wnętrze | Usługi remontowo-budowlane',
+	'@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
+	'@id': 'https://pro-wnetrze.pl/#business',
+	name: 'PRO Wnętrze – Remonty i Wykończenia Wnętrz Żywiec, Bielsko-Biała i okolice',
+	alternateName: 'Firma budowlana Żywiec, Bielsko-Biała | Usługi remontowo-budowlane Śląsk i Małopolska',
 	url: 'https://pro-wnetrze.pl',
 	logo: 'https://pro-wnetrze.pl/logo.jpg',
 	image: 'https://pro-wnetrze.pl/og_img.jpg',
@@ -26,9 +26,16 @@ export const businessSchema = {
 	},
 	openingHoursSpecification: {
 		'@type': 'OpeningHoursSpecification',
-		dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+		dayOfWeek: [
+			'Monday',
+			'Tuesday',
+			'Wednesday',
+			'Thursday',
+			'Friday',
+			'Saturday',
+		],
 		opens: '07:00',
-		closes: '16:00',
+		closes: '18:00',
 	},
 	sameAs: [
 		'https://www.instagram.com/prownetrze/profilecard/?igsh=NWxrOGMzazA2M29s',

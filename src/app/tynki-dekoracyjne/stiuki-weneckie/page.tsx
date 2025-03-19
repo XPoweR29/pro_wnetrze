@@ -19,8 +19,7 @@ import Image from 'next/image';
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
-	'@id':
-		'https://pro-wnetrze.pl/tynki-dekoracyjne/stiuki-weneckie',
+	'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne/stiuki-weneckie#service',
 	isPartOf: {
 		'@type': 'CollectionPage',
 		'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne',
@@ -29,56 +28,7 @@ const schema = {
 	description:
 		'Oferujemy profesjonalne położenie stiuku weneckiego – stiuk lustrzany, tynki stiukowe i dekoracyjne wykończenia ścian.',
 	provider: {
-		'@type': 'HomeAndConstructionBusiness',
 		'@id': 'https://pro-wnetrze.pl#business',
-		name: 'PRO Wnętrze',
-		alternateName: 'Firma budowlana PRO Wnętrze | Usługi remontowo-budowlane',
-		url: 'https://pro-wnetrze.pl',
-		logo: 'https://pro-wnetrze.pl/logo.jpg',
-		image: 'https://pro-wnetrze.pl/og_img.jpg',
-		description:
-			'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz na terenie województwa Śląskiego oraz Małopolskiego. Zaufaj naszym fachowcom!',
-		telephone: '+48 515-484-232',
-		email: 'prownetrze.zywiec@gmail.com',
-		address: {
-			'@type': 'PostalAddress',
-			streetAddress: 'ul. Parkowa 43',
-			addressLocality: 'Kocierz Moszczanicki',
-			postalCode: '34-321',
-			addressCountry: 'PL',
-		},
-		hasMap: 'https://maps.app.goo.gl/16b83CP9iQeqTBjp9',
-		geo: {
-			'@type': 'GeoCoordinates',
-			latitude: '49.74023502968384',
-			longitude: '19.259109544674573',
-		},
-		openingHoursSpecification: {
-			'@type': 'OpeningHoursSpecification',
-			dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-			opens: '07:00',
-			closes: '16:00',
-		},
-		sameAs: [
-			'https://www.instagram.com/prownetrze/profilecard/?igsh=NWxrOGMzazA2M29s',
-		],
-		serviceType: 'Usługi remontowo-budowlane',
-		contactPoint: {
-			'@type': 'ContactPoint',
-			telephone: '+48 515-484-232',
-			contactType: 'customer service',
-			email: 'prownetrze.zywiec@gmail.com',
-		},
-		areaServed: [
-			{
-				'@type': 'AdministrativeArea',
-				name: 'Województwo Śląskie',
-			},
-			{
-				'@type': 'AdministrativeArea',
-				name: 'Województwo Małopolskie',
-			},
-		],
 	},
 	serviceType: [
 		'Położenie stiuku weneckiego na ścianę',
@@ -145,8 +95,7 @@ export const metadata: Metadata = {
 		'Oferujemy profesjonalne położenie stiuku weneckiego – stiuk lustrzany, tynki stiukowe i dekoracyjne wykończenia ścian.',
 
 	alternates: {
-		canonical:
-			'https://pro-wnetrze.pl/tynki-dekoracyjne/stiuki-weneckie',
+		canonical: 'https://pro-wnetrze.pl/tynki-dekoracyjne/stiuki-weneckie',
 	},
 
 	openGraph: {
@@ -185,10 +134,8 @@ const posts: ServicePost[] = [
 				</span>
 				<span>
 					Alternatywą dla stiuku jest{' '}
-					<Link href='/tynki-dekoracyjne/glinka-wenecka'>
-						glinka wenecka
-					</Link>
-					, która oferuje równie elegancki wygląd, ale o bardziej subtelnej
+					<Link href='/tynki-dekoracyjne/glinka-wenecka'>glinka wenecka</Link>,
+					która oferuje równie elegancki wygląd, ale o bardziej subtelnej
 					strukturze i mniejszym stopniu połysku.
 				</span>
 			</>
