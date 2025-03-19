@@ -11,6 +11,7 @@
 	background-color: $black;
 	z-index: -3;
 	overflow: hidden;
+	transition: opacity 0.4s ease;
 
 	.wrapper {
 		position: relative;
@@ -22,7 +23,7 @@
 		height: 100%;
 
 		@media (orientation: portrait) and (height>=760px) {
-			gap: 5em;
+			gap: 3em;
 		}
 	}
 
@@ -35,7 +36,7 @@
 		gap: 2em;
 
 		@media (orientation: portrait) and (height>=760px) {
-			gap: 5em;
+			gap: 3em;
 		}
 	}
 

@@ -19,67 +19,18 @@ import Image from 'next/image';
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
-	'@id':
-		'https://pro-wnetrze.pl/tynki-dekoracyjne/glinka-wenecka',
+	'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne/glinka-wenecka#service',
+	name: 'Glinka wenecka – dekoracyjne wykończenie ścian | Efekt przetartego tynku',
+	description:
+		'Profesjonalne położenie glinki weneckiej – trwałe i eleganckie wykończenie ścian. Sprawdź kolory, efekt dekoracyjny i koszt aplikacji!',
 	isPartOf: {
 		'@type': 'CollectionPage',
 		'@id': 'https://pro-wnetrze.pl/tynki-dekoracyjne',
 	},
-	name: 'Glinka wenecka – dekoracyjne wykończenie ścian | Efekt przetartego tynku',
-	description:
-		'Profesjonalne położenie glinki weneckiej – trwałe i eleganckie wykończenie ścian. Sprawdź kolory, efekt dekoracyjny i koszt aplikacji!',
 	provider: {
-		'@type': 'HomeAndConstructionBusiness',
 		'@id': 'https://pro-wnetrze.pl#business',
-		name: 'PRO Wnętrze',
-		alternateName: 'Firma budowlana PRO Wnętrze | Usługi remontowo-budowlane',
-		url: 'https://pro-wnetrze.pl',
-		logo: 'https://pro-wnetrze.pl/logo.jpg',
-		image: 'https://pro-wnetrze.pl/og_img.jpg',
-		description:
-			'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz na terenie województwa Śląskiego oraz Małopolskiego. Zaufaj naszym fachowcom!',
-		telephone: '+48 515-484-232',
-		email: 'prownetrze.zywiec@gmail.com',
-		address: {
-			'@type': 'PostalAddress',
-			streetAddress: 'ul. Parkowa 43',
-			addressLocality: 'Kocierz Moszczanicki',
-			postalCode: '34-321',
-			addressCountry: 'PL',
-		},
-		hasMap: 'https://maps.app.goo.gl/16b83CP9iQeqTBjp9',
-		geo: {
-			'@type': 'GeoCoordinates',
-			latitude: '49.74023502968384',
-			longitude: '19.259109544674573',
-		},
-		openingHoursSpecification: {
-			'@type': 'OpeningHoursSpecification',
-			dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-			opens: '07:00',
-			closes: '16:00',
-		},
-		sameAs: [
-			'https://www.instagram.com/prownetrze/profilecard/?igsh=NWxrOGMzazA2M29s',
-		],
-		serviceType: 'Usługi remontowo-budowlane',
-		contactPoint: {
-			'@type': 'ContactPoint',
-			telephone: '+48 515-484-232',
-			contactType: 'customer service',
-			email: 'prownetrze.zywiec@gmail.com',
-		},
-		areaServed: [
-			{
-				'@type': 'AdministrativeArea',
-				name: 'Województwo Śląskie',
-			},
-			{
-				'@type': 'AdministrativeArea',
-				name: 'Województwo Małopolskie',
-			},
-		],
 	},
+
 	serviceType: [
 		'Położenie glinki weneckiej na ścianę',
 		'Aplikacja glinki weneckiej – profesjonalne wykonanie',
@@ -144,8 +95,7 @@ export const metadata: Metadata = {
 		'Profesjonalne położenie glinki weneckiej – trwałe i eleganckie wykończenie ścian. Sprawdź kolory, efekt dekoracyjny i koszt aplikacji!',
 
 	alternates: {
-		canonical:
-			'https://pro-wnetrze.pl/tynki-dekoracyjne/glinka-wenecka',
+		canonical: 'https://pro-wnetrze.pl/tynki-dekoracyjne/glinka-wenecka',
 	},
 
 	openGraph: {
@@ -184,9 +134,7 @@ const posts: ServicePost[] = [
 					marmurowego, która po wypolerowaniu tworzy efekt wysokiego połysku i
 					głębokiego odbicia światła. Jeśli chcesz dowiedzieć się więcej o tej
 					technice, sprawdź naszą stronę:{' '}
-					<Link href='/tynki-dekoracyjne/stiuki-weneckie'>
-						stuiki weneckie
-					</Link>
+					<Link href='/tynki-dekoracyjne/stiuki-weneckie'>stuiki weneckie</Link>
 					.
 				</span>
 			</>
@@ -230,10 +178,7 @@ const posts: ServicePost[] = [
 					wygląd do stylu wnętrza, tworząc eleganckie i trwałe wykończenie.
 					Jeśli szukasz innych efektownych technik dekoracyjnych, sprawdź
 					również nasze propozycje na stronie dotyczącej{' '}
-					<Link href='/tynki-dekoracyjne'>
-						dekoracji ścian
-					</Link>
-					.
+					<Link href='/tynki-dekoracyjne'>dekoracji ścian</Link>.
 				</span>
 			</>
 		),

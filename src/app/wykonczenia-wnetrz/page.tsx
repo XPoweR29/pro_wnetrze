@@ -20,11 +20,19 @@ import { CategoryContact } from '@/sections/Category_Contact/CategoryContact';
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'CollectionPage',
-	'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz',
+	'@id': 'https://pro-wnetrze.pl/wykonczenia-wnetrz#category',
 	name: 'Wykończenia wnętrz | Kompleksowe prace wykończeniowe mieszkań i domów',
 	description:
 		'Profesjonalne wykończenia wnętrz – kompleksowe remonty mieszkań i domów, prace wykończeniowe, stylowe aranżacje i wykończenia pod klucz.',
 	url: 'https://pro-wnetrze.pl/wykonczenia-wnetrz',
+	isPartOf: {
+		'@type': 'WebPage',
+		'@id': 'https://pro-wnetrze.pl',
+	},
+
+	provider: {
+		'@id': 'https://pro-wnetrze.pl#business',
+	},
 };
 
 export const metadata: Metadata = {
@@ -95,11 +103,8 @@ const CategoryPage = () => {
 						<Link href={'/uslugi-remontowo-budowlane'}>usługi remontowe</Link>,
 						dzięki którym możesz odmienić swoją przestrzeń od podstaw. Jeśli
 						zależy Ci na wyjątkowym efekcie wizualnym, sprawdź również nasze{' '}
-						<Link href={'/tynki-dekoracyjne'}>
-							{' '}
-							techniki dekoracyjne
-						</Link>
-						, takie jak imitacja betonu czy stiuki, które nadadzą wnętrzom
+						<Link href={'/tynki-dekoracyjne'}> techniki dekoracyjne</Link>,
+						takie jak imitacja betonu czy stiuki, które nadadzą wnętrzom
 						unikalny charakter.
 					</p>
 

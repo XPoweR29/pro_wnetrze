@@ -36,8 +36,15 @@ const services: ServiceBoxType[] = [
 
 const schema = {
 	'@context': 'https://schema.org',
-	'@type': 'HomeAndConstructionBusiness',
-	'@id': 'https://pro-wnetrze.pl/firma-budowlana/oswiecim#business',
+	'@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
+	'@id': 'https://pro-wnetrze.pl/firma-budowlana/oswiecim#local',
+	isPartOf: {
+		'@type': 'WebPage',
+		'@id': 'https://pro-wnetrze.pl',
+	},
+	provider: {
+		'@id': 'https://pro-wnetrze.pl#business',
+	},
 	name: 'PRO Wnętrze',
 	alternateName:
 		'Firma budowlana Oświęcim | Kompleksowe usługi remontowo-budowlane',
@@ -72,7 +79,7 @@ const schema = {
 			'Saturday',
 		],
 		opens: '07:00',
-		closes: '16:00',
+		closes: '18:00',
 	},
 	sameAs: [
 		'https://www.instagram.com/prownetrze/profilecard/?igsh=NWxrOGMzazA2M29s',

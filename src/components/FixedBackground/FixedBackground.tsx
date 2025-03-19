@@ -5,11 +5,15 @@ import styles from './FixedBackground.module.scss';
 
 interface FixedBackgroundProps {
 	src: string | StaticImageData;
-    className?: string;
-    margin?: number;
+	className?: string;
+	margin?: number;
 }
 
-const FixedBackground: FC<FixedBackgroundProps> = ({ src, className, margin=0 }) => {
+const FixedBackground: FC<FixedBackgroundProps> = ({
+	src,
+	className,
+	margin = 0,
+}) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const [visible, setVisible] = useState(false);
 
@@ -23,12 +27,13 @@ const FixedBackground: FC<FixedBackgroundProps> = ({ src, className, margin=0 })
 			([entry]) => {
 				setVisible(entry.isIntersecting);
 			},
-			{ rootMargin: `${margin}px` } 
+			{ rootMargin: `${margin}px` }
 		);
 
 		observer.observe(parentElement);
 
 		return () => {
+			document.body.classList.add('loading');
 			observer.unobserve(parentElement);
 			observer.disconnect();
 		};
@@ -39,7 +44,17 @@ const FixedBackground: FC<FixedBackgroundProps> = ({ src, className, margin=0 })
 			ref={containerRef}
 			className={`${styles.fixedContainer} ${className || ''}`}
 			style={{ display: visible ? 'block' : 'none' }}>
-			<Image src={src} alt='' aria-hidden fill style={{ objectFit: 'cover' }} priority />
+			<Image
+				src={src}
+				alt=''
+				aria-hidden
+				fill
+				style={{ objectFit: 'cover' }}
+				priority
+				onLoadingComplete={() => {
+					document.body.classList.remove('loading');
+				}}
+			/>
 		</div>
 	);
 };

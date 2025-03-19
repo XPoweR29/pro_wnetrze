@@ -14,37 +14,18 @@ import { Contact_Review_Form } from '@/sections/Contact_Review_Form/Contact_Revi
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'ContactPage',
-	'@id': 'https://pro-wnetrze.pl/kontakt',
+	'@id': 'https://pro-wnetrze.pl/kontakt#contact',
 	url: 'https://pro-wnetrze.pl/kontakt',
 	name: 'Kontakt – PRO Wnętrze',
 	description:
 		'Skontaktuj się z nami, aby uzyskać wycenę i doradztwo w zakresie usług remontowo-budowlanych. Oferujemy profesjonalne wsparcie dla klientów indywidualnych i firm.',
-
 	mainEntity: {
-		'@type': 'HomeAndConstructionBusiness',
 		'@id': 'https://pro-wnetrze.pl#business',
-		name: 'PRO Wnętrze',
-		telephone: '+48 515-484-232',
-		email: 'prownetrze.zywiec@gmail.com',
-		address: {
-			'@type': 'PostalAddress',
-			streetAddress: 'ul. Parkowa 43',
-			addressLocality: 'Kocierz Moszczanicki',
-			postalCode: '34-321',
-			addressCountry: 'PL',
-		},
-		openingHoursSpecification: {
-			'@type': 'OpeningHoursSpecification',
-			dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-			opens: '07:00',
-			closes: '16:00',
-		},
-		areaServed: [
-			{ '@type': 'AdministrativeArea', name: 'Województwo Śląskie' },
-			{ '@type': 'AdministrativeArea', name: 'Województwo Małopolskie' },
-		],
 	},
-
+	isPartOf: {
+		'@type': 'WebPage',
+		'@id': 'https://pro-wnetrze.pl',
+	},
 	potentialAction: [
 		{
 			'@type': 'ScheduleAction',
@@ -82,7 +63,8 @@ const schema = {
 };
 
 export const metadata: Metadata = {
-	title: 'Kontakt - PRO Wnętrze | Wycena i doradztwo remontowe',
+	title:
+		'Kontakt – PRO Wnętrze | Usługi remontowo-budowlane Żywiec, Bielsko-Biała i okolice',
 	description:
 		'Masz pytania dotyczące remontu lub wykończenia wnętrz? Skontaktuj się z PRO Wnętrze! Oferujemy fachowe doradztwo i indywidualną wycenę usług.',
 	openGraph: {
