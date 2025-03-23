@@ -13,11 +13,15 @@ import ParallaxVideo from '@/components/ParallaxImage/ParallaxVideo';
 export const Start = () => {
 	return (
 		<section className={styles.home} id='start'>
-			<ParallaxVideo src={'/video-bg.mp4'} speed={-0.7} className={styles.parallax} />
+			<ParallaxVideo
+				src={'/video-bg.mp4'}
+				speed={-0.7}
+				className={styles.parallax}
+			/>
 
 			<Wrapper className={styles.wrapper}>
 				<h1 className={`${styles.heading} ${rubik.className}`}>
-					Kompleksowe remonty i wykończenia wnętrz
+					PRO Wnętrze – Remonty i Wykończenia Wnętrz Żywiec, Bielsko-Biała
 				</h1>
 				<p className={styles.text}>
 					<span>Planujesz remont mieszkania lub domu?</span>

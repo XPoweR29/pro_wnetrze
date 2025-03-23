@@ -19,9 +19,8 @@ export const Footer = () => {
 							<Image src={logo} alt='PROWnętrze' />
 						</Link>
 
-						<p className={styles.description}>
-							Kompleksowe remonty oraz wykończenia wnętrz. Zaufaj naszym
-							fachowcom i ciesz się nową jakością przestrzeni!
+						<p className={styles.description} itemProp='name'>
+							PRO Wnętrze – Remonty i Wykończenia Wnętrz Żywiec, Bielsko-Biała.
 						</p>
 					</div>
 
