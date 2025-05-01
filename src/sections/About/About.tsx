@@ -31,7 +31,7 @@ export const About = () => {
 					</div>
 
 					<p className={styles.text}>
-						Jesteśmy firmą, która realizuje <strong>kompleksowe remonty</strong>{' '}
+						PRO Wnętrze Żywiec | Remonty i Wykończenia Wnętrz to firma , która realizuje <strong>kompleksowe remonty</strong>{' '}
 						i wykończenia domów oraz mieszkań, zapewniając{' '}
 						<strong>najwyższą jakość</strong> usług. Wykorzystujemy nowoczesne
 						narzędzia i sprawdzone techniki, co pozwala nam pracować efektywnie

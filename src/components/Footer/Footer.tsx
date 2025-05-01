@@ -3,7 +3,9 @@ import { Wrapper } from '@/components/Wrapper/Wrapper';
 import Link from 'next/link';
 
 import styles from './Footer.module.scss';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo_slogan_yellow_vertical.png';
+import logo_instagram from '../../assets/icons/icon_instagram-white.svg';
+import logo_google from '../../assets/icons/icon_google-white.svg';
 import Image from 'next/image';
 import dev_logo from '../../assets/dev_logo.svg';
 import toolsImg from '../../assets/img/tools.svg';
@@ -16,12 +18,37 @@ export const Footer = () => {
 				<div className={styles.flexContainer}>
 					<div className={styles.col1}>
 						<Link href={'/#start'} className={styles.logo}>
-							<Image src={logo} alt='PROWnętrze' />
+							<Image
+								className={styles.logo}
+								src={logo}
+								alt='PRO Wnętrze Żywiec - Remonty i Wykończenia Wnętrz'
+							/>
 						</Link>
 
-						<p className={styles.description} itemProp='name'>
-							PRO Wnętrze – Remonty i Wykończenia Wnętrz Żywiec, Bielsko-Biała.
-						</p>
+						<div className={styles.socialLinks}>
+							<a
+								href={'https://www.instagram.com/prownetrze/'}
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'>
+								<Image
+									className={styles.instagram}
+									src={logo_instagram}
+									alt='PRO Wnętrze Żywiec - Instagram'
+								/>
+							</a>
+							<a
+								href={'https://g.co/kgs/f6E29c6'}
+								className={styles.link}
+								target='_blank'
+								rel='noopener noreferrer'>
+								<Image
+									className={styles.google}
+									src={logo_google}
+									alt='PRO Wnętrze Żywiec - Profil Google'
+								/>
+							</a>
+						</div>
 					</div>
 
 					<address className={styles.col2}>
@@ -47,15 +74,6 @@ export const Footer = () => {
 							</a>
 						</p>
 						<p className={styles.link}>NIP: 553 259 57 98</p>
-						<p>
-							<a
-								href='https://www.instagram.com/prownetrze/profilecard/?igsh=NWxrOGMzazA2M29s'
-								target='_blank'
-								rel='noopener noreferrer'
-								className={styles.link}>
-								instagram/@PROWnetrze
-							</a>
-						</p>
 					</address>
 
 					<div className={styles.col3}>
@@ -74,8 +92,7 @@ export const Footer = () => {
 							</Link>
 						</div>
 						<p className={styles.copyright}>
-							© {new Date().getFullYear()} PROWnętrze <br /> Wszelkie prawa
-							zastrzeżone.
+							© {new Date().getFullYear()} PRO Wnętrze Żywiec<br /> Remonty i Wykończenia Wnętrz
 						</p>
 					</div>
 				</div>

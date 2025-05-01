@@ -21,20 +21,18 @@ export const rubikDirt = Rubik_Dirt({
 });
 
 export const metadata: Metadata = {
-	title:
-		'Remonty i Wykończenia Wnętrz Żywiec, Bielsko-Biała i okolice | Firma budowlana',
+	title: 'PRO Wnętrze Żywiec - Remonty i Wykończenia Wnętrz',
 	description:
-		'PROWnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz na terenie województwa Śląskiego oraz Małopolskiego. Zaufaj naszym fachowcom!',
+		'PRO Wnętrze Żywiec to solidna firma remontowa z doświadczeniem. Oferujemy kompleksowe remonty i wykończenia wnętrz w Żywcu i okolicach',
 	openGraph: {
-		title:
-			'Kompleksowe usługi remontowo-budowlane Żywiec | PROWnętrze - firma budowlana',
+		title: 'PRO Wnętrze Żywiec - Remonty i Wykończenia Wnętrz',
 		description:
-			'PRO Wnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz na terenie województwa Śląskiego oraz Małopolskiego. Zaufaj naszym fachowcom!',
+			'PRO Wnętrze Żywiec to solidna firma remontowa z doświadczeniem. Oferujemy kompleksowe remonty i wykończenia wnętrz w Żywcu i okolicach',
 		url: 'https://pro-wnetrze.pl',
 		siteName: 'PRO Wnętrze',
 		images: [
 			{
-				url: 'https://pro-wnetrze.pl/og_img.jpg',
+				url: 'https://pro-wnetrze.pl/og_img-slogan.jpg',
 				width: 1200,
 				height: 630,
 				alt: 'PROWnętrze Logo',

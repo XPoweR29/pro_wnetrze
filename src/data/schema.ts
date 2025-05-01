@@ -2,13 +2,13 @@ export const businessSchema = {
 	'@context': 'https://schema.org',
 	'@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
 	'@id': 'https://pro-wnetrze.pl/#business',
-	name: 'PRO Wnętrze – Remonty i Wykończenia Wnętrz Żywiec, Bielsko-Biała i okolice',
-	alternateName: 'Firma budowlana Żywiec, Bielsko-Biała | Usługi remontowo-budowlane Śląsk i Małopolska',
+	name: 'PRO Wnętrze Żywiec - Remonty i Wykończenia Wnętrz',
+	alternateName: 'PRO Wnętrze Żywiec - Remonty i Wykończenia Wnętrz',
 	url: 'https://pro-wnetrze.pl',
 	logo: 'https://pro-wnetrze.pl/logo.jpg',
-	image: 'https://pro-wnetrze.pl/og_img.jpg',
+	image: 'https://pro-wnetrze.pl/og_img-slogan.jpg',
 	description:
-		'PRO Wnętrze oferuje kompleksowe remonty oraz wykończenia wnętrz na terenie województwa Śląskiego oraz Małopolskiego. Zaufaj naszym fachowcom!',
+		'PRO Wnętrze Żywiec to solidna firma remontowa z doświadczeniem. Oferujemy kompleksowe remonty i wykończenia wnętrz w Żywcu i okolicach',
 	telephone: '+48 515-484-232',
 	email: 'prownetrze.zywiec@gmail.com',
 	address: {
@@ -18,7 +18,7 @@ export const businessSchema = {
 		postalCode: '34-321',
 		addressCountry: 'PL',
 	},
-	hasMap: 'https://maps.app.goo.gl/16b83CP9iQeqTBjp9',
+	hasMap: 'https://maps.app.goo.gl/5UdbV2x69U1fxacc9',
 	geo: {
 		'@type': 'GeoCoordinates',
 		latitude: '49.74023502968384',

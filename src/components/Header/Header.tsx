@@ -7,7 +7,7 @@ import { BurgerBtn } from '@/components/BurgerBtn/BurgerBtn';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
 
 import styles from './Header.module.scss';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo_slogan_yellow.png';
 import { useBreakpoints } from '@/hooks/useBreakpoint';
 import { LinkBar } from '@/components/LinkBar/LinkBar';
 import { MobileMenu } from '@/components/MobileMenu/MobileMenu';

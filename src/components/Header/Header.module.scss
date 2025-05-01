@@ -23,15 +23,31 @@
 }
 
 .logo {
-	width: 75px;
+	width: 240px;
 }
 
 .burgerBtn {
 	z-index: 30;
 }
 
+@media (width >= 576px) {
+	.logo {
+		width: 300px;
+	}
+}
+
 @media (width >= 768px) {
 	.header {
 		padding: 1em 0;
+	}
+
+	.logo {
+		width: 210px;
+	}
+}
+
+@media (width >= 992px) {
+	.logo {
+		width: 300px;
 	}
 }

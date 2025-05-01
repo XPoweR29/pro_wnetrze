@@ -60,13 +60,17 @@
 	.col1 {
 		gap: 1em;
 
-		img {
-			width: 80px;
+		.logo {
+			width: 250px;
 		}
 
-		p {
-			text-align: center;
-			line-height: 1.7em;
+		.socialLinks {
+			display: flex;
+			gap: 2em;
+
+			.link img {
+				width: 2em;
+			}
 		}
 	}
 
@@ -143,12 +147,15 @@
 		.flexContainer {
 			flex-direction: row;
 			align-items: center;
+			justify-content: space-between;
+			width: 100%;
 		}
 
 		.col1,
 		.col2,
 		.col3 {
 			max-width: none;
+			width: 30%;
 
 			.link:hover {
 				opacity: 0.5;

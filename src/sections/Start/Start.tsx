@@ -7,6 +7,7 @@ import styles from './Start.module.scss';
 import Link from 'next/link';
 import social_img from '../../assets/icons/icon_social.svg';
 import instagram from '../../assets/icons/icon_instagram.svg';
+import google from '../../assets/icons/icon_google.svg';
 import arrow from '../../assets/icons/icon_arrow.svg';
 import ParallaxVideo from '@/components/ParallaxImage/ParallaxVideo';
 
@@ -21,7 +22,7 @@ export const Start = () => {
 
 			<Wrapper className={styles.wrapper}>
 				<h1 className={`${styles.heading} ${rubik.className}`}>
-					PRO Wnętrze – Remonty i Wykończenia Wnętrz Żywiec, Bielsko-Biała
+					PRO Wnętrze Żywiec <span>Remonty i Wykończenia Wnętrz</span>
 				</h1>
 				<p className={styles.text}>
 					<span>Planujesz remont mieszkania lub domu?</span>
@@ -48,17 +49,30 @@ export const Start = () => {
 						alt=''
 						aria-hidden
 					/>
-					<a
-						href='https://www.instagram.com/prownetrze/profilecard/?igsh=NWxrOGMzazA2M29s'
-						className={styles.link}
-						target='_blank'
-						rel='noopener noreferrer'>
-						<Image
-							className={styles.icon}
-							src={instagram}
-							alt='link do instagrama'
-						/>
-					</a>
+					<div className={styles.linkContainer}>
+						<a
+							href='https://www.instagram.com/prownetrze/profilecard/?igsh=NWxrOGMzazA2M29s'
+							className={styles.link}
+							target='_blank'
+							rel='noopener noreferrer'>
+							<Image
+								className={`${styles.icon} ${styles['icon--instagram']}`}
+								src={instagram}
+								alt='link do instagrama'
+							/>
+						</a>
+						<a
+							href='https://g.co/kgs/f6E29c6'
+							className={styles.link}
+							target='_blank'
+							rel='noopener noreferrer'>
+							<Image
+								className={`${styles.icon} ${styles['icon--google']}`}
+								src={google}
+								alt='link do profilu google'
+							/>
+						</a>
+					</div>
 				</div>
 			</Wrapper>
 

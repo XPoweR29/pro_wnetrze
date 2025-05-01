@@ -34,10 +34,18 @@
 	}
 
 	.heading {
+		display: flex;
+		flex-direction: column;
 		font-size: 2.6em;
 		text-transform: uppercase;
 		animation: fade-in-bottom 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 		animation-delay: 0.5s;
+
+		span {
+			font-size: 0.75em;
+			color: $accent;
+			opacity: 0.8;
+		}
 	}
 
 	.text {
@@ -109,7 +117,7 @@
 	.socialLink {
 		position: absolute;
 		bottom: calc(3em + 30px);
-		right: 4em;
+		right: 8em;
 		width: fit-content;
 		display: flex;
 		align-items: end;
@@ -122,15 +130,21 @@
 			animation-delay: 2s;
 		}
 
-		.icon {
+		.linkContainer {
 			position: absolute;
-			bottom: 0;
-			right: 0;
-			padding: 0.5em;
-			width: 55px;
-			transform: translateX(65%) translateY(40%);
-			animation: shake-bottom 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
-			animation-delay: 4s;
+			bottom: -10px;
+			right: -70px;
+			display: flex;
+			gap: 0.5em;
+
+			.icon {
+				width: 3.3em;
+				padding: 0.5em;
+				transform: translateX(65%) translateY(40%);
+				animation: shake-bottom 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both
+					infinite;
+				animation-delay: 4s;
+			}
 		}
 	}
 
