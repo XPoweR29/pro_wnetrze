@@ -39,6 +39,7 @@ export const businessSchema = {
 	},
 	sameAs: [
 		'https://www.instagram.com/prownetrze/profilecard/?igsh=NWxrOGMzazA2M29s',
+		'https://pro-wnetrze-remonty-bielsko-zywiec.localo.site/',
 		'https://g.co/kgs/2t1nJxJ',
 	],
 	serviceType: 'Usługi remontowo-budowlane',
