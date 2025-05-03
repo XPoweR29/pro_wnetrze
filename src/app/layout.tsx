@@ -21,11 +21,11 @@ export const rubikDirt = Rubik_Dirt({
 });
 
 export const metadata: Metadata = {
-	title: 'PRO Wnętrze Żywiec - Remonty i Wykończenia Wnętrz',
+	title: 'PRO Wnętrze Żywiec | Remonty i Wykończenia Wnętrz',
 	description:
 		'PRO Wnętrze Żywiec to solidna firma remontowa z doświadczeniem. Oferujemy kompleksowe remonty i wykończenia wnętrz w Żywcu i okolicach',
 	openGraph: {
-		title: 'PRO Wnętrze Żywiec - Remonty i Wykończenia Wnętrz',
+		title: 'PRO Wnętrze Żywiec | Remonty i Wykończenia Wnętrz',
 		description:
 			'PRO Wnętrze Żywiec to solidna firma remontowa z doświadczeniem. Oferujemy kompleksowe remonty i wykończenia wnętrz w Żywcu i okolicach',
 		url: 'https://pro-wnetrze.pl',
