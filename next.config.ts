@@ -10,9 +10,6 @@ const nextConfig: NextConfig = {
 			}
 		],
 	},
-	eslint: {
-		ignoreDuringBuilds: false,
-	},
 	async redirects() {
 		return [
 			{
