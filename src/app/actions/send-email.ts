@@ -17,7 +17,7 @@ export const sendEmail = async (data: ContactFormData) => {
 	try {
 		const { data: resendData, error: resendError } = await resend.emails.send({
 			from: 'kontakt@pro-wnetrze.pl',
-			to: ['kontakt@pro-wnetrze.pl', 'ceo.webcraftstudio@gmail.com'],
+			to: ['kontakt@pro-wnetrze.pl'],
 			subject: 'Wiadomość z formularza kontaktowego',
 			text: message,
 			react: ContactTemplate({

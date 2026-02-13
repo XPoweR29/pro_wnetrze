@@ -93,15 +93,15 @@ const styles = {
 	},
 	header: {
 		textAlign: 'center' as const,
-		backgroundColor: '#FCCA00',
-		color: '#1E1E1E',
+		backgroundColor: '#348feb',
+		color: 'white',
 		borderRadius: '8px 8px 0 0',
 	},
 	headerTitle: {
 		fontSize: '22px',
 		margin: '0',
 		padding: '15px 0',
-		color: '#1E1E1E',
+		color: 'white',
 		fontWeight: 'bold',
 	},
 	content: {
@@ -120,7 +120,7 @@ const styles = {
 	},
 	label: {
 		marginRight: '0.3em',
-		color: '#1E1E1E',
+		color: '#348feb',
 		fontWeight: 'bold',
 	},
 	message: {
