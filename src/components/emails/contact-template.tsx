@@ -20,7 +20,6 @@ export const ContactTemplate = ({
 	name,
 	email,
 	phone,
-	subject,
 	message,
 }: ContactTemplateProps) => {
 	return (
@@ -49,8 +48,7 @@ export const ContactTemplate = ({
 							</Text>
 						</div>
 
-						<Text style={styles.message}>{message}
-						</Text>
+						<Text style={styles.message}>{message}</Text>
 					</Section>
 
 					{/* Footer */}
@@ -60,9 +58,10 @@ export const ContactTemplate = ({
 							Twojej stronie internetowej.
 						</Text>
 						<Text style={styles.footerText2}>
-								Możesz odpowiedzieć bezpośrednio, używając opcji "Odpowiedz" w
-								swojej skrzynce pocztowej, lub skontaktować się z nadawcą za
-								pomocą danych kontaktowych zawartych w treści wiadomości.
+							Możesz odpowiedzieć bezpośrednio, używając opcji
+							&quot;Odpowiedz&quot; w swojej skrzynce pocztowej, lub
+							skontaktować się z nadawcą za pomocą danych kontaktowych zawartych
+							w treści wiadomości.
 						</Text>
 					</Section>
 				</Container>
