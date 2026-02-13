@@ -7,7 +7,7 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (data: ContactFormData) => {
-	const { email, message, name, phone, subject } = data;
+	const { email, message, name, phone } = data;
 	const formattedPhone = phone ? `+48 ${phone}` : 'Nie podano';
 
 	if (!name?.trim() || !email?.trim() || !message?.trim()) {
