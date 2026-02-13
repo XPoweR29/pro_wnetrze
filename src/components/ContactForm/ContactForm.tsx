@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './ContactForm.module.scss';
 import { ContactFormData, useContactForm } from '@/hooks/useContactForm';
 import icon_envelope from '../../assets/icons/btn_envelope.svg';
