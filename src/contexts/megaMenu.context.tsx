@@ -33,7 +33,7 @@ export const MegaMenuProvider: React.FC<{ children: React.ReactNode }> = ({
 	useEffect(() => {
 		setIsOpenSubmenu(false);
 		if (hideTimeout) clearTimeout(hideTimeout);
-	}, [pathname]);
+	}, [pathname, hideTimeout]);
 
 	return (
 		<MegaMenuContext.Provider value={{ isSubmenuOpen, openMenu, closeMenu }}>
