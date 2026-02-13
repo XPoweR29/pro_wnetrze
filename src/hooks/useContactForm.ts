@@ -5,6 +5,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 export interface ContactFormData {
 	name: string;
 	email: string;
+	subject: string;
 	phone?: string;
 	message: string;
 	privacyPolicy: boolean;

@@ -7,36 +7,33 @@ import icon_envelope from '../../assets/icons/btn_envelope.svg';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
 import Image from 'next/image';
+import { sendEmail } from '@/app/actions/send-email';
 
 export const ContactForm = ({ className }: { className?: string }) => {
-	const [isSubmiting, setIsSubmiting] = useState<boolean>(false);
+	const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
 	const onSubmit = async (data: ContactFormData) => {
+		setIsSubmitting(true);
+
 		try {
-			setIsSubmiting(true);
-			const formData = new FormData();
-			formData.append('name', data.name);
-			formData.append('email', data.email);
-			if (data.phone) formData.append('phone', `+48${data.phone}`);
-			formData.append('message', data.message);
-			formData.append('sender', 'kontakt@pro-wnetrze.pl');
-			formData.append('recipient', 'prownetrze.zywiec@gmail.com');
+			const response = await sendEmail(data);
 
-			const response = await fetch(
-				'https://backendapp-gamma.vercel.app/api/send-mail',
-				{
-					method: 'POST',
-					body: formData,
-				}
-			);
-
-			if (response.ok) {
+			if (response.success) {
 				toast.success('Twoja wiadomość została wysłana', {
 					duration: 5000,
-					position: 'top-center',
+					position: 'bottom-right',
+					className: 'toaster',
 				});
-
 				reset();
+			} else if (response.error) {
+				toast.error(
+					'Błąd podczas wysyłania wiadomości. Spróbuj ponownie później',
+					{
+						duration: 5000,
+						position: 'top-right',
+					}
+				);
+				console.error(response.error);
 			}
 		} catch (err) {
 			toast.error(
@@ -48,14 +45,17 @@ export const ContactForm = ({ className }: { className?: string }) => {
 			);
 			console.error(err);
 		} finally {
-			setIsSubmiting(false);
+			setIsSubmitting(false);
 		}
 	};
 
 	const { register, submitHandler, errors, reset } = useContactForm(onSubmit);
 
 	return (
-		<form id='formularz' onSubmit={submitHandler} className={`${styles.form} ${className}`}>
+		<form
+			id='formularz'
+			onSubmit={submitHandler}
+			className={`${styles.form} ${className}`}>
 			<div className={styles.formGroup}>
 				<label htmlFor='name' className={`${styles.label} ${styles.srOnly}`}>
 					Imię:
@@ -124,13 +124,17 @@ export const ContactForm = ({ className }: { className?: string }) => {
 					className={styles.input}
 					placeholder='Telefon (opcjonalnie)'
 					{...register('phone', {
-						validate: {
-							onlyDigits: (value) =>
-								/^\d+$/.test(value!) ||
-								'Wprowadź tylko cyfry',
-							nineDigits: (value) =>
-								value!.length === 9 ||
-								'Numer telefonu musi mieć dokładnie 9 cyfr',
+						validate: (value) => {
+							if (!value || value === '') return true;
+
+							const onlyDigits = /^\d+$/.test(value);
+							if (!onlyDigits) return 'Wprowadź tylko cyfry';
+
+							const isNineDigits = value.length === 9;
+							if (!isNineDigits)
+								return 'Numer telefonu musi mieć dokładnie 9 cyfr';
+
+							return true;
 						},
 					})}
 				/>
@@ -199,7 +203,7 @@ export const ContactForm = ({ className }: { className?: string }) => {
 			<button
 				type='submit'
 				className={styles.submitButton}
-				disabled={isSubmiting}>
+				disabled={isSubmitting}>
 				Wyślij{' '}
 				<Image className={styles.icon} src={icon_envelope} alt='' aria-hidden />
 			</button>

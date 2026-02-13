@@ -7,9 +7,12 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"postbuild": "next-sitemap"
+		"postbuild": "next-sitemap",
+		"email": "email dev --dir src/components/emails"
 	},
 	"dependencies": {
+		"@react-email/components": "^1.0.7",
+		"@react-email/preview-server": "^5.2.8",
 		"@tabler/icons-react": "^3.29.0",
 		"@tailwindcss/postcss": "^4.0.4",
 		"autoprefixer": "^10.4.20",
@@ -21,10 +24,12 @@
 		"postcss": "^8.5.1",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
+		"react-email": "^5.2.8",
 		"react-fast-marquee": "^1.6.5",
 		"react-hook-form": "^7.54.2",
 		"react-hot-toast": "^2.5.1",
 		"react-intersection-observer": "^9.15.1",
+		"resend": "^6.9.2",
 		"swiper": "^11.2.0",
 		"tailwind-merge": "^3.0.1",
 		"tailwindcss": "^4.0.4"

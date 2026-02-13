@@ -6,6 +6,7 @@ import '../sass/globals.scss';
 import { Footer } from '@/components/Footer/Footer';
 import Script from 'next/script';
 import { MegaMenuProvider } from '@/contexts/megaMenu.context';
+import { Toaster } from 'react-hot-toast';
 
 const manrope = Manrope({
 	subsets: ['latin'],
@@ -82,6 +83,7 @@ export default function RootLayout({
 							<Header />
 							{children}
 							<Footer />
+							<Toaster />
 						</MegaMenuProvider>
 					</ContextProvider>
 				</body>
