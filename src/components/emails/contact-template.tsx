@@ -102,7 +102,7 @@ const styles = {
 		margin: '0',
 		padding: '15px 0',
 		color: '#1E1E1E',
-		fontWeight: 'normal',
+		fontWeight: 'bold',
 	},
 	content: {
 		color: '#333333',
@@ -120,7 +120,7 @@ const styles = {
 	},
 	label: {
 		marginRight: '0.3em',
-		color: '#0ea8cb',
+		color: '#1E1E1E',
 		fontWeight: 'bold',
 	},
 	message: {
